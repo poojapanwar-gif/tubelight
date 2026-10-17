@@ -1,0 +1,85 @@
+.click-use-cases {
+  width: 100%;
+  padding: 60px 80px 40px 80px;
+  h2 {
+    font-family: Space Grotesk;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 44px;
+    line-height: auto;
+    text-align: center;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #0d1322;
+  }
+  .use-cases-all-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+    a {
+      text-decoration: none;
+    }
+    .use-cases-card {
+      border: 1px solid #8ca2d680;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      border-radius: 20px;
+      padding: 30px;
+      height: 100%;
+      width: 100%;
+      .use-case-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main-image {
+          width: 245px;
+          height: 260px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      h3 {
+        font-family: Space Grotesk;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 40px;
+        line-height: auto;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 2px;
+        text-decoration-skip-ink: auto;
+        text-underline-offset: 5px;
+        color: #5e6ff9;
+        margin-top: 20px;
+      }
+      h5 {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 26px;
+        line-height: auto;
+        letter-spacing: -0.4px;
+        vertical-align: middle;
+        color: #0a0e1a;
+        margin-top: 20px;
+      }
+      p {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #5f6982;
+        margin-top: 12px;
+      }
+    }
+  }
+}
