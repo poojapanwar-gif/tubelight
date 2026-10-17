@@ -2,12 +2,15 @@
   width: 100%;
   background: #0a0e1a;
   padding: 80px;
+
   .developer-left-right-content {
     display: flex;
     align-items: center;
     gap: 100px;
+
     .developer-left-content {
-      width: 50%;
+      width: 60%;
+
       h2 {
         font-family: Space Grotesk;
         font-weight: 600;
@@ -19,6 +22,7 @@
         text-transform: capitalize;
         color: #ffffff;
       }
+
       p {
         font-family: Inter;
         font-weight: 400;
@@ -28,9 +32,10 @@
         letter-spacing: 0px;
         vertical-align: middle;
         color: #9aa4ba;
-        width: 70%;
+        width: 80%;
         margin-top: 20px;
       }
+
       button {
         height: 44px;
         padding: 0px 30px;
@@ -47,41 +52,100 @@
         cursor: pointer;
         border: none;
         margin-top: 50px;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
+
     .developer-right-content {
+      flex: 1;
+
       .all-tabs-and-content {
         .all-tabs {
           display: flex;
+          align-items: center;
           gap: 30px;
           border-bottom: 1px solid #252d42;
           button {
             height: 49px;
             border-radius: 4px;
-            padding: 0px 30px;
+            padding: 0px 60px;
             background: transparent;
             cursor: pointer;
             border: none;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-weight: 400;
             font-style: Regular;
             font-size: 24px;
             line-height: auto;
             letter-spacing: 0%;
             color: #5e6ff9;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background: rgba(94, 111, 249, 0.1);
+            }
+
+            &.active {
+              background: #5e6ff9;
+              color: #ffffff;
+            }
           }
         }
+
         .tab-content {
-          margin-top: 50px;
-          .content {
-            h5 {
-              font-family: Inter;
-              font-weight: 400;
-              font-style: Regular;
-              font-size: 14px;
-              line-height: 24px;
-              letter-spacing: 0%;
+          margin-top: 60px;
+          .code-block {
+            font-family: "Fira Code", "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            color: #26b11e;
+            white-space: pre-wrap;
+            word-break: break-word;
+
+            .code-line {
+              display: block;
+            }
+
+            .indent {
+              padding-left: 28px;
+            }
+
+            .keyword {
+              color: #c678dd;
+              font-weight: 500;
+            }
+
+            .variable {
+              color: #e06c75;
+            }
+
+            .class-name {
+              color: #4ec9b0;
+            }
+
+            .function {
+              color: #61afef;
+            }
+
+            .string {
               color: #26b11e;
+            }
+
+            .property {
+              color: #e5c07b;
+            }
+
+            .number {
+              color: #d19a66;
+            }
+
+            .operator {
+              color: #abb2bf;
             }
           }
         }

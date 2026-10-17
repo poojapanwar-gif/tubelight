@@ -1,0 +1,60 @@
+.contact-center-section {
+  width: 100%;
+  padding: 40px 80px;
+  .contact-center-content {
+    padding: 60px 40px 40px 60px;
+    background: linear-gradient(
+      96.51deg,
+      #0f213f 0.44%,
+      #1d2653 29.93%,
+      #1f2755 50%,
+      #48336f 99.56%
+    );
+    border-radius: 8px;
+    position: relative;
+    h2 {
+      font-family: Space Grotesk;
+      font-weight: 600;
+      font-style: SemiBold;
+      font-size: 44px;
+      line-height: 54px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: #eef2ff;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: #ffffff;
+      width: 50%;
+    }
+    button {
+      height: 42px;
+      border-radius: 12px;
+      padding: 0px 30px;
+      background: #5e6ff9;
+      font-family: Inter;
+      font-weight: 600;
+      font-style: Semi Bold;
+      font-size: 15px;
+      line-height: auto;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: #ffffff;
+      cursor: pointer;
+      border: none;
+      margin-top: 60px;
+    }
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: 60px;
+    }
+  }
+}
