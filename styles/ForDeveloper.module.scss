@@ -1,0 +1,91 @@
+.for-developer-section {
+  width: 100%;
+  background: #0a0e1a;
+  padding: 80px;
+  .developer-left-right-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    .developer-left-content {
+      width: 50%;
+      h2 {
+        font-family: Space Grotesk;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 38px;
+        line-height: auto;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      p {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #9aa4ba;
+        width: 70%;
+        margin-top: 20px;
+      }
+      button {
+        height: 44px;
+        padding: 0px 30px;
+        border-radius: 12px;
+        background: #5e6ff9;
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 16px;
+        line-height: auto;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        margin-top: 50px;
+      }
+    }
+    .developer-right-content {
+      .all-tabs-and-content {
+        .all-tabs {
+          display: flex;
+          gap: 30px;
+          border-bottom: 1px solid #252d42;
+          button {
+            height: 49px;
+            border-radius: 4px;
+            padding: 0px 30px;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            font-family: Inter;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 24px;
+            line-height: auto;
+            letter-spacing: 0%;
+            color: #5e6ff9;
+          }
+        }
+        .tab-content {
+          margin-top: 50px;
+          .content {
+            h5 {
+              font-family: Inter;
+              font-weight: 400;
+              font-style: Regular;
+              font-size: 14px;
+              line-height: 24px;
+              letter-spacing: 0%;
+              color: #26b11e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
