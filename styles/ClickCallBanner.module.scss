@@ -47,6 +47,10 @@
           letter-spacing: 0px;
           color: #0f1828;
           cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          &:hover {
+            transform: translateY(-2px);
+          }
           &::before {
             content: "";
             position: absolute;
@@ -84,6 +88,11 @@
           }
           svg {
             color: #ffffff;
+          }
+          &:hover {
+            box-shadow:
+              0 0 0 1px rgba(94, 111, 249, 0.7),
+              0 20px 52px -10px rgba(94, 111, 249, 0.75);
           }
         }
       }
