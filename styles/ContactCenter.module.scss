@@ -50,6 +50,12 @@
       cursor: pointer;
       border: none;
       margin-top: 60px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-3px);
+      }
     }
     img{
         position: absolute;

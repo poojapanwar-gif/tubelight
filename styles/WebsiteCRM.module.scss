@@ -37,10 +37,19 @@
     gap: 40px;
     margin-top: 60px;
     .website-crm-card {
+      --c: #5e6ff9;
       background: linear-gradient(180deg, #ffffff 0%, #eef2f9 100%);
       border: 1px solid #1e346e1f;
       border-radius: 18px;
       padding: 30px;
+      transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+      &:hover {
+        border-color: color-mix(in srgb, var(--c) 55%, transparent);
+        box-shadow: 0 18px 40px -30px
+          color-mix(in srgb, var(--c) 55%, rgba(0, 0, 0, 0.4));
+      }
       .circle-icon {
         background: #5e6ff9;
         width: 80px;
