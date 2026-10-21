@@ -1,0 +1,63 @@
+<svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Win deals sales CRM illustration">
+  <defs>
+    <linearGradient id="hxBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0edff"/><stop offset="1" stop-color="#eef3ff"/></linearGradient>
+    <linearGradient id="hxAcc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a52f0"/><stop offset="1" stop-color="#2f6dee"/></linearGradient>
+  </defs>
+  <rect width="600" height="460" rx="22" fill="url(#hxBg)"/>
+  <circle cx="110" cy="90" r="66" fill="#7a52f0" opacity=".12"/>
+  <circle cx="500" cy="380" r="80" fill="#2f6dee" opacity=".10"/>
+
+  <!-- CRM board -->
+  <g>
+    <rect x="70" y="86" width="460" height="288" rx="18" fill="#ffffff" stroke="#e2def5"/>
+    <rect x="70" y="86" width="460" height="38" rx="18" fill="#f5f3ff"/>
+    <text x="92" y="110" font-family="monospace" font-size="10" fill="#5f6982">SALES PIPELINE</text>
+    <!-- column headers -->
+    <text x="104" y="150" font-family="Arial" font-size="11" font-weight="700" fill="#7a52f0">New</text>
+    <text x="248" y="150" font-family="Arial" font-size="11" font-weight="700" fill="#2f6dee">Engaged</text>
+    <text x="396" y="150" font-family="Arial" font-size="11" font-weight="700" fill="#1eb858">Won</text>
+    <!-- deal cards -->
+    <g>
+      <rect x="92" y="160" width="124" height="50" rx="10" fill="#faf9ff" stroke="#e6e1fa"/>
+      <rect x="104" y="172" width="70" height="6" rx="3" fill="#33415a"/>
+      <rect x="104" y="186" width="44" height="5" rx="2.5" fill="#a9a2c8"/>
+      <text x="196" y="178" text-anchor="end" font-family="monospace" font-size="9" fill="#7a52f0">₹40k</text>
+    </g>
+    <g>
+      <rect x="92" y="220" width="124" height="50" rx="10" fill="#faf9ff" stroke="#e6e1fa"/>
+      <rect x="104" y="232" width="60" height="6" rx="3" fill="#33415a"/>
+      <rect x="104" y="246" width="40" height="5" rx="2.5" fill="#a9a2c8"/>
+    </g>
+    <g>
+      <rect x="238" y="160" width="124" height="50" rx="10" fill="#f6f9ff" stroke="#dbe6fb"/>
+      <rect x="250" y="172" width="66" height="6" rx="3" fill="#33415a"/>
+      <rect x="250" y="186" width="48" height="5" rx="2.5" fill="#9bb6f0"/>
+      <text x="342" y="178" text-anchor="end" font-family="monospace" font-size="9" fill="#2f6dee">₹1.2L</text>
+    </g>
+    <g>
+      <rect x="238" y="220" width="124" height="50" rx="10" fill="#f6f9ff" stroke="#dbe6fb"/>
+      <rect x="250" y="232" width="58" height="6" rx="3" fill="#33415a"/>
+      <rect x="250" y="246" width="42" height="5" rx="2.5" fill="#9bb6f0"/>
+    </g>
+    <g>
+      <rect x="384" y="160" width="124" height="50" rx="10" fill="#eafbf1" stroke="#bfe8cf"/>
+      <rect x="396" y="172" width="62" height="6" rx="3" fill="#2e7d4f"/>
+      <path d="M392 196l5 5 9-10" stroke="#1eb858" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-4)"/>
+      <text x="496" y="178" text-anchor="end" font-family="monospace" font-size="9" fill="#1eb858">₹2.1L</text>
+    </g>
+    <!-- mini chart -->
+    <rect x="384" y="220" width="124" height="120" rx="10" fill="#faf9ff" stroke="#e6e1fa"/>
+    <text x="396" y="244" font-family="monospace" font-size="8" fill="#5f6982">WIN RATE</text>
+    <polyline points="396,318 416,308 436,312 456,294 476,300 496,278" fill="none" stroke="url(#hxAcc)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="496" cy="278" r="4" fill="#7a52f0"/>
+  </g>
+
+  <!-- closed badge -->
+  <g>
+    <rect x="60" y="300" width="150" height="58" rx="14" fill="#ffffff" stroke="#e2def5"/>
+    <circle cx="88" cy="329" r="16" fill="#7a52f0" opacity=".16"/>
+    <path d="M82 322h12l-2 9h-8zM84 331l-1 7h10l-1-7M88 322v-3h4v3" fill="none" stroke="#7a52f0" stroke-width="2" stroke-linejoin="round"/>
+    <text x="112" y="325" font-family="Arial" font-size="14" font-weight="700" fill="#0f1828">+27%</text>
+    <text x="112" y="343" font-family="Arial" font-size="10" fill="#5f6982">deals won</text>
+  </g>
+</svg>

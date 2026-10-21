@@ -1,0 +1,49 @@
+<svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scale marketing illustration">
+  <defs>
+    <linearGradient id="hmBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8fbfd"/><stop offset="1" stop-color="#eef3ff"/></linearGradient>
+    <linearGradient id="hmAcc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0bb4c4"/><stop offset="1" stop-color="#2f6dee"/></linearGradient>
+  </defs>
+  <rect width="600" height="460" rx="22" fill="url(#hmBg)"/>
+  <circle cx="120" cy="90" r="64" fill="#0bb4c4" opacity=".12"/>
+  <circle cx="500" cy="380" r="80" fill="#7a52f0" opacity=".10"/>
+
+  <!-- phone -->
+  <g>
+    <rect x="208" y="60" width="184" height="340" rx="28" fill="#0e1424"/>
+    <rect x="218" y="72" width="164" height="316" rx="20" fill="#ffffff"/>
+    <rect x="270" y="80" width="60" height="9" rx="4.5" fill="#0e1424"/>
+    <!-- wa header -->
+    <rect x="218" y="96" width="164" height="40" fill="#1eb858"/>
+    <circle cx="244" cy="116" r="12" fill="#ffffff" opacity=".9"/>
+    <rect x="262" y="110" width="70" height="6" rx="3" fill="#ffffff" opacity=".9"/>
+    <rect x="262" y="121" width="44" height="5" rx="2.5" fill="#ffffff" opacity=".6"/>
+    <!-- broadcast bubbles -->
+    <rect x="234" y="150" width="120" height="40" rx="10" fill="#e7fbef" stroke="#1eb858" stroke-opacity=".3"/>
+    <rect x="246" y="160" width="92" height="6" rx="3" fill="#3a7a55"/>
+    <rect x="246" y="172" width="64" height="6" rx="3" fill="#8fc7a6"/>
+    <rect x="246" y="204" width="120" height="34" rx="10" fill="#eef3ff" stroke="#2f6dee" stroke-opacity=".25"/>
+    <rect x="258" y="214" width="84" height="6" rx="3" fill="#2f6dee"/>
+    <rect x="258" y="225" width="54" height="5" rx="2.5" fill="#9bb6f0"/>
+    <!-- send pill -->
+    <rect x="234" y="256" width="132" height="26" rx="13" fill="url(#hmAcc)"/>
+    <rect x="248" y="266" width="64" height="6" rx="3" fill="#ffffff"/>
+    <circle cx="352" cy="269" r="7" fill="#ffffff"/><path d="M349 269l5-2-2 2 2 2z" fill="#2f6dee"/>
+  </g>
+
+  <!-- growth chart card -->
+  <g>
+    <rect x="404" y="120" width="150" height="120" rx="16" fill="#ffffff" stroke="#dbe4f5"/>
+    <text x="420" y="146" font-family="monospace" font-size="10" fill="#5f6982">REACH</text>
+    <text x="420" y="170" font-family="Arial" font-size="20" font-weight="700" fill="#0bb4c4">3.4×</text>
+    <polyline points="420,224 444,210 468,216 492,190 516,196 538,168" fill="none" stroke="url(#hmAcc)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="538" cy="168" r="4.5" fill="#2f6dee"/>
+  </g>
+  <!-- leads badge -->
+  <g>
+    <rect x="40" y="250" width="150" height="56" rx="14" fill="#ffffff" stroke="#dbe4f5"/>
+    <circle cx="68" cy="278" r="16" fill="#0bb4c4" opacity=".16"/>
+    <path d="M62 278l4 4 8-9" stroke="#0bb4c4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="274" font-family="Arial" font-size="15" font-weight="700" fill="#0f1828">+38%</text>
+    <text x="92" y="292" font-family="Arial" font-size="10" fill="#5f6982">new leads</text>
+  </g>
+</svg>

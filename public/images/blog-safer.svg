@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Safer internet blog cover">
+  <defs><linearGradient id="bc2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1eb858"/><stop offset="1" stop-color="#0bb4c4"/></linearGradient></defs>
+  <rect width="480" height="270" fill="url(#bc2)"/>
+  <rect width="480" height="270" fill="#0a0e1a" opacity=".12"/>
+  <g transform="translate(240,138)">
+    <path d="M0 -56l46 18v30c0 30-20 48-46 56-26-8-46-26-46-56v-30z" fill="#ffffff" fill-opacity=".16"/>
+    <path d="M0 -56l46 18v30c0 30-20 48-46 56-26-8-46-26-46-56v-30z" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M-18 4l12 13 26-30" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="28" y="40" font-family="monospace" font-size="12" letter-spacing="2" fill="#ffffff" opacity=".85">TUBELIGHT · BLOG</text>
+</svg>

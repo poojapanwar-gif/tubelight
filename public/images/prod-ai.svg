@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI conversation animation">
+  <defs>
+    <linearGradient id="aiBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1424"/><stop offset="1" stop-color="#0a0e1a"/></linearGradient>
+    <linearGradient id="aiAcc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7af0c8"/><stop offset="1" stop-color="#38e8f2"/></linearGradient>
+    <style>
+      .ai-reply{opacity:0;transform:translateY(8px);transform-box:fill-box;animation:aiReply 4s ease-in-out infinite}
+      .ai-dot{animation:aiBlink 1.4s ease-in-out infinite}
+      .ai-dot2{animation:aiBlink 1.4s ease-in-out .2s infinite}
+      .ai-dot3{animation:aiBlink 1.4s ease-in-out .4s infinite}
+      .ai-send{transform-box:fill-box;transform-origin:center;animation:aiPulse 2.4s ease-in-out infinite}
+      @keyframes aiReply{0%,20%{opacity:0;transform:translateY(10px)}35%,90%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(10px)}}
+      @keyframes aiBlink{0%,100%{opacity:.3}50%{opacity:1}}
+      @keyframes aiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+    </style>
+  </defs>
+  <rect width="400" height="225" fill="url(#aiBg)"/>
+  <rect x="92" y="34" width="216" height="158" rx="14" fill="#0c1322" stroke="#7af0c8" stroke-opacity=".22"/>
+  <rect x="92" y="34" width="216" height="30" rx="14" fill="#101a2c"/>
+  <circle cx="106" cy="49" r="3.4" fill="#ff5f57"/><circle cx="118" cy="49" r="3.4" fill="#febc2e"/><circle cx="130" cy="49" r="3.4" fill="#28c840"/>
+  <text x="300" y="53" text-anchor="end" font-family="monospace" font-size="9" fill="#7af0c8">AI Agent</text>
+  <rect x="108" y="78" width="120" height="26" rx="9" fill="#172033"/>
+  <rect x="118" y="86" width="84" height="4.5" rx="2" fill="#5b6479"/>
+  <rect x="118" y="94" width="56" height="4.5" rx="2" fill="#404b61"/>
+  <!-- typing dots -->
+  <g>
+    <circle class="ai-dot"  cx="176" cy="131" r="4" fill="#38e8f2"/>
+    <circle class="ai-dot2" cx="188" cy="131" r="4" fill="#38e8f2"/>
+    <circle class="ai-dot3" cx="200" cy="131" r="4" fill="#38e8f2"/>
+  </g>
+  <!-- AI reply bubble -->
+  <g class="ai-reply">
+    <rect x="172" y="114" width="124" height="34" rx="9" fill="url(#aiAcc)" opacity=".18"/>
+    <rect x="172" y="114" width="124" height="34" rx="9" fill="none" stroke="#38e8f2" stroke-opacity=".5"/>
+    <circle cx="186" cy="131" r="7" fill="url(#aiAcc)"/>
+    <path d="M183 131h6M186 128v6" stroke="#04121a" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="200" y="124" width="84" height="4.5" rx="2" fill="#bfeede"/>
+    <rect x="200" y="133" width="64" height="4.5" rx="2" fill="#8fd9c4"/>
+  </g>
+  <rect x="108" y="160" width="160" height="20" rx="10" fill="#11192a"/>
+  <rect x="118" y="168" width="80" height="4.5" rx="2" fill="#3a4359"/>
+  <circle class="ai-send" cx="288" cy="170" r="12" fill="url(#aiAcc)"/>
+  <path d="M283 170l10-4-4 4 4 4z" fill="#04121a" class="ai-send"/>
+</svg>

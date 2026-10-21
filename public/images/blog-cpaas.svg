@@ -1,0 +1,14 @@
+<svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CPaaS blog cover">
+  <defs><linearGradient id="bc1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0bb4c4"/><stop offset="1" stop-color="#2f6dee"/></linearGradient></defs>
+  <rect width="480" height="270" fill="url(#bc1)"/>
+  <rect width="480" height="270" fill="#0a0e1a" opacity=".12"/>
+  <g stroke="#ffffff" stroke-opacity=".55" fill="none" stroke-width="2">
+    <circle cx="240" cy="135" r="34" fill="#ffffff" fill-opacity=".14"/>
+    <path d="M240 135 L150 80 M240 135 L330 80 M240 135 L130 150 M240 135 L350 150 M240 135 L175 205 M240 135 L305 205"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="150" cy="80" r="9"/><circle cx="330" cy="80" r="9"/><circle cx="130" cy="150" r="9"/><circle cx="350" cy="150" r="9"/><circle cx="175" cy="205" r="9"/><circle cx="305" cy="205" r="9"/>
+  </g>
+  <rect x="222" y="123" width="36" height="24" rx="12" fill="#ffffff"/>
+  <text x="28" y="40" font-family="monospace" font-size="12" letter-spacing="2" fill="#ffffff" opacity=".85">TUBELIGHT · BLOG</text>
+</svg>

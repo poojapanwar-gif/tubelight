@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Voice call animation">
+  <defs>
+    <linearGradient id="vBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1424"/><stop offset="1" stop-color="#0a0e1a"/></linearGradient>
+    <linearGradient id="vAcc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#38e8f2"/><stop offset="1" stop-color="#b98bff"/></linearGradient>
+    <style>
+      .wf rect{transform-box:fill-box;transform-origin:center;animation:wf 1s ease-in-out infinite}
+      .wf rect:nth-of-type(2n){animation-duration:1.3s}
+      .wf rect:nth-of-type(3n){animation-duration:.8s}
+      .wf rect:nth-of-type(4n){animation-duration:1.15s}
+      .wf rect:nth-of-type(5n){animation-duration:.9s}
+      @keyframes wf{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+      .v-ring{transform-box:fill-box;transform-origin:center;animation:vRing 2s ease-out infinite}
+      @keyframes vRing{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.8);opacity:0}}
+    </style>
+  </defs>
+  <rect width="400" height="225" fill="url(#vBg)"/>
+  <rect x="96" y="44" width="208" height="138" rx="16" fill="#0c1322" stroke="#b98bff" stroke-opacity=".24"/>
+  <circle class="v-ring" cx="128" cy="78" r="16" fill="none" stroke="#b98bff" stroke-width="2"/>
+  <circle cx="128" cy="78" r="16" fill="#b98bff" opacity=".22"/>
+  <path d="M120 80a12 12 0 0 0 8 6l2-2a8 8 0 0 0 4 1v3a13 13 0 0 1-13-13h3a8 8 0 0 0 1 4z" fill="#b98bff"/>
+  <rect x="152" y="68" width="90" height="6" rx="3" fill="#dfe6f5"/>
+  <rect x="152" y="80" width="60" height="5" rx="2.5" fill="#5b6479"/>
+  <text x="288" y="80" text-anchor="end" font-family="monospace" font-size="10" fill="#7af0c8">02:18</text>
+  <g class="wf">
+    <rect x="116" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="128" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="140" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="152" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="164" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="176" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="188" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="200" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="212" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="224" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="236" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="248" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="260" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+    <rect x="272" y="108" width="5" height="40" rx="2.5" fill="url(#vAcc)"/>
+  </g>
+  <circle cx="160" cy="166" r="11" fill="#172033"/>
+  <circle cx="200" cy="166" r="13" fill="#ff5f57"/>
+  <circle cx="240" cy="166" r="11" fill="#172033"/>
+</svg>
