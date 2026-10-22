@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "../../styles/ProductMenu.module.scss";
 
 export const productCategories = [
@@ -56,13 +57,13 @@ export const productCategories = [
         links: [
           {
             label: "Voice Broadcast",
-            href: "https://tubelightcommunications.com/voice-broadcast",
+            href: "/voice-broadcast",
           },
           {
             label: "Number Masking",
             href: "https://tubelightcommunications.com/number-masking",
           },
-          { label: "IVR", href: "https://tubelightcommunications.com/ivr" },
+          { label: "IVR", href: "/ivr-solution" },
           { label: "Flow Builder", href: "#channels" },
           { label: "WebRTC", href: "#channels" },
           { label: "Click 2 Call", href: "/clicktocall" },
@@ -393,15 +394,33 @@ export const quickLinks = [
   { label: "Developer Docs", href: "#developers" },
 ];
 
-const ProductMenu = () => {
+const ProductMenu = ({ onClose }) => {
   const [activeId, setActiveId] = useState("cpaas");
+  const [isForceClosed, setIsForceClosed] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsForceClosed(false);
+  }, [pathname]);
+
+  const handleLinkClick = (e) => {
+    setIsForceClosed(true);
+    onClose?.();
+    e?.currentTarget?.blur();
+    if (typeof document !== "undefined") {
+      document.activeElement?.blur();
+    }
+  };
 
   const currentCategory =
     productCategories.find((cat) => cat.id === activeId) ||
     productCategories[0];
 
   return (
-    <div className={`${styles.productMega} product-mega-panel`}>
+    <div
+      className={`${styles.productMega} product-mega-panel ${isForceClosed ? styles.forceClosed : ""}`}
+      onMouseEnter={() => setIsForceClosed(false)}
+    >
       <div className={styles.menuContainer}>
         {/* ============ 1. LEFT CATEGORIES SIDEBAR ============ */}
         <div className={styles.categoriesSidebar}>
@@ -435,13 +454,18 @@ const ProductMenu = () => {
                     return (
                       <li key={lIdx}>
                         {isInternal ? (
-                          <Link href={link.href} className={styles.menuLink}>
+                          <Link
+                            href={link.href}
+                            className={styles.menuLink}
+                            onClick={handleLinkClick}
+                          >
                             {link.label}
                           </Link>
                         ) : (
                           <a
                             href={link.href}
                             className={styles.menuLink}
+                            onClick={handleLinkClick}
                             {...(link.href.startsWith("http")
                               ? { target: "_blank", rel: "noopener noreferrer" }
                               : {})}
@@ -482,6 +506,7 @@ const ProductMenu = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
+            onClick={handleLinkClick}
           >
             Try It For Free
           </a>
@@ -494,11 +519,19 @@ const ProductMenu = () => {
                 return (
                   <li key={qIdx}>
                     {isInternal ? (
-                      <Link href={ql.href} className={styles.quickLink}>
+                      <Link
+                        href={ql.href}
+                        className={styles.quickLink}
+                        onClick={handleLinkClick}
+                      >
                         {ql.label}
                       </Link>
                     ) : (
-                      <a href={ql.href} className={styles.quickLink}>
+                      <a
+                        href={ql.href}
+                        className={styles.quickLink}
+                        onClick={handleLinkClick}
+                      >
                         {ql.label}
                       </a>
                     )}

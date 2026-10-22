@@ -12,6 +12,17 @@
     vertical-align: middle;
     color: #0d1322;
   }
+  h6 {
+    margin-top: 20px;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #5f6784;
+  }
   .use-cases-all-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

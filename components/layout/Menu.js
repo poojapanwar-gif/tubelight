@@ -1,10 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "../../styles/Menu.module.scss";
 import ProductMenu from "./ProductMenu";
 
 const Menu = ({ isOpen }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpenDropdown(null);
+    if (typeof document !== "undefined") {
+      document.activeElement?.blur();
+    }
+  }, [pathname]);
+
+  const closeAll = () => {
+    setOpenDropdown(null);
+    if (typeof document !== "undefined") {
+      document.activeElement?.blur();
+    }
+  };
 
   const toggleDropdown = (key) => {
     setOpenDropdown(openDropdown === key ? null : key);
@@ -90,7 +106,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Voice Broadcast",
       sub: "OBD at scale",
-      href: "https://tubelightcommunications.com/voice-broadcast",
+      href: "/voice-broadcast",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M3 10v4h4l5 5V5L7 10H3Z" />
@@ -101,7 +117,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "IVR",
       sub: "Smart call flows",
-      href: "https://tubelightcommunications.com/ivr",
+      href: "/ivr-solution",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="4" y="3" width="16" height="18" rx="2" />
@@ -415,7 +431,7 @@ const Menu = ({ isOpen }) => {
             <path d="M6 9l6 6 6-6" />
           </svg>
         </button>
-        <ProductMenu />
+        <ProductMenu onClose={closeAll} />
       </div>
 
       {/* 2. SOLUTIONS */}
@@ -440,6 +456,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                 >
                   <span className={styles["mega-ic"]}>{item.icon}</span>
                   <span className={styles["mega-tx"]}>
@@ -458,6 +475,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                 >
                   <span className={styles["mega-ic"]}>{item.icon}</span>
                   <span className={styles["mega-tx"]}>
@@ -493,6 +511,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -513,6 +532,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -549,6 +569,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -585,6 +606,7 @@ const Menu = ({ isOpen }) => {
                   className={styles["mega-link"]}
                   style={{ "--mc": "#5e6ff9" }}
                   href={item.href}
+                  onClick={closeAll}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

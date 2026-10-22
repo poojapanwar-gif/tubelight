@@ -30,6 +30,13 @@
     height: 20px;
   }
 
+  &.forceClosed {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(10px) !important;
+  }
+
   .menuContainer {
     display: flex;
     gap: 0;

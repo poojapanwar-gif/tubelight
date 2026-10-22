@@ -1,0 +1,152 @@
+.ivr-developer-section{
+  width: 100%;
+  background: #F6F8FC;
+  padding: 80px;
+  .developer-left-right-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    .developer-left-content {
+      width: 60%;
+      h2 {
+        font-family: Space Grotesk;
+        font-weight: 700;
+        font-style: SemiBold;
+        font-size: 40px;
+        line-height: auto;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        text-transform: capitalize;
+        color: #2F6DEE;
+      }
+      p {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #5F6982;
+        width: 80%;
+        margin-top: 20px;
+      }
+      button {
+        height: 44px;
+        padding: 0px 30px;
+        border-radius: 12px;
+        background: #2F6DEE;
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 16px;
+        line-height: auto;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        margin-top: 50px;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        box-shadow: 0px 10px 30px -12px #2F6DEE8C;
+        &:hover {
+          opacity: 0.9;
+          transform: translateY(-3px);
+        }
+      }
+    }
+    .developer-right-content {
+      flex: 1;
+      .all-tabs-and-content {
+        border: 13px solid #2F6DEE;
+        background: #090E1A;
+        border-radius: 20px;
+        padding: 30px;
+        .all-tabs {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          border-bottom: 1px solid #252d42;
+          button {
+            height: 49px;
+            border-radius: 4px;
+            padding: 0px 60px;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 24px;
+            line-height: auto;
+            letter-spacing: 0%;
+            color: #2F6DEE;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background: rgba(94, 111, 249, 0.1);
+            }
+
+            &.active {
+              background: #2F6DEE;
+              color: #ffffff;
+            }
+          }
+        }
+        .tab-content {
+          margin-top: 60px;
+          .code-block {
+            font-family: "Fira Code", "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+            font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            color: #26b11e;
+            white-space: pre-wrap;
+            word-break: break-word;
+
+            .code-line {
+              display: block;
+            }
+
+            .indent {
+              padding-left: 28px;
+            }
+
+            .keyword {
+              color: #c678dd;
+              font-weight: 500;
+            }
+
+            .variable {
+              color: #e06c75;
+            }
+
+            .class-name {
+              color: #4ec9b0;
+            }
+
+            .function {
+              color: #61afef;
+            }
+
+            .string {
+              color: #26b11e;
+            }
+
+            .property {
+              color: #e5c07b;
+            }
+
+            .number {
+              color: #d19a66;
+            }
+
+            .operator {
+              color: #abb2bf;
+            }
+          }
+        }
+      }
+    }
+  }
+}
