@@ -61,11 +61,11 @@ export const productCategories = [
           },
           {
             label: "Number Masking",
-            href: "https://tubelightcommunications.com/number-masking",
+            href: "/number-masking",
           },
           { label: "IVR", href: "/ivr-solution" },
           { label: "Flow Builder", href: "#channels" },
-          { label: "WebRTC", href: "#channels" },
+          { label: "WebRTC", href: "/web-rtc" },
           { label: "Click 2 Call", href: "/clicktocall" },
         ],
       },

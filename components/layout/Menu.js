@@ -128,7 +128,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Number Masking",
       sub: "Privacy-safe calls",
-      href: "https://tubelightcommunications.com/number-masking",
+      href: "/number-masking",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="4" y="11" width="16" height="9" rx="2" />
@@ -139,7 +139,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "WebRTC",
       sub: "Real-time voice/video",
-      href: "https://tubelightcommunications.com/web-rtc",
+      href: "/web-rtc",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="9" />
