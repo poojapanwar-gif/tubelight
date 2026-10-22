@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../../styles/Menu.module.scss";
+import ProductMenu from "./ProductMenu";
 
 const Menu = ({ isOpen }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -79,7 +80,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Click2Call",
       sub: "Browser-based calling",
-      href: "https://tubelightcommunications.com/click2call",
+      href: "/clicktocall",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1l-2.3 2.2Z" />
@@ -403,7 +404,7 @@ const Menu = ({ isOpen }) => {
   return (
     <nav className={`${styles["nav-links"]} ${isOpen ? styles.open : ""}`} id="navLinks">
       {/* 1. PRODUCTS */}
-      <div className={`${styles["nav-item"]} ${openDropdown === "products" ? styles.open : ""}`}>
+      <div className={`${styles["nav-item"]} ${styles["product-item"]} ${openDropdown === "products" ? styles.open : ""}`}>
         <button
           className={styles["nav-trigger"]}
           type="button"
@@ -414,92 +415,7 @@ const Menu = ({ isOpen }) => {
             <path d="M6 9l6 6 6-6" />
           </svg>
         </button>
-        <div className={styles.mega}>
-          <div className={`${styles["mega-cols"]} ${styles["mega-3"]}`}>
-            {/* Messaging Column */}
-            <div className={styles["mega-col"]}>
-              <div className={styles["mega-col-h"]}>Messaging</div>
-              {messagingLinks.map((item, idx) => (
-                <a
-                  key={idx}
-                  className={styles["mega-link"]}
-                  style={{ "--mc": "#5e6ff9" }}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles["mega-ic"]}>{item.icon}</span>
-                  <span className={styles["mega-tx"]}>
-                    <b>{item.title}</b>
-                    <small>{item.sub}</small>
-                  </span>
-                </a>
-              ))}
-            </div>
-
-            {/* Voice Column */}
-            <div className={styles["mega-col"]}>
-              <div className={styles["mega-col-h"]}>Voice</div>
-              {voiceLinks.map((item, idx) => (
-                <a
-                  key={idx}
-                  className={styles["mega-link"]}
-                  style={{ "--mc": "#5e6ff9" }}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles["mega-ic"]}>{item.icon}</span>
-                  <span className={styles["mega-tx"]}>
-                    <b>{item.title}</b>
-                    <small>{item.sub}</small>
-                  </span>
-                </a>
-              ))}
-            </div>
-
-            {/* Platform Column */}
-            <div className={styles["mega-col"]}>
-              <div className={styles["mega-col-h"]}>Platform</div>
-              {platformLinks.map((item, idx) => (
-                <a
-                  key={idx}
-                  className={styles["mega-link"]}
-                  style={{ "--mc": "#5e6ff9" }}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles["mega-ic"]}>{item.icon}</span>
-                  <span className={styles["mega-tx"]}>
-                    <b>{item.title}</b>
-                    <small>{item.sub}</small>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles["mega-foot"]}>
-            <div className={styles["mega-foot-feat"]}>
-              <span className={styles["mega-foot-ic"]}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z" />
-                </svg>
-              </span>
-              <span className={styles["mega-foot-tx"]}>
-                <b>One platform, every channel</b>
-                <small>Bring messaging, voice &amp; AI into a single workflow</small>
-              </span>
-            </div>
-            <a className={styles["mega-foot-cta"]} href="https://tubelightcommunications.com/contact" target="_blank" rel="noopener noreferrer">
-              Talk to an expert{" "}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </a>
-          </div>
-        </div>
+        <ProductMenu />
       </div>
 
       {/* 2. SOLUTIONS */}

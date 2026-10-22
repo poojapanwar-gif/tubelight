@@ -20,6 +20,28 @@
     align-items: center;
     height: 72px;
 
+    &.product-item {
+      position: static;
+
+      &:hover,
+      &:focus-within,
+      &.open {
+        :global(.product-mega-panel) {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+      }
+    }
+
+    &:hover :global(.product-mega-panel) {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
     .nav-trigger {
       display: inline-flex;
       align-items: center;

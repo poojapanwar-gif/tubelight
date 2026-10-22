@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styles from "../../styles/Header.module.scss";
 import Menu from "./Menu";
 
@@ -37,9 +38,9 @@ const Header = () => {
       {/* ============ NAV ============ */}
       <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`} id="nav">
         <div className={`${styles.wrap} ${styles["nav-inner"]}`}>
-          <a className={styles.brand} href="#top">
+          <Link className={styles.brand} href="/">
             <img className={styles["brand-logo"]} src="/images/footerlogo.png" alt="Tubelight Communications" />
-          </a>
+          </Link>
 
           <Menu isOpen={isMobileMenuOpen} />
 

@@ -1,6 +1,6 @@
 import ClickCallBanner from '@/components/ClickToCall/ClickCallBanner'
 import ClickUseCases from '@/components/ClickToCall/ClickUseCases'
-import ContactCenter from '@/components/ClickToCall/ContactCenter'
+import ContactCenter from '@/components/Common/ContactCenter'
 import ForDeveloper from '@/components/ClickToCall/ForDeveloper'
 import WebsiteCRM from '@/components/ClickToCall/WebsiteCRM'
 import YourCustomer from '@/components/ClickToCall/YourCustomer'
