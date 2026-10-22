@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 import HeroBanner from "@/components/Home/HeroBanner";
 import Hubs from "@/components/Home/Hubs";
 import Products from "@/components/Home/Products";
@@ -15,7 +12,6 @@ import FinalCta from "@/components/Home/FinalCta";
 const page = () => {
   return (
     <>
-      <Header />
       <HeroBanner />
       <Hubs />
       <Products />
@@ -25,8 +21,6 @@ const page = () => {
       <Developers />
       <Blogs />
       <FinalCta />
-      <Footer />
-      <WhatsAppWidget />
     </>
   );
 };

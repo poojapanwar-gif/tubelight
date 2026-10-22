@@ -65,11 +65,14 @@
 
   .wrap {
     width: 100%;
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 0 24px;
+    margin: 0;
+    padding: 0 80px;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 980px) {
+      padding: 0 24px;
+    }
   }
 
   .nav-inner {

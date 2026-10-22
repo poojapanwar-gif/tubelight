@@ -1,9 +1,13 @@
 import React from "react";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 
 export const metadata = {
-  title: "TubeLight",
-  description: "TubeLight — built with Next.js",
+  title: "Tubelight Communications — Customer Engagement Platform for Modern Enterprises",
+  description:
+    "Connect with customers across WhatsApp, SMS, RCS, Voice, Email and AI-powered conversations from a single omnichannel platform. CPaaS + contact centre built for modern enterprises.",
 };
 
 const RootLayout = ({ children }) => {
@@ -21,7 +25,12 @@ const RootLayout = ({ children }) => {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        <WhatsAppWidget />
+      </body>
     </html>
   );
 };
