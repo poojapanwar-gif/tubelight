@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/VoicePlatfrom.module.scss";
+
 const VoicePlatfrom = () => {
   const cardData = [
     {
@@ -54,22 +55,21 @@ const VoicePlatfrom = () => {
       digit: "O9",
       title: "Click2Call",
       detail:
-        "Simplest & quickest solution for call batching on a website or CRM.",
+        "Simplest & quickest solution",
     },
   ];
+
   return (
     <div className={styles["voice-platfrom-section"]}>
       <h2>Voice Platform</h2>
       <div className={styles["voice-platfrom-all-cards"]}>
-        {
-            cardData.map((item,index)=>(
-                <div className={styles["platfrom-card"]} key={index}>
-                    <h4>{item.digit}</h4>
-                    <h5>{item.title}</h5>
-                    <p>{item.detail}</p>
-                </div>
-            ))
-        }
+        {cardData.map((item, index) => (
+          <div className={styles["platfrom-card"]} key={index}>
+            <h4>{item.digit}</h4>
+            <h5>{item.title}</h5>
+            <p>{item.detail}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
