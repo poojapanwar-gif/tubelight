@@ -3,15 +3,15 @@ import React from "react";
 import Link from "next/link";
 import styles from "../../styles/ClickUseCases.module.scss";
 
-const WebRTCUseCase = () => {
+const SmsOtpUseCase = () => {
   const useCaseCard = [
     {
-      id: "webcall",
+      id: "otpverify",
       link: "/",
-      linktext: "WebCall",
-      title: "Websites & landing pages",
+      linktext: "OTPVerify",
+      title: "Login & transaction verification",
       detail:
-        "Turn visitors into conversations with a call button that connects them to your team in one click.",
+        "Verify users at sign-up, login and payment with secure one-time passwords delivered in seconds.",
       renderVisual: () => (
         <div
           style={{
@@ -22,159 +22,27 @@ const WebRTCUseCase = () => {
             position: "relative",
             overflow: "hidden",
             boxSizing: "border-box",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          {/* ============ PHASE 1: SCREENSHOT 3 OPTIONS (0s - 4.5s) ============ */}
-          <div className="webrtc-step-container webrtc-step-a">
-            {/* Row 1: Website visitor · Call us */}
+          {/* ============ PHASE 1: OTP INPUT BOXES FILLING (0s - 4.5s) ============ */}
+          <div className="sms-step-container sms-step-a">
+            {/* Top SMS Notification Banner */}
             <div
               style={{
-                width: "100%",
-                maxWidth: "235px",
                 background: "#ffffff",
-                borderRadius: "8px",
-                padding: "7px 12px",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
-                boxSizing: "border-box",
-              }}
-            >
-              <span
-                style={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#4F46E5",
-                  color: "#ffffff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  flexShrink: 0,
-                }}
-              >
-                1
-              </span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  color: "#1E293B",
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Website visitor · Call us
-              </span>
-            </div>
-
-            {/* Row 2: Landing page · Call now (Active Blue Pill) */}
-            <div
-              className="webrtc-row-active"
-              style={{
-                width: "100%",
-                maxWidth: "235px",
-                background: "#5E6FF9",
-                color: "#ffffff",
-                borderRadius: "8px",
-                padding: "7px 12px",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                boxShadow: "0 3px 12px rgba(94, 111, 249, 0.35)",
-                boxSizing: "border-box",
-              }}
-            >
-              <span
-                style={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.25)",
-                  color: "#ffffff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  flexShrink: 0,
-                }}
-              >
-                2
-              </span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  color: "#ffffff",
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Landing page · Call now
-              </span>
-            </div>
-
-            {/* Row 3: Product page · Talk to sales */}
-            <div
-              style={{
-                width: "100%",
-                maxWidth: "235px",
-                background: "#ffffff",
-                borderRadius: "8px",
-                padding: "7px 12px",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.03)",
-                boxSizing: "border-box",
-              }}
-            >
-              <span
-                style={{
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  background: "#4F46E5",
-                  color: "#ffffff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  flexShrink: 0,
-                }}
-              >
-                3
-              </span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  color: "#1E293B",
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Product page · Talk to sales
-              </span>
-            </div>
-          </div>
-
-          {/* ============ PHASE 2: BROWSER CALL CONNECTED (4.5s - 9s) ============ */}
-          <div className="webrtc-step-container webrtc-step-b">
-            {/* Status chip */}
-            <div
-              style={{
-                background: "#E0E7FF",
-                color: "#4338CA",
-                padding: "4px 12px",
                 borderRadius: "20px",
-                fontSize: "11px",
-                fontWeight: 700,
+                padding: "4px 14px",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "6px",
+                fontSize: "11px",
+                fontWeight: 600,
+                color: "#4F46E5",
+                boxShadow: "0 2px 8px rgba(94, 111, 249, 0.08)",
+                marginBottom: "8px",
               }}
             >
               <span
@@ -185,89 +53,133 @@ const WebRTCUseCase = () => {
                   background: "#10B981",
                 }}
               />
-              WebRTC Direct Browser Call
+              SMS: Your Code is 121111
             </div>
 
-            {/* Connected Rep card */}
+            {/* 6 Digit OTP Boxes (Exact match to image) */}
+            <div
+              style={{
+                display: "flex",
+                gap: "7px",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {["1", "2", "1", "1", "1", "1"].map((digit, i) => (
+                <div
+                  key={i}
+                  className={`sms-otp-box sms-otp-${i + 1}`}
+                  style={{
+                    width: "32px",
+                    height: "38px",
+                    background: "#ffffff",
+                    border: "1.5px solid #5E6FF9",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "16px",
+                    fontWeight: 700,
+                    color: "#5E6FF9",
+                    boxShadow: "0 2px 6px rgba(94, 111, 249, 0.12)",
+                    fontFamily: "Space Grotesk, sans-serif",
+                  }}
+                >
+                  <span className={`sms-digit sms-digit-${i + 1}`}>{digit}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Subtitle timer */}
+            <div
+              style={{
+                fontSize: "10.5px",
+                color: "#64748B",
+                marginTop: "10px",
+                fontWeight: 500,
+              }}
+            >
+              Auto-reading OTP • Valid for 10:00
+            </div>
+          </div>
+
+          {/* ============ PHASE 2: INSTANT VERIFICATION SUCCESS (4.5s - 9s) ============ */}
+          <div className="sms-step-container sms-step-b">
+            {/* Green Success Badge */}
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "50%",
+                background: "#10B981",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 8px 24px rgba(16, 185, 129, 0.35)",
+                color: "#ffffff",
+                fontSize: "22px",
+                fontWeight: 700,
+              }}
+            >
+              ✓
+            </div>
+
             <div
               style={{
                 background: "#ffffff",
-                borderRadius: "12px",
-                padding: "12px 16px",
-                width: "100%",
-                maxWidth: "235px",
+                borderRadius: "14px",
+                padding: "8px 18px",
                 boxShadow: "0 4px 14px rgba(0, 0, 0, 0.06)",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                gap: "12px",
-                boxSizing: "border-box",
+                textAlign: "center",
               }}
             >
-              <div
+              <span
                 style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "50%",
-                  background: "#10B981",
-                  color: "#ffffff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  color: "#0F172A",
                 }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1l-2.3 2.2Z" />
-                </svg>
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div
-                  style={{
-                    fontSize: "13px",
-                    fontWeight: 700,
-                    color: "#1E293B",
-                  }}
-                >
-                  Sales Specialist
-                </div>
-                <div
-                  style={{
-                    fontSize: "11px",
-                    color: "#10B981",
-                    fontWeight: 600,
-                  }}
-                >
-                  Connected in 0.4s • Zero Plugins
-                </div>
-              </div>
+                Verification Successful
+              </span>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 600,
+                  color: "#10B981",
+                  marginTop: "2px",
+                }}
+              >
+                Delivered in 0.6s • 99.99% Success
+              </span>
             </div>
 
-            {/* Live audio wave */}
-            <div
+            <span
               style={{
-                display: "flex",
-                gap: "4px",
-                alignItems: "center",
-                height: "16px",
+                fontSize: "10.5px",
+                color: "#4F46E5",
+                background: "#E0E7FF",
+                padding: "3px 10px",
+                borderRadius: "12px",
+                fontWeight: 600,
               }}
             >
-              <span className="webrtc-wave-bar webrtc-wave-1" />
-              <span className="webrtc-wave-bar webrtc-wave-2" />
-              <span className="webrtc-wave-bar webrtc-wave-3" />
-              <span className="webrtc-wave-bar webrtc-wave-4" />
-              <span className="webrtc-wave-bar webrtc-wave-5" />
-            </div>
+              Bank-Grade 2FA Security
+            </span>
           </div>
         </div>
       ),
     },
     {
-      id: "crmcall",
+      id: "bulksms",
       link: "/",
-      linktext: "CRMCall",
-      title: "Agent desktop & CRM",
+      linktext: "BulkSMS",
+      title: "Promotions, alerts & reminders",
       detail:
-        "Give agents a softphone inside your CRM so they can call leads and customers without switching tools.",
+        "Announce offers, send payment reminders and share order updates with thousands of customers at once.",
       renderVisual: () => (
         <div
           style={{
@@ -278,146 +190,176 @@ const WebRTCUseCase = () => {
             position: "relative",
             overflow: "hidden",
             boxSizing: "border-box",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          {/* ============ PHASE 1: SCREENSHOT SOFTPHONE DIALING (0s - 4.5s) ============ */}
-          <div className="webrtc-step-container webrtc-step-a">
-            {/* Phone button with concentric rings */}
+          {/* ============ PHASE 1: BROADCAST RADAR & SMS ICON (0s - 4.5s) ============ */}
+          <div className="sms-step-container sms-step-a">
+            {/* Concentric Broadcasting Radar Rings */}
             <div
               style={{
                 position: "relative",
-                width: "88px",
-                height: "88px",
+                width: "90px",
+                height: "90px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <div className="webrtc-ring webrtc-ring-1" />
-              <div className="webrtc-ring webrtc-ring-2" />
-              <div className="webrtc-ring webrtc-ring-3" />
+              <div className="sms-radar-ring sms-ring-1" />
+              <div className="sms-radar-ring sms-ring-2" />
+              <div className="sms-radar-ring sms-ring-3" />
 
-              <div className="webrtc-phone-btn">
+              {/* Center Blue Speech Bubble Button */}
+              <div
+                className="sms-center-btn"
+                style={{
+                  width: "54px",
+                  height: "54px",
+                  borderRadius: "50%",
+                  background: "#5E6FF9",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 8px 24px rgba(94, 111, 249, 0.4)",
+                  position: "relative",
+                  zIndex: 2,
+                }}
+              >
+                {/* Speech Bubble Icon with 3 dots */}
                 <svg
-                  width="22"
-                  height="22"
+                  width="26"
+                  height="26"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
-                  style={{ color: "#ffffff" }}
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1l-2.3 2.2Z" />
+                  <path
+                    d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z"
+                    fill="#ffffff"
+                  />
+                  <circle cx="8" cy="10" r="1.5" fill="#ffffff" />
+                  <circle cx="12" cy="10" r="1.5" fill="#ffffff" />
+                  <circle cx="16" cy="10" r="1.5" fill="#ffffff" />
                 </svg>
               </div>
+
+              {/* Top-Right "SMS" Pill Badge */}
+              <span
+                style={{
+                  position: "absolute",
+                  top: "2px",
+                  right: "-10px",
+                  background: "#ffffff",
+                  color: "#5E6FF9",
+                  borderRadius: "10px",
+                  padding: "2px 7px",
+                  fontSize: "9px",
+                  fontWeight: 700,
+                  boxShadow: "0 2px 6px rgba(0, 0, 0, 0.08)",
+                  border: "1px solid rgba(94, 111, 249, 0.2)",
+                  zIndex: 5,
+                }}
+              >
+                SMS
+              </span>
             </div>
 
-            {/* Agent softphone / Calling from CRM... badge */}
+            {/* Sub-label */}
             <div
               style={{
                 background: "#ffffff",
                 borderRadius: "14px",
-                padding: "6px 18px",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.06)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                lineHeight: "1.35",
+                padding: "5px 16px",
+                fontSize: "11.5px",
+                fontWeight: 600,
+                color: "#4F46E5",
+                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+                marginTop: "6px",
               }}
             >
-              <span
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  color: "#1E293B",
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Agent softphone
-              </span>
-              <span
-                style={{
-                  fontSize: "11.5px",
-                  fontWeight: 600,
-                  color: "#4F46E5",
-                  fontFamily: "Inter, sans-serif",
-                }}
-              >
-                Calling from CRM...
-              </span>
+              Broadcasting to 50,000+ Customers...
             </div>
           </div>
 
-          {/* ============ PHASE 2: SOFTPHONE CALL ACTIVE (4.5s - 9s) ============ */}
-          <div className="webrtc-step-container webrtc-step-b">
-            {/* Green Connected Phone Button */}
+          {/* ============ PHASE 2: DELIVERED STATS (4.5s - 9s) ============ */}
+          <div className="sms-step-container sms-step-b">
             <div
               style={{
-                width: "50px",
-                height: "50px",
+                width: "48px",
+                height: "48px",
                 borderRadius: "50%",
-                background: "#10B981",
+                background: "#5E6FF9",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 8px 22px rgba(16, 185, 129, 0.4)",
+                boxShadow: "0 8px 24px rgba(94, 111, 249, 0.35)",
+                color: "#ffffff",
               }}
             >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="20 6 9 17 4 12" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
               </svg>
             </div>
 
             <div
               style={{
                 background: "#ffffff",
-                borderRadius: "20px",
-                padding: "8px 18px",
-                fontSize: "12.5px",
-                fontWeight: 700,
-                color: "#1E293B",
-                fontFamily: "Inter, sans-serif",
-                boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
+                borderRadius: "12px",
+                padding: "10px 18px",
+                boxShadow: "0 4px 14px rgba(0, 0, 0, 0.06)",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                gap: "8px",
+                textAlign: "center",
               }}
             >
-              <span style={{ color: "#10B981", fontSize: "14px" }}>✓</span>
-              <span>CRM Softphone Active • 00:28</span>
+              <span
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  color: "#0F172A",
+                }}
+              >
+                Campaign Delivered
+              </span>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 600,
+                  color: "#10B981",
+                  marginTop: "2px",
+                }}
+              >
+                ⚡ 98.4% Open Rate • Tier-1 Telecom Routes
+              </span>
             </div>
 
             <span
               style={{
-                fontSize: "11px",
+                fontSize: "10.5px",
                 color: "#10B981",
-                fontWeight: 600,
                 background: "#DCFCE7",
-                padding: "2px 10px",
+                padding: "3px 12px",
                 borderRadius: "12px",
+                fontWeight: 600,
               }}
             >
-              Salesforce & HubSpot Auto-Synced
+              DND Filtered & DLT Compliant
             </span>
           </div>
         </div>
       ),
     },
     {
-      id: "supportcall",
+      id: "twowaysms",
       link: "/",
-      linktext: "SupportCall",
-      title: "In-app customer support",
+      linktext: "TwoWaySMS",
+      title: "Conversations & feedback",
       detail:
-        "Let customers speak to support from inside your app or portal, with context and call history attached.",
+        "Let customers reply with keywords to opt in, book, claim offers or share feedback, and track every response.",
       renderVisual: () => (
         <div
           style={{
@@ -428,59 +370,100 @@ const WebRTCUseCase = () => {
             position: "relative",
             overflow: "hidden",
             boxSizing: "border-box",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          {/* ============ PHASE 1: SCREENSHOT EQUALIZER WAVEFORM (0s - 4.5s) ============ */}
-          <div className="webrtc-step-container webrtc-step-a">
-            {/* Multi-bar prominent soundwave from screenshot */}
+          {/* ============ PHASE 1: CHAT CONVERSATION (0s - 4.5s) ============ */}
+          <div className="sms-step-container sms-step-a" style={{ padding: "16px 20px" }}>
+            {/* Incoming Promotional SMS Bubble (Exact match to image) */}
             <div
+              className="sms-bubble-incoming"
               style={{
-                display: "flex",
-                gap: "8px",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "80px",
+                alignSelf: "flex-start",
+                width: "82%",
+                background: "#ffffff",
+                borderRadius: "12px 12px 12px 4px",
+                padding: "10px 14px",
+                boxShadow: "0 3px 10px rgba(0, 0, 0, 0.04)",
+                color: "#0F172A",
+                fontSize: "11.5px",
+                fontWeight: 700,
+                lineHeight: "1.35",
+                fontFamily: "Inter, sans-serif",
+                position: "relative",
               }}
             >
-              <span className="webrtc-prominent-bar webrtc-pwave-1" />
-              <span className="webrtc-prominent-bar webrtc-pwave-2" />
-              <span className="webrtc-prominent-bar webrtc-pwave-3" />
-              <span className="webrtc-prominent-bar webrtc-pwave-4" />
-              <span className="webrtc-prominent-bar webrtc-pwave-5" />
-              <span className="webrtc-prominent-bar webrtc-pwave-6" />
-              <span className="webrtc-prominent-bar webrtc-pwave-7" />
+              Flat 20% off today! Reply YES to claim
             </div>
 
+            {/* Outgoing Reply Bubble (Exact match to image) */}
             <div
+              className="sms-bubble-reply"
               style={{
-                background: "#ffffff",
-                borderRadius: "20px",
+                alignSelf: "flex-end",
+                background: "#5E6FF9",
+                color: "#ffffff",
+                borderRadius: "12px 12px 4px 12px",
                 padding: "6px 16px",
                 fontSize: "12px",
                 fontWeight: 600,
-                color: "#4F46E5",
+                boxShadow: "0 4px 12px rgba(94, 111, 249, 0.35)",
                 fontFamily: "Inter, sans-serif",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+                marginTop: "10px",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "4px",
               }}
             >
-              Real-time In-App Audio
+              <span>Yes</span>
+              <span style={{ fontSize: "10px", opacity: 0.9 }}>✓✓</span>
             </div>
           </div>
 
-          {/* ============ PHASE 2: CONTEXT & HISTORY ATTACHED (4.5s - 9s) ============ */}
-          <div className="webrtc-step-container webrtc-step-b">
-            {/* Context chip */}
+          {/* ============ PHASE 2: INSTANT COUPON REWARD (4.5s - 9s) ============ */}
+          <div className="sms-step-container sms-step-b" style={{ padding: "16px 20px" }}>
+            {/* Verified Automated Response */}
             <div
               style={{
+                alignSelf: "flex-start",
+                width: "90%",
+                background: "#ffffff",
+                borderRadius: "12px 12px 12px 4px",
+                padding: "10px 14px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
+                color: "#0F172A",
+                fontSize: "11px",
+                lineHeight: "1.35",
+              }}
+            >
+              <div
+                style={{
+                  color: "#10B981",
+                  fontWeight: 700,
+                  fontSize: "10px",
+                  marginBottom: "3px",
+                }}
+              >
+                ⚡ Instant Auto-Reply
+              </div>
+              🎉 Your coupon code <strong>FLAT20</strong> is active! Applied to your cart.
+            </div>
+
+            {/* Status chip */}
+            <div
+              style={{
+                marginTop: "10px",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
                 background: "#E0E7FF",
                 color: "#4338CA",
                 padding: "4px 12px",
                 borderRadius: "20px",
-                fontSize: "11px",
+                fontSize: "10.5px",
                 fontWeight: 700,
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
               }}
             >
               <span
@@ -491,70 +474,8 @@ const WebRTCUseCase = () => {
                   background: "#10B981",
                 }}
               />
-              In-App Context Attached
+              2-Way Interactive Keyword Engine
             </div>
-
-            {/* Support session card */}
-            <div
-              style={{
-                background: "#ffffff",
-                borderRadius: "12px",
-                padding: "10px 16px",
-                boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                width: "100%",
-                maxWidth: "235px",
-                boxSizing: "border-box",
-              }}
-            >
-              <span
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "50%",
-                  background: "#4F46E5",
-                  color: "#ffffff",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "12px",
-                  fontWeight: 800,
-                }}
-              >
-                🎧
-              </span>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div
-                  style={{
-                    fontSize: "12.5px",
-                    fontWeight: 700,
-                    color: "#1E293B",
-                  }}
-                >
-                  Support Ticket #4912
-                </div>
-                <div
-                  style={{
-                    fontSize: "11px",
-                    color: "#64748B",
-                  }}
-                >
-                  Call History & Plan Attached
-                </div>
-              </div>
-            </div>
-
-            <span
-              style={{
-                fontSize: "11px",
-                color: "#10B981",
-                fontWeight: 600,
-              }}
-            >
-              HD Opus Codec • Ultra Low Latency
-            </span>
           </div>
         </div>
       ),
@@ -563,23 +484,21 @@ const WebRTCUseCase = () => {
 
   return (
     <div className={styles["click-use-cases"]}>
-      {/* Inline animation keyframes and styles so no css file changes are needed */}
+      {/* Inline animation keyframes for 100% self-contained video demo */}
       <style>{`
-        /* Transitions between Step A and Step B like a playing video */
-        .webrtc-step-container {
+        /* Step Container Transitions (0s-4.5s and 4.5s-9s) */
+        .sms-step-container {
           position: absolute;
           inset: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 12px;
-          padding: 16px 20px;
           box-sizing: border-box;
           transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-        @keyframes webrtcVideoCycleA {
+        @keyframes smsVideoCycleA {
           0%, 46% {
             opacity: 1;
             transform: scale(1) translateY(0);
@@ -597,7 +516,7 @@ const WebRTCUseCase = () => {
           }
         }
 
-        @keyframes webrtcVideoCycleB {
+        @keyframes smsVideoCycleB {
           0%, 46% {
             opacity: 0;
             transform: scale(0.96) translateY(8px);
@@ -615,191 +534,143 @@ const WebRTCUseCase = () => {
           }
         }
 
-        .webrtc-step-a {
-          animation: webrtcVideoCycleA 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        .sms-step-a {
+          animation: smsVideoCycleA 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         }
 
-        .webrtc-step-b {
-          animation: webrtcVideoCycleB 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        .sms-step-b {
+          animation: smsVideoCycleB 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         }
 
-        @keyframes webrtcPulseActive {
-          0%, 100% {
-            transform: scale(1);
-            box-shadow: 0 3px 12px rgba(94, 111, 249, 0.35);
+        /* OTP Staggered Digits Pop-in Animation */
+        @keyframes digitPop {
+          0%, 15% {
+            opacity: 0;
+            transform: scale(0.4) translateY(6px);
           }
-          50% {
-            transform: scale(1.02);
-            box-shadow: 0 6px 18px rgba(94, 111, 249, 0.55);
+          25%, 100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
           }
         }
 
-        .webrtc-row-active {
-          animation: webrtcPulseActive 2.8s ease-in-out infinite;
+        .sms-digit-1 { animation: digitPop 9s infinite 0.1s; }
+        .sms-digit-2 { animation: digitPop 9s infinite 0.35s; }
+        .sms-digit-3 { animation: digitPop 9s infinite 0.6s; }
+        .sms-digit-4 { animation: digitPop 9s infinite 0.85s; }
+        .sms-digit-5 { animation: digitPop 9s infinite 1.1s; }
+        .sms-digit-6 { animation: digitPop 9s infinite 1.35s; }
+
+        @keyframes boxGlow {
+          0%, 35% {
+            border-color: #5E6FF9;
+            box-shadow: 0 2px 6px rgba(94, 111, 249, 0.12);
+          }
+          40%, 46% {
+            border-color: #10B981;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+          }
+          50%, 100% {
+            border-color: #5E6FF9;
+          }
         }
 
-        @keyframes webrtcRingPulse {
+        .sms-otp-box {
+          animation: boxGlow 9s infinite;
+        }
+
+        /* Bulk SMS Radar Rings Pulse */
+        @keyframes radarExpand {
           0% {
-            transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.6);
             opacity: 0.85;
           }
           60% {
             opacity: 0.35;
           }
           100% {
-            transform: translate(-50%, -50%) scale(1.65);
+            transform: translate(-50%, -50%) scale(1.6);
             opacity: 0;
           }
         }
 
-        .webrtc-ring {
+        .sms-radar-ring {
           position: absolute;
           top: 50%;
           left: 50%;
           border-radius: 50%;
-          border: 1.5px solid rgba(79, 70, 229, 0.35);
+          border: 1.5px solid rgba(94, 111, 249, 0.35);
           pointer-events: none;
           transform: translate(-50%, -50%);
         }
 
-        .webrtc-ring-1 {
-          width: 70px;
-          height: 70px;
-          animation: webrtcRingPulse 2.4s ease-out infinite;
+        .sms-ring-1 {
+          width: 65px;
+          height: 65px;
+          animation: radarExpand 2.2s ease-out infinite;
         }
 
-        .webrtc-ring-2 {
-          width: 105px;
-          height: 105px;
-          animation: webrtcRingPulse 2.4s ease-out infinite 0.8s;
+        .sms-ring-2 {
+          width: 95px;
+          height: 95px;
+          animation: radarExpand 2.2s ease-out infinite 0.7s;
         }
 
-        .webrtc-ring-3 {
-          width: 140px;
-          height: 140px;
-          animation: webrtcRingPulse 2.4s ease-out infinite 1.6s;
+        .sms-ring-3 {
+          width: 125px;
+          height: 125px;
+          animation: radarExpand 2.2s ease-out infinite 1.4s;
         }
 
-        @keyframes webrtcPhoneShake {
-          0%, 100% { transform: rotate(0deg); }
-          10% { transform: rotate(-12deg); }
-          20% { transform: rotate(12deg); }
-          30% { transform: rotate(-8deg); }
-          40% { transform: rotate(8deg); }
-          50%, 90% { transform: rotate(0deg); }
-        }
-
-        .webrtc-phone-btn {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: #4F46E5;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 8px 22px rgba(79, 70, 229, 0.4);
-          position: relative;
-          z-index: 2;
-          animation: webrtcPhoneShake 3s ease-in-out infinite;
-        }
-
-        @keyframes webrtcProminentWave {
+        @keyframes centerBtnPulse {
           0%, 100% {
-            transform: scaleY(0.4);
+            transform: scale(1);
+            box-shadow: 0 8px 24px rgba(94, 111, 249, 0.4);
           }
           50% {
-            transform: scaleY(1.2);
+            transform: scale(1.06);
+            box-shadow: 0 12px 28px rgba(94, 111, 249, 0.6);
           }
         }
 
-        .webrtc-prominent-bar {
-          width: 7px;
-          background: #5E6FF9;
-          border-radius: 99px;
-          display: inline-block;
-          transform-origin: center;
+        .sms-center-btn {
+          animation: centerBtnPulse 2.2s ease-in-out infinite;
         }
 
-        .webrtc-pwave-1 {
-          height: 28px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.1s;
-        }
-
-        .webrtc-pwave-2 {
-          height: 48px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.35s;
-        }
-
-        .webrtc-pwave-3 {
-          height: 60px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0s;
-        }
-
-        .webrtc-pwave-4 {
-          height: 38px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.5s;
-        }
-
-        .webrtc-pwave-5 {
-          height: 62px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.15s;
-        }
-
-        .webrtc-pwave-6 {
-          height: 44px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.4s;
-        }
-
-        .webrtc-pwave-7 {
-          height: 26px;
-          animation: webrtcProminentWave 1.3s ease-in-out infinite 0.25s;
-        }
-
-        @keyframes webrtcWaveMotion {
-          0%, 100% {
-            transform: scaleY(0.35);
+        /* Two Way SMS Chat Bubbles Entry */
+        @keyframes bubbleDrop {
+          0% {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.96);
           }
-          50% {
-            transform: scaleY(1.15);
+          15%, 100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
           }
         }
 
-        .webrtc-wave-bar {
-          width: 5px;
-          background: #10B981;
-          border-radius: 99px;
-          display: inline-block;
-          transform-origin: center;
+        .sms-bubble-incoming {
+          animation: bubbleDrop 9s ease-out infinite;
         }
 
-        .webrtc-wave-1 {
-          height: 14px;
-          animation: webrtcWaveMotion 1.2s ease-in-out infinite 0.1s;
+        @keyframes replySlide {
+          0%, 20% {
+            opacity: 0;
+            transform: translateY(10px) scale(0.9);
+          }
+          30%, 100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
         }
 
-        .webrtc-wave-2 {
-          height: 22px;
-          animation: webrtcWaveMotion 1.2s ease-in-out infinite 0.35s;
-        }
-
-        .webrtc-wave-3 {
-          height: 30px;
-          animation: webrtcWaveMotion 1.2s ease-in-out infinite 0s;
-        }
-
-        .webrtc-wave-4 {
-          height: 22px;
-          animation: webrtcWaveMotion 1.2s ease-in-out infinite 0.45s;
-        }
-
-        .webrtc-wave-5 {
-          height: 14px;
-          animation: webrtcWaveMotion 1.2s ease-in-out infinite 0.2s;
+        .sms-bubble-reply {
+          animation: replySlide 9s cubic-bezier(0.34, 1.3, 0.64, 1) infinite;
         }
       `}</style>
 
       <h2>Use Cases</h2>
-      <h6>Wherever two parties need to talk but should not share personal numbers, masking keeps the conversation safe.</h6>
+      <h6>From logins to launch offers, SMS reaches customers on the device they always have with them.</h6>
       <div className={styles["use-cases-all-cards"]}>
         {useCaseCard.map((item, index) => (
           <Link href={item.link} key={index}>
@@ -823,4 +694,4 @@ const WebRTCUseCase = () => {
   );
 };
 
-export default WebRTCUseCase;
+export default SmsOtpUseCase;

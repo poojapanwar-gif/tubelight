@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "../../styles/ClickCallBanner.module.scss";
-const WebRTCBanner = () => {
+const SmsOtpBanner = () => {
   return (
     <div className={styles["click-call-banner"]}>
       <div className={styles["click-call-banner-content"]}>
         <div className={styles["click-call-left-content"]}>
           <h2>
-            WebRTC <span>Calling</span>
+            SMS & <span>OTP</span>
           </h2>
           <p>
-            WebRTC lets customers and agents make crystal-clear voice calls
-            straight from any browser or app — no plugins, no downloads and no
-            extra hardware needed.
+            Reach every customer instantly with bulk SMS, secure one-time
+            passwords and two-way messaging — delivered over a reliable,
+            scalable A2P SMS platform built for businesses.
           </p>
           <div className={styles["both-button"]}>
             <button className={styles["blue-button"]}>
@@ -64,4 +64,4 @@ const WebRTCBanner = () => {
   );
 };
 
-export default WebRTCBanner;
+export default SmsOtpBanner;

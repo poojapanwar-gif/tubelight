@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Footer.module.scss";
 
 const Footer = () => {
@@ -6,8 +7,8 @@ const Footer = () => {
     {
       title: "Channels",
       links: [
-        { label: "WhatsApp API", href: "#channels" },
-        { label: "Bulk SMS", href: "#channels" },
+        { label: "WhatsApp API", href: "/whatsapp" },
+        { label: "Bulk SMS", href: "/sms-and-otp" },
         { label: "RCS Messaging", href: "#channels" },
         { label: "Voice & IVR", href: "#channels" },
         { label: "AI Conversations", href: "#channels" },
@@ -56,11 +57,17 @@ const Footer = () => {
           {footerColumns.map((col, idx) => (
             <div key={idx} className={styles["foot-col"]}>
               <h4>{col.title}</h4>
-              {col.links.map((link, lIdx) => (
-                <a key={lIdx} href={link.href}>
-                  {link.label}
-                </a>
-              ))}
+              {col.links.map((link, lIdx) =>
+                link.href.startsWith("/") ? (
+                  <Link key={lIdx} href={link.href}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a key={lIdx} href={link.href}>
+                    {link.label}
+                  </a>
+                )
+              )}
             </div>
           ))}
         </div>

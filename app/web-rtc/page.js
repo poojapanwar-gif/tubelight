@@ -1,3 +1,4 @@
+import ContactCenter from '@/components/Common/ContactCenter'
 import WebRTCBanner from '@/components/WebRTC/WebRTCBanner'
 import WebRTCCall from '@/components/WebRTC/WebRTCCall'
 import WebRTCCustomer from '@/components/WebRTC/WebRTCCustomer'
@@ -13,6 +14,7 @@ const page = () => {
      <WebRTCCustomer/>
      <WebRTCUseCase/>
      <WebRTCDeveloper/> 
+     <ContactCenter/>
     </>
   )
 }

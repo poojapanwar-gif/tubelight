@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/WebsiteCRM.module.scss";
-const WebRTCCall = () => {
+const SmsOtpCall = () => {
   const cardData = [
     {
       icon: (
@@ -18,9 +18,9 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "Browser-based Calling",
+      title: "Bulk SMS",
       detail:
-        "Make and receive calls directly in Chrome, Edge, Safari or Firefox — nothing to install.",
+        "Send promotional and transactional messages to thousands of customers in a single campaign.",
     },
     {
       icon: (
@@ -38,9 +38,9 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "HD Voice Quality",
+      title: "OTP & Verification",
       detail:
-        "Adaptive audio keeps conversations clear and natural, even on changing networks.",
+        "Deliver secure one-time passwords for logins, sign-ups and payments, within seconds.",
     },
     {
       icon: (
@@ -58,9 +58,9 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "Secure & Encrypted",
+      title: "Two-way SMSM",
       detail:
-        "Calls and media are encrypted end to end between the browser and the network.",
+        "Let customers reply, opt in or respond to surveys and keywords, and handle every conversation.",
     },
     {
       icon: (
@@ -78,9 +78,9 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "Reach Any Phone",
+      title: "Delivery Reports",
       detail:
-        "Connect browser users to mobile and landline numbers through our carrier network.",
+        "Track delivery status and campaign performance with real-time reports and analytics.",
     },
     {
       icon: (
@@ -98,9 +98,9 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "Simple SDK & API",
+      title: "Sender IDs & Short Codes",
       detail:
-        "Embed a calling widget or build your own with a lightweight JavaScript SDK.",
+        "Use approved sender IDs, templates and short codes so every message looks trusted.",
     },
     {
       icon: (
@@ -118,17 +118,16 @@ const WebRTCCall = () => {
           />
         </svg>
       ),
-      title: "Recording & Analytics",
+      title: "Simple SMS API",
       detail:
-        "Record calls and track durations, outcomes and agent activity from one dashboard.",
+        "Integrate in minutes with a developer-friendly API, or send from the web portal.",
     },
   ];
   return (
     <div className={styles["website-crm-section"]}>
-      <h2>Everything You Need for Browser Calling</h2>
+      <h2>Reach Every Customer Where They Read First</h2>
       <p>
-        Add real-time voice to your website, app or CRM with a few lines of
-        code.
+        Send campaigns, alerts and one-time passwords on a fast, reliable A2P SMS platform.
       </p>
       <div className={styles["website-crm-all-cards"]}>
         {cardData.map((item, index) => (
@@ -143,4 +142,4 @@ const WebRTCCall = () => {
   );
 };
 
-export default WebRTCCall;
+export default SmsOtpCall;

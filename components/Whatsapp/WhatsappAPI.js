@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/WhatsappApi.module.scss";
-import whatsappapi from "../../public/images/whatsappapi.png";
+import logo from "../../public/images/logo.png";
 
 const WhatsappAPI = () => {
   const [isInView, setIsInView] = useState(false);
@@ -184,16 +184,147 @@ const WhatsappAPI = () => {
     <div className={styles["whatsapp-api-section"]} ref={sectionRef}>
       <h2>Whatsapp API Business Solution Profile</h2>
       <div className={styles["whatsapp-api-circle-content"]}>
-        {/* Center Smartphone */}
+        {/* Center Live Smartphone Video Screen */}
         <div className={styles["phone-wrapper"]}>
-          <Image
-            src={whatsappapi}
-            alt="Whatsapp API Business Solution Profile"
-            className={styles["phone-image"]}
-            priority
-            width={250}
-            height={525}
-          />
+          {/* Dynamic Island Notch */}
+          <div className={styles["dynamic-island"]} />
+
+          {/* iOS Status Bar */}
+          <div className={styles["status-bar"]}>
+            <span className={styles["status-time"]}>9:41</span>
+            <div className={styles["status-icons"]}>
+              <span className={styles["status-signal"]}>📶</span>
+              <span className={styles["status-wifi"]}>􀙇</span>
+              <span className={styles["status-battery"]}>🔋</span>
+            </div>
+          </div>
+
+          {/* WhatsApp Dark App Header */}
+          <div className={styles["wa-header"]}>
+            <span className={styles["wa-back-btn"]}>←</span>
+            <div className={styles["wa-avatar"]}>
+              <Image src={logo} alt="Tubelight" width={26} height={10} priority />
+            </div>
+            <div className={styles["wa-info"]}>
+              <div className={styles["wa-name"]}>Tubelight Communications</div>
+              <div className={styles["wa-status"]}>Business account</div>
+            </div>
+            <div className={styles["wa-actions"]}>
+              <span>🏬</span>
+              <span>📞</span>
+              <span>⋮</span>
+            </div>
+          </div>
+
+          {/* WhatsApp Screen Body: Looping Video Timeline */}
+          <div className={styles["wa-screen"]}>
+            <div className={styles["video-stage"]}>
+              {/* Slide 1: Business Profile View */}
+              <div className={styles["profile-view"]}>
+                <div className={styles["profile-card"]}>
+                  <div className={styles["profile-logo-wrap"]}>
+                    <Image
+                      src={logo}
+                      alt="Tubelight Logo"
+                      className={styles["profile-logo-img"]}
+                      priority
+                    />
+                    <div className={styles["profile-tagline"]}>
+                      communication is evolution...
+                    </div>
+                  </div>
+                  <div className={styles["profile-title"]}>
+                    Tubelight Communications
+                  </div>
+                  <div className={styles["profile-badge"]}>
+                    Business account
+                  </div>
+
+                  <div className={styles["profile-details"]}>
+                    <div className={styles["profile-row"]}>
+                      <span className={styles["green-icon"]}>📞</span>
+                      <span>+91 98765 43210</span>
+                    </div>
+                    <div className={styles["profile-row"]}>
+                      <span>📍</span>
+                      <span>Mumbai, Maharashtra, India</span>
+                    </div>
+                    <div className={`${styles["profile-row"]} ${styles["link-row"]}`}>
+                      <span>🔗</span>
+                      <span>www.tubelightcommunications.com</span>
+                    </div>
+                  </div>
+
+                  <div className={styles["action-buttons"]}>
+                    <div className={`${styles["action-btn"]} ${styles["active-btn"]}`}>
+                      <span className={styles["btn-icon"]}>💬</span>
+                      <span>Message</span>
+                    </div>
+                    <div className={styles["action-btn"]}>
+                      <span className={styles["btn-icon"]}>📞</span>
+                      <span>Call</span>
+                    </div>
+                    <div className={styles["action-btn"]}>
+                      <span className={styles["btn-icon"]}>↗</span>
+                      <span>Share</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slide 2: Active Chat & API Features in Action */}
+              <div className={styles["chat-view"]}>
+                <div className={styles["enc-pill"]}>
+                  🔒 Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.
+                </div>
+
+                <div className={`${styles["msg-bubble"]} ${styles["msg-incoming"]}`}>
+                  <div className={styles["msg-text"]}>
+                    Hello! Welcome to <strong>Tubelight Communications</strong> 🚀
+                  </div>
+                  <div className={styles["chat-cta-btn"]}>
+                    ⚡ Explore WhatsApp API
+                  </div>
+                  <div className={styles["msg-time"]}>9:41 AM</div>
+                </div>
+
+                <div className={`${styles["msg-bubble"]} ${styles["msg-outgoing"]}`}>
+                  <div className={styles["msg-text"]}>
+                    I want to integrate Official WhatsApp API for my brand.
+                  </div>
+                  <div className={styles["msg-time"]}>
+                    9:42 AM <span className={styles["blue-ticks"]}>✓✓</span>
+                  </div>
+                </div>
+
+                <div className={`${styles["msg-bubble"]} ${styles["msg-incoming"]} ${styles["highlight-msg"]}`}>
+                  <div className={styles["verified-label"]}>
+                    ✅ Official Verified Business API
+                  </div>
+                  <div className={styles["msg-text"]}>
+                    99.9% Delivery Uptime, Automated Bots & Broadcast Templates Activated!
+                  </div>
+                  <div className={`${styles["chat-cta-btn"]} ${styles["cta-green"]}`}>
+                    📲 Get Started Now
+                  </div>
+                  <div className={styles["msg-time"]}>9:42 AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom WhatsApp Input Bar */}
+          <div className={styles["wa-bottom-bar"]}>
+            <span className={styles["emoji-icon"]}>😊</span>
+            <div className={styles["input-pill"]}>
+              <span className={styles["placeholder-text"]}>Message</span>
+              <span className={styles["typing-cursor"]} />
+            </div>
+            <span className={styles["clip-icon"]}>📎</span>
+            <span className={styles["rupee-icon"]}>₹</span>
+            <span className={styles["camera-icon"]}>📷</span>
+            <div className={styles["mic-btn"]}>🎙</div>
+          </div>
         </div>
 
         {/* Orbit Cards animating one by one from behind phone */}

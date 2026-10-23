@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Menu.module.scss";
 import ProductMenu from "./ProductMenu";
@@ -30,7 +31,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "WhatsApp",
       sub: "Business API & campaigns",
-      href: "https://tubelightcommunications.com/whatsapp",
+      href: "/whatsapp",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.4 14c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.4-1-2.9-1.2-4.7-4.2-4.9-4.4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.3.4-.2.6-.1l1.7.8c.3.1.5.2.5.4.1.1.1.6-.1 1.2Z" />
@@ -40,7 +41,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "SMS & OTP",
       sub: "Bulk & transactional",
-      href: "https://tubelightcommunications.com/sms",
+      href: "/sms-and-otp",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M21 11.5a8.4 8.4 0 0 1-12 7.6L3 21l1.9-5.8A8.5 8.5 0 1 1 21 11.5Z" />
@@ -280,7 +281,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "SMS Verification",
       sub: "OTP at scale",
-      href: "https://tubelightcommunications.com/sms-verification",
+      href: "/sms-and-otp",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="4" y="11" width="16" height="9" rx="2" />
@@ -505,23 +506,40 @@ const Menu = ({ isOpen }) => {
           <div className={`${styles["mega-cols"]} ${styles["mega-2"]}`}>
             <div className={styles["mega-col"]}>
               <div className={styles["mega-col-h"]}>Identity</div>
-              {verificationIdentity.map((item, idx) => (
-                <a
-                  key={idx}
-                  className={styles["mega-link"]}
-                  style={{ "--mc": "#5e6ff9" }}
-                  href={item.href}
-                  onClick={closeAll}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles["mega-ic"]}>{item.icon}</span>
-                  <span className={styles["mega-tx"]}>
-                    <b>{item.title}</b>
-                    <small>{item.sub}</small>
-                  </span>
-                </a>
-              ))}
+              {verificationIdentity.map((item, idx) => {
+                const isInternal = item.href.startsWith("/");
+                return isInternal ? (
+                  <Link
+                    key={idx}
+                    className={styles["mega-link"]}
+                    style={{ "--mc": "#5e6ff9" }}
+                    href={item.href}
+                    onClick={closeAll}
+                  >
+                    <span className={styles["mega-ic"]}>{item.icon}</span>
+                    <span className={styles["mega-tx"]}>
+                      <b>{item.title}</b>
+                      <small>{item.sub}</small>
+                    </span>
+                  </Link>
+                ) : (
+                  <a
+                    key={idx}
+                    className={styles["mega-link"]}
+                    style={{ "--mc": "#5e6ff9" }}
+                    href={item.href}
+                    onClick={closeAll}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className={styles["mega-ic"]}>{item.icon}</span>
+                    <span className={styles["mega-tx"]}>
+                      <b>{item.title}</b>
+                      <small>{item.sub}</small>
+                    </span>
+                  </a>
+                );
+              })}
             </div>
 
             <div className={styles["mega-col"]}>

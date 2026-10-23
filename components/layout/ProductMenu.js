@@ -36,11 +36,11 @@ export const productCategories = [
       {
         title: "Messaging",
         links: [
-          { label: "SMS", href: "https://tubelightcommunications.com/sms" },
+          { label: "SMS", href: "/sms-and-otp" },
           { label: "RCS", href: "https://tubelightcommunications.com/rcs" },
           {
             label: "WhatsApp",
-            href: "https://tubelightcommunications.com/whatsapp",
+            href: "/whatsapp",
           },
           { label: "Email", href: "https://tubelightcommunications.com/email" },
           {
@@ -210,7 +210,7 @@ export const productCategories = [
         links: [
           {
             label: "SMS OTP",
-            href: "https://tubelightcommunications.com/sms-verification",
+            href: "/sms-and-otp",
           },
           {
             label: "Flash Call Verification",

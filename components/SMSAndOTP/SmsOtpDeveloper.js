@@ -6,7 +6,7 @@ const text = `Tubelight programmable API infrastructure enables developers to
 easily integrate communication API’s and create solutions of their
 choice.`;
 
-const WebRTCDeveloper = () => {
+const SmsOtpDeveloper = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const allTabs = [
@@ -246,4 +246,4 @@ const WebRTCDeveloper = () => {
   );
 };
 
-export default WebRTCDeveloper;
+export default SmsOtpDeveloper;

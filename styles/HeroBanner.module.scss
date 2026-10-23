@@ -214,8 +214,29 @@
     .stage {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 0.92;
-      min-height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .banner-video-wrap {
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+
+        video,
+        .banner-video {
+          width: 100%;
+          height: auto;
+          max-height: 540px;
+          object-fit: contain;
+          border-radius: 20px;
+          display: block;
+        }
+      }
 
       svg.beams {
         position: absolute;
@@ -521,7 +542,8 @@
       }
 
       .stage {
-        min-height: 300px;
+        min-height: auto;
+        max-width: 100%;
 
         .core {
           width: 112px;

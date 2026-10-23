@@ -51,7 +51,7 @@ const VoiceBanner = () => {
         <div className={styles["click-call-right-content"]}>
           <div className={styles["click-call-banner-video"]}>
             <video
-              src="/images/clicktocallvideo.mp4"
+              src="/images/voicebroadcast.mp4"
               autoPlay
               loop
               muted
