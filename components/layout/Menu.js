@@ -51,7 +51,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "RCS",
       sub: "Rich business messaging",
-      href: "https://tubelightcommunications.com/rcs",
+      href: "/rcs",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="4" width="18" height="13" rx="2" />
@@ -62,7 +62,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Email",
       sub: "Transactional & campaigns",
-      href: "https://tubelightcommunications.com/email",
+      href: "/email-delivery",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -73,7 +73,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Google Business",
       sub: "GBM messaging",
-      href: "https://tubelightcommunications.com/gbm",
+      href: "/gbm",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="9" />
@@ -84,7 +84,7 @@ const Menu = ({ isOpen }) => {
     {
       title: "Short Code",
       sub: "Branded keywords",
-      href: "https://tubelightcommunications.com/shortcode",
+      href: "/short-code-sms",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 7h16M4 12h16M4 17h10" />

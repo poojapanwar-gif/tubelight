@@ -37,15 +37,15 @@ export const productCategories = [
         title: "Messaging",
         links: [
           { label: "SMS", href: "/sms-and-otp" },
-          { label: "RCS", href: "https://tubelightcommunications.com/rcs" },
+          { label: "RCS", href: "/rcs" },
           {
             label: "WhatsApp",
             href: "/whatsapp",
           },
-          { label: "Email", href: "https://tubelightcommunications.com/email" },
+          { label: "Email", href: "/email-delivery" },
           {
             label: "Shortcode",
-            href: "https://tubelightcommunications.com/shortcode",
+            href: "/short-code-sms",
           },
           { label: "Instagram", href: "#channels" },
           { label: "FB Messenger", href: "#channels" },

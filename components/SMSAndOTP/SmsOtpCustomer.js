@@ -50,7 +50,7 @@ const SmsOtpCustomer = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_585_649)">
+          <g clipPath="url(#clip0_585_649)">
             <path
               d="M14.5523 27.7711L5.67529 16.306L23.7229 11.5016L14.5523 27.7711ZM14.3609 25.0738L20.6696 13.8656L8.23881 17.1668L10.4992 20.0862L15.5878 17.8003L12.1005 22.1543L14.3609 25.0738Z"
               fill="white"

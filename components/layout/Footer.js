@@ -9,7 +9,7 @@ const Footer = () => {
       links: [
         { label: "WhatsApp API", href: "/whatsapp" },
         { label: "Bulk SMS", href: "/sms-and-otp" },
-        { label: "RCS Messaging", href: "#channels" },
+        { label: "RCS Messaging", href: "/rcs" },
         { label: "Voice & IVR", href: "#channels" },
         { label: "AI Conversations", href: "#channels" },
       ],
