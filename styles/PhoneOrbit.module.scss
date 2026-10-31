@@ -1,0 +1,585 @@
+.phone-orbit-section {
+  width: 100%;
+  padding: 50px 80px;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: visible;
+
+  .phone-orbit-left-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+
+    .phone-orbit-left {
+      flex: 0 0 380px;
+      max-width: 440px;
+      z-index: 5;
+
+      h2 {
+        font-family: Space Grotesk, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 44px;
+        line-height: 55px;
+        letter-spacing: -0.88px;
+        vertical-align: middle;
+        color: #0f1828;
+        margin: 0;
+      }
+
+      p {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 23.2px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #424242;
+        margin-top: 20px;
+      }
+    }
+
+    .phone-orbit-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 650px;
+      position: relative;
+      padding: 30px 0;
+
+      .orbit-container {
+        width: 600px;
+        height: 600px;
+        max-width: none !important;
+        position: relative;
+        margin: 0 auto;
+        transform-origin: center center;
+
+        &,
+        * {
+          max-width: none !important;
+        }
+
+        // The smoothly rotating circle wheel
+        .orbit-wheel {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 600px;
+          height: 600px;
+          border-radius: 50%;
+          animation: spinOrbit 45s linear infinite;
+          z-index: 1;
+          transform-origin: center center;
+
+          &.paused {
+            animation-play-state: paused;
+          }
+
+          .orbit-circle-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            pointer-events: none;
+          }
+
+          .orbit-dot {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: linear-gradient(
+              161.9deg,
+              #40c2f7 4.26%,
+              #7e82ff 87.68%
+            );
+            box-shadow: 0px 0px 8px 1px #4d8dff;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+          }
+        }
+
+        // Static cards layer: fixed positions, strictly horizontal
+        .cards-layer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 600px;
+          height: 600px;
+          z-index: 5;
+          pointer-events: none;
+
+          .orbit-card-anchor {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            pointer-events: auto;
+
+            .orbit-card {
+              cursor: pointer;
+              box-sizing: border-box;
+              user-select: none;
+              transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.25s ease;
+
+              // Inactive state: strictly hugs content without phantom whitespace
+              &.inactive {
+                background: #f3f3f3;
+                border: 1.17px solid #5e6ff9;
+                border-radius: 10px;
+                padding: 10px 18px;
+                width: max-content;
+                display: inline-block;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                white-space: nowrap;
+
+                .card-title {
+                  font-family: Space Grotesk, sans-serif;
+                  font-weight: 600;
+                  font-style: normal;
+                  font-size: 16px;
+                  line-height: 100%;
+                  letter-spacing: 0px;
+                  vertical-align: middle;
+                  color: #5e6ff9;
+                  margin: 0;
+                  white-space: nowrap;
+                }
+
+                &:hover {
+                  background: #eef2ff;
+                  border-color: #4354f9;
+                  transform: scale(1.05);
+                }
+              }
+
+              // Active state: fixed 320px width blue card with details
+              &.active {
+                background: linear-gradient(0deg, #5e6ff9, #5e6ff9);
+                border: 1.17px solid #5e6ff9;
+                border-radius: 12px;
+                padding: 18px 22px;
+                width: 320px;
+                box-shadow: 0 10px 28px rgba(94, 111, 249, 0.35);
+                z-index: 50;
+                display: flex;
+                flex-direction: column;
+
+                .card-title {
+                  font-family: Space Grotesk, sans-serif;
+                  font-weight: 600;
+                  font-style: normal;
+                  font-size: 18px;
+                  line-height: 120%;
+                  letter-spacing: 0px;
+                  vertical-align: middle;
+                  color: #ffffff;
+                  margin: 0;
+                }
+
+                .card-detail {
+                  font-family: Inter, sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                  font-size: 13.5px;
+                  line-height: 19px;
+                  letter-spacing: 0px;
+                  vertical-align: middle;
+                  color: #ffffff;
+                  margin: 8px 0 0 0;
+                  white-space: normal;
+                  animation: fadeInDetail 0.25s ease-out;
+                }
+              }
+            }
+          }
+        }
+
+        // Mobile center feature display: hidden on desktop
+        .mobile-center-display {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 1081px) {
+    padding: 40px 40px;
+
+    .phone-orbit-left-right {
+      gap: 30px;
+
+      .phone-orbit-left {
+        flex: 0 0 350px;
+
+        h2 {
+          font-size: 38px;
+          line-height: 48px;
+        }
+
+        p {
+          font-size: 16.5px;
+        }
+      }
+
+      .phone-orbit-right {
+        .orbit-container {
+          transform: scale(0.88);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 40px 40px;
+
+    .phone-orbit-left-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      .phone-orbit-left {
+        flex: 0 0 auto;
+        max-width: 680px;
+        text-align: center;
+
+        h2 {
+          font-size: 36px;
+          line-height: 44px;
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 16px;
+          margin-top: 14px;
+        }
+      }
+
+      .phone-orbit-right {
+        width: 100%;
+        min-height: 520px;
+        height: 520px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -300px;
+          margin-top: -300px;
+          transform: scale(0.72);
+          transform-origin: 300px 300px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px 24px 20px;
+    overflow: hidden;
+
+    .phone-orbit-left-right {
+      gap: 20px;
+
+      .phone-orbit-left {
+        h2 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 23px;
+          margin-top: 10px;
+        }
+      }
+
+      .phone-orbit-right {
+        min-height: 420px;
+        height: 420px;
+        width: 100%;
+        position: relative;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -300px;
+          margin-top: -300px;
+          transform: scale(0.56);
+          transform-origin: 300px 300px;
+
+          // Mobile Central Feature Display
+          .mobile-center-display {
+            display: flex;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            z-index: 10;
+            pointer-events: none;
+            align-items: center;
+            justify-content: center;
+
+            .mobile-center-badge {
+              background: #ffffff;
+              border: 2px solid #5e6ff9;
+              border-radius: 20px;
+              padding: 20px 24px;
+              box-shadow: 0 8px 30px rgba(94, 111, 249, 0.22);
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+
+              .mobile-center-tag {
+                display: inline-block;
+                font-family: Inter, sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                color: #5e6ff9;
+                background: #eef2ff;
+                padding: 4px 12px;
+                border-radius: 20px;
+                margin-bottom: 8px;
+              }
+
+              .mobile-center-title {
+                font-family: Space Grotesk, sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                color: #0f1828;
+                margin: 0 0 8px 0;
+                line-height: 1.25;
+              }
+
+              .mobile-center-desc {
+                font-family: Inter, sans-serif;
+                font-size: 17px;
+                line-height: 24px;
+                color: #4b5563;
+                margin: 0;
+              }
+            }
+          }
+
+          .cards-layer {
+            .orbit-card-anchor {
+              // Pull anchors inward so nothing touches or clips the screen edge
+              &.anchor-easy-integration {
+                transform: translate(-20%, -50%);
+              }
+              &.anchor-seamless-ux {
+                transform: translate(-30%, -30%);
+              }
+              &.anchor-automatic-otp {
+                transform: translate(-70%, -30%);
+              }
+              &.anchor-optimized-routes {
+                transform: translate(-80%, -50%);
+              }
+              &.anchor-top-notch-security {
+                transform: translate(-50%, -75%);
+              }
+
+              .orbit-card {
+                .card-detail {
+                  display: none !important;
+                }
+
+                &.active {
+                  width: auto;
+                  min-width: 140px;
+                  max-width: 210px;
+                  background: #5e6ff9;
+                  border: 2px solid #ffffff;
+                  border-radius: 12px;
+                  padding: 10px 18px;
+                  box-shadow: 0 4px 18px rgba(94, 111, 249, 0.5);
+
+                  .card-title {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    color: #ffffff;
+                    text-align: center;
+                    white-space: normal;
+                  }
+                }
+
+                &.inactive {
+                  width: auto;
+                  min-width: 125px;
+                  max-width: 195px;
+                  background: #f8faff;
+                  border: 1.5px solid #5e6ff9;
+                  border-radius: 12px;
+                  padding: 8px 14px;
+                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+                  .card-title {
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: #5e6ff9;
+                    text-align: center;
+                    white-space: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 20px 24px 20px;
+    overflow: hidden;
+
+    .phone-orbit-left-right {
+      gap: 16px;
+
+      .phone-orbit-left {
+        h2 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 13.5px;
+          line-height: 21px;
+          margin-top: 8px;
+        }
+      }
+
+      .phone-orbit-right {
+        min-height: 380px;
+        height: 380px;
+        width: 100%;
+        position: relative;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -300px;
+          margin-top: -300px;
+          transform: scale(0.48);
+          transform-origin: 300px 300px;
+
+          // Mobile Central Feature Display
+          .mobile-center-display {
+            width: 360px;
+
+            .mobile-center-badge {
+              padding: 16px 20px;
+
+              .mobile-center-tag {
+                font-size: 13px;
+                padding: 3px 10px;
+                margin-bottom: 6px;
+              }
+
+              .mobile-center-title {
+                font-size: 22px;
+                margin-bottom: 6px;
+              }
+
+              .mobile-center-desc {
+                font-size: 16px;
+                line-height: 22px;
+              }
+            }
+          }
+
+          .cards-layer {
+            .orbit-card-anchor {
+              .orbit-card {
+                &.active {
+                  min-width: 130px;
+                  max-width: 190px;
+                  padding: 8px 14px;
+
+                  .card-title {
+                    font-size: 17px;
+                  }
+                }
+
+                &.inactive {
+                  min-width: 115px;
+                  max-width: 180px;
+                  padding: 7px 12px;
+
+                  .card-title {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .phone-orbit-left-right {
+      .phone-orbit-right {
+        min-height: 330px;
+        height: 330px;
+
+        .orbit-container {
+          transform: scale(0.42);
+        }
+      }
+    }
+  }
+}
+
+// Circle spin animation
+@keyframes spinOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInDetail {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

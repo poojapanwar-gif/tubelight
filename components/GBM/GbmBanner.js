@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/ClickCallBanner.module.scss";
 const GbmBanner = () => {
   return (
@@ -14,7 +15,7 @@ const GbmBanner = () => {
             searches into conversations.
           </p>
           <div className={styles["both-button"]}>
-            <button className={styles["blue-button"]}>
+            <Link href="/contact-us" className={styles["blue-button"]}>
               Try for free{" "}
               <svg
                 width="16"
@@ -29,8 +30,8 @@ const GbmBanner = () => {
                   strokeWidth="1.46667"
                 />
               </svg>
-            </button>
-            <button>
+            </Link>
+            <Link href="/contact-us">
               Talk to Expert
               <svg
                 width="16"
@@ -45,13 +46,13 @@ const GbmBanner = () => {
                   strokeWidth="1.46667"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
         <div className={styles["click-call-right-content"]}>
           <div className={styles["click-call-banner-video"]}>
             <video
-              src="/images/clicktocallvideo.mp4"
+              src="/images/gbmbanner.mp4"
               autoPlay
               loop
               muted

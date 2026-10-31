@@ -10,28 +10,27 @@ const Footer = () => {
         { label: "WhatsApp API", href: "/whatsapp" },
         { label: "Bulk SMS", href: "/sms-and-otp" },
         { label: "RCS Messaging", href: "/rcs" },
-        { label: "Voice & IVR", href: "#channels" },
-        { label: "AI Conversations", href: "#channels" },
+        { label: "Voice & IVR", href: "/ivr-solution" },
+        { label: "AI Conversations", href: "/intelligent-conversations" },
       ],
     },
     {
       title: "Solutions",
       links: [
-        { label: "Banking & Finance", href: "#industries" },
-        { label: "E-commerce", href: "#industries" },
-        { label: "Healthcare", href: "#industries" },
-        { label: "Logistics", href: "#industries" },
-        { label: "Real Estate", href: "#industries" },
+        { label: "Banking & Finance", href: "/case-studies/banking-finance" },
+        { label: "Healthcare", href: "/case-studies/health-tech" },
+        { label: "Electric Utility", href: "/case-studies/electric-utility" },
+        { label: "Insurance", href: "/case-studies/insurance" },
+        { label: "Home & Appliances", href: "/case-studies/home-appliance" },
       ],
     },
     {
       title: "Company",
       links: [
-        { label: "Platform", href: "#product" },
-        { label: "Integrations", href: "#integrations" },
-        { label: "Results", href: "#results" },
-        { label: "Request Demo", href: "#demo" },
-        { label: "Contact", href: "#trial" },
+        { label: "About Us", href: "/about-us" },
+        { label: "Contact Us", href: "/contact-us" },
+        { label: "Blog", href: "/blogs" },
+        { label: "Case Studies", href: "/case-studies" },
       ],
     },
   ];
@@ -41,13 +40,13 @@ const Footer = () => {
       <div className={styles.wrap}>
         <div className={styles["foot-grid"]}>
           <div className={styles["foot-brand"]}>
-            <a className={styles.brand} href="#top">
+            <Link className={styles.brand} href="/">
               <img
                 className={styles["brand-logo"]}
                 src="/images/footerlogo.png"
                 alt="Tubelight Communications"
               />
-            </a>
+            </Link>
             <p>
               The omnichannel customer engagement platform for modern enterprises. Send smarter, resolve faster, convert more.
             </p>

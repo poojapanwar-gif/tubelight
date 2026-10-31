@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Blogs.module.scss";
 
 const Blogs = () => {
@@ -8,21 +9,21 @@ const Blogs = () => {
       desc: "Tubelight Communications is a leading CPaaS service provider in India — here's why a single API beats juggling vendors….",
       img: "/images/blog-cpaas.png",
       alt: "Why should you choose CPaaS",
-      link: "#",
+      link: "/blogs/why-choose-cpaas-for-your-business",
     },
     {
       title: "How communication platforms contribute to a safer internet",
       desc: "On this Safer Internet Day, let us explore how communication companies are keeping customer conversations secure….",
       img: "/images/blog-safer.png",
       alt: "Safer internet",
-      link: "#",
+      link: "/blogs/communication-platforms-safer-internet",
     },
     {
       title: "Cloud Contact Center: the modern way to support customers",
       desc: "Tubelight Communications is a leading Cloud Contact Center platform with multiple channels, AI and analytics built in….",
       img: "/images/blog-ccc.png",
       alt: "Cloud Contact Center",
-      link: "#",
+      link: "/blogs/cloud-contact-center",
     },
   ];
 
@@ -35,7 +36,7 @@ const Blogs = () => {
 
         <div className={styles["blog-grid"]}>
           {blogsData.map((blog, index) => (
-            <a key={index} className={styles["blog-card"]} href={blog.link}>
+            <Link key={index} className={styles["blog-card"]} href={blog.link}>
               <div className={styles["blog-thumb"]}>
                 <img src={blog.img} alt={blog.alt} loading="lazy" />
               </div>
@@ -54,12 +55,12 @@ const Blogs = () => {
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className={styles["blog-all"]}>
-          <a href="#">You can find all blogs here</a>
+          <Link href="/blogs">You can find all blogs here</Link>
         </div>
       </div>
     </section>

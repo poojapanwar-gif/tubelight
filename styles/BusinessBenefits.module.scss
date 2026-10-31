@@ -1,0 +1,237 @@
+.business-benefits-section {
+  width: 100%;
+  margin: 40px 0px;
+  background: #0a0d24;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h6 {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5e6ff9;
+  }
+
+  h2 {
+    font-family: Space Grotesk;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -0.4px;
+    text-transform: capitalize;
+    color: #f6f8fc;
+    margin-top: 20px;
+  }
+
+  .business-all-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+
+    .business-card {
+      grid-column: span 2;
+      background: #111533;
+      border: 1px solid transparent;
+      border-top: 0.8px solid #32364a;
+      border-radius: 16px;
+      padding: 30px;
+      height: 100%;
+      min-height: 180px;
+      cursor: pointer;
+      position: relative;
+      transition:
+        transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease;
+
+      // 4th and 5th card center me align honge jab exactly 5 cards hon (Col 2-4 and Col 4-6)
+      &:nth-child(4):nth-last-child(2) {
+        grid-column: 2 / span 2;
+      }
+
+      &:hover {
+        transform: translateY(-6px);
+        background-color: #151a3d;
+        border-color: rgba(94, 111, 249, 0.35);
+        border-top-color: #5e6ff9;
+        box-shadow:
+          0 20px 40px -15px rgba(94, 111, 249, 0.3),
+          0 0 20px rgba(94, 111, 249, 0.12);
+
+        .icon {
+          transform: scale(1.08);
+          box-shadow: 0 8px 24px -4px rgba(94, 111, 249, 0.55);
+        }
+
+        h5 {
+          color: #ffffff;
+        }
+      }
+
+      .icon {
+        background: #5e6ff9;
+        border-radius: 8px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.35s ease;
+      }
+
+      h5 {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 18px;
+        line-height: 22.4px;
+        letter-spacing: 0px;
+        color: #f6f8fc;
+        text-align: left;
+        margin-top: 20px;
+        transition: color 0.3s ease;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 993px) {
+    padding: 50px 40px;
+
+    h2 {
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width: 992px) and (min-width: 769px) {
+    padding: 50px 40px;
+
+    h2 {
+      font-size: 34px;
+      line-height: 44px;
+    }
+
+    .business-all-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      .business-card {
+        grid-column: auto;
+
+        &:nth-child(4):nth-last-child(2),
+        &:nth-child(4) {
+          grid-column: auto;
+        }
+
+        &:nth-child(5) {
+          grid-column: 1 / -1;
+          width: 50%;
+          justify-self: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 36px 20px 40px 20px;
+    margin: 24px 0px;
+
+    h6 {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 14px;
+    }
+
+    .business-all-cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+      margin-top: 28px;
+      width: 100% !important;
+
+      .business-card,
+      .business-card:nth-child(n) {
+        grid-column: auto !important;
+        width: 100% !important;
+        min-height: auto;
+        padding: 24px 20px;
+        box-sizing: border-box;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        h5 {
+          font-size: 17px;
+          line-height: 24px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 20px 36px 20px;
+
+    h6 {
+      font-size: 13px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-top: 12px;
+    }
+
+    .business-all-cards {
+      gap: 14px !important;
+      margin-top: 22px;
+
+      .business-card,
+      .business-card:nth-child(n) {
+        padding: 20px 18px;
+        border-radius: 14px;
+
+        .icon {
+          width: 46px;
+          height: 46px;
+
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+
+        h5 {
+          font-size: 15.5px;
+          line-height: 22px;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}

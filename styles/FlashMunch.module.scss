@@ -1,0 +1,457 @@
+.flash-much-section {
+  width: 100%;
+  padding: 40px 80px;
+  background: #F6F8FC;
+
+  .flash-much-left-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+    .flash-much-left {
+      width: 50%;
+      flex: 1 1 50%;
+
+      h2 {
+        font-family: Space Grotesk, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 48px;
+        line-height: 55px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #0f1828;
+
+        span {
+          color: #5e6ff9;
+        }
+      }
+
+      p {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0%;
+        color: #5f6982;
+        margin-top: 20px;
+      }
+    }
+
+    .flash-much-right {
+      width: 520px;
+      flex: 0 0 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .much-orbit-container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        max-width: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        &,
+        * {
+          max-width: none !important;
+        }
+
+        // 1. Sab se bada circle (500px, border dashed #2F6DEE33)
+        .circle-outer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 500px;
+          border-radius: 50%;
+          border: 1.5px dashed #2F6DEE33;
+          pointer-events: none;
+        }
+
+        // 2. Chota circle (350px, border dashed #5E6FF9)
+        .circle-middle {
+          position: absolute;
+          top: 75px;
+          left: 75px;
+          width: 350px;
+          height: 350px;
+          border-radius: 50%;
+          border: 1.5px dashed #5E6FF9;
+          pointer-events: none;
+        }
+
+        // 3. Orbiting ring: exactly 500px x 500px, rotating around center (250px, 250px)
+        .orbit-ring {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 500px;
+          border-radius: 50%;
+          transform-origin: 250px 250px;
+          animation: spinOrbit 28s linear infinite;
+
+          &:hover {
+            animation-play-state: paused;
+
+            .orbit-node-inner {
+              animation-play-state: paused;
+            }
+          }
+        }
+
+        // 4 Intermediate Dots on 350px circle
+        .orbit-dot {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: #5E6FF9;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: 0 0 6px rgba(94, 111, 249, 0.6);
+          pointer-events: none;
+        }
+
+        // 4 Channel Nodes on 350px circle
+        .orbit-node {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .orbit-node-inner {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            transform-origin: center center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: counterSpinOrbit 28s linear infinite;
+          }
+
+          .channel-card {
+            width: 80px;
+            height: 80px;
+            background: #F9FBFF;
+            border: 0.2px solid #5E6FF9;
+            box-shadow: 0px 2px 8px 0px #00000040;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            &:hover {
+              transform: scale(1.08);
+              box-shadow: 0px 4px 16px 0px rgba(94, 111, 249, 0.45);
+            }
+          }
+
+          .channel-label {
+            position: absolute;
+            top: 88px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            color: #0F1828;
+            text-align: center;
+            white-space: nowrap;
+            user-select: none;
+          }
+        }
+
+        // 4. Center Circle: MuCh (120px, #0F1828)
+        .center-circle {
+          position: absolute;
+          top: 190px;
+          left: 190px;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: #0F1828;
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 10px 28px rgba(15, 24, 40, 0.4);
+          pointer-events: none;
+
+          .much-title {
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 22.93px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #F6F8FC;
+          }
+
+          .much-sub {
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10.7px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #EEF2FF;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 1081px) {
+    padding: 40px 40px;
+
+    .flash-much-left-right {
+      gap: 50px;
+
+      .flash-much-left {
+        h2 {
+          font-size: 40px;
+          line-height: 48px;
+        }
+
+        p {
+          font-size: 16.5px;
+        }
+      }
+
+      .flash-much-right {
+        width: 480px;
+        flex: 0 0 480px;
+
+        .much-orbit-container {
+          transform: scale(0.92);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 40px 40px;
+
+    .flash-much-left-right {
+      width: 100%;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+
+      .flash-much-left {
+        width: 100%;
+        flex: 0 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          font-size: 36px;
+          line-height: 44px;
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 680px;
+          font-size: 16px;
+          margin-top: 14px;
+        }
+      }
+
+      .flash-much-right {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+        height: 440px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto;
+
+        .much-orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -250px;
+          margin-top: -250px;
+          transform: scale(0.84);
+          transform-origin: 250px 250px;
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+
+    .flash-much-left-right {
+      gap: 20px;
+
+      .flash-much-left {
+        h2 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        p {
+          font-size: 14.5px;
+          line-height: 23px;
+          margin-top: 12px;
+        }
+      }
+
+      .flash-much-right {
+        height: 360px;
+
+        .much-orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -250px;
+          margin-top: -250px;
+          transform: scale(0.68);
+          transform-origin: 250px 250px;
+
+          .center-circle {
+            .much-title {
+              font-size: 25px;
+            }
+
+            .much-sub {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 1.2;
+            }
+          }
+
+          .orbit-node {
+            .channel-label {
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 20px 28px 20px;
+
+    .flash-much-left-right {
+      gap: 16px;
+
+      .flash-much-left {
+        h2 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 13.5px;
+          line-height: 21px;
+          margin-top: 10px;
+        }
+      }
+
+      .flash-much-right {
+        height: 320px;
+
+        .much-orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -250px;
+          margin-top: -250px;
+          transform: scale(0.60);
+          transform-origin: 250px 250px;
+
+          .center-circle {
+            .much-title {
+              font-size: 25px;
+            }
+
+            .much-sub {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 1.2;
+            }
+          }
+
+          .orbit-node {
+            .channel-label {
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .flash-much-left-right {
+      .flash-much-right {
+        height: 290px;
+
+        .much-orbit-container {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -250px;
+          margin-top: -250px;
+          transform: scale(0.54);
+          transform-origin: 250px 250px;
+        }
+      }
+    }
+  }
+}
+
+// Seamless Orbit: Track rotates clockwise
+@keyframes spinOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Counter-rotation: Inner node rotates counter-clockwise around its own center
+@keyframes counterSpinOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

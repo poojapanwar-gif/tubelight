@@ -51,7 +51,9 @@
         margin-top: 14px;
       }
 
-      button {
+      button,
+      a {
+        text-decoration: none;
         margin-top: 30px;
         height: 44px;
         padding: 0px 30px;
@@ -165,8 +167,8 @@
     }
   }
 
-  @media (max-width: 1080px) {
-    padding: 50px 32px;
+  @media (max-width: 1280px) and (min-width: 769px) {
+    padding: 50px 40px;
 
     .voice-builder-left-right {
       flex-direction: column;
@@ -174,7 +176,8 @@
       text-align: center;
 
       .voice-builder-right {
-        button {
+        button,
+        a {
           margin-left: auto;
           margin-right: auto;
         }
@@ -191,18 +194,110 @@
     }
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 768px) {
     padding: 40px 20px;
 
+    .voice-builder-left-right {
+      flex-direction: column;
+      gap: 32px;
+      text-align: left;
+
+      .voice-builder-left {
+        width: 100%;
+
+        .voice-builder-image {
+          max-width: 100%;
+        }
+      }
+
+      .voice-builder-right {
+        width: 100%;
+
+        h2 {
+          font-size: 28px;
+          line-height: 1.25;
+        }
+
+        h6 {
+          font-size: 15.5px;
+          line-height: 24px;
+          margin-top: 12px;
+        }
+
+        button,
+        a {
+          margin-top: 24px;
+          display: inline-flex;
+        }
+      }
+    }
+
     .explore-solution-section {
+      margin-top: 48px;
+
       h2 {
-        font-size: 32px;
+        font-size: 30px;
       }
 
       .all-cards-solution {
         grid-template-columns: 1fr;
         gap: 20px;
-        margin-top: 32px;
+        margin-top: 28px;
+
+        .card-solution {
+          padding: 26px 20px;
+          border-radius: 16px;
+
+          h5 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 23px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 20px;
+
+    .voice-builder-right {
+      h2 {
+        font-size: 24px;
+      }
+
+      h6 {
+        font-size: 14.5px;
+        line-height: 22px;
+      }
+
+      button,
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .explore-solution-section {
+      h2 {
+        font-size: 26px;
+      }
+
+      .all-cards-solution .card-solution {
+        padding: 22px 18px;
+
+        h5 {
+          font-size: 19px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
     }
   }

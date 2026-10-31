@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/DataVerification.module.scss";
 import dataverification from "../../public/images/dataverification.png";
 import Image from "next/image";
@@ -15,7 +16,7 @@ const DataVerificarion = () => {
           Also, failovers are enabled in case of any first channel failing due
           to any reasons if so then the seconds, third can be aligned.
         </p>
-        <button>Talk to Expert</button>
+        <Link href="/contact-us">Talk to Expert</Link>
         <Image src={dataverification} alt="img" />
       </div>
     </div>

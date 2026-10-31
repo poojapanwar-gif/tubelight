@@ -1,17 +1,19 @@
 .click-call-banner {
   width: 100%;
-  padding: 60px 80px;
+  padding: 40px 80px 60px 80px;
   .click-call-banner-content {
     display: flex;
-    // align-items: center;
-    gap: 100px;
+    align-items: center;
+    gap: 80px;
     .click-call-left-content {
-      margin-top: 80px;
+      // margin-top: 80px;
+      width: 100%;
       h2 {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 600;
         font-size: 48px;
         letter-spacing: 0px;
+        line-height: auto;
         color: #0f1828;
         span {
           color: #5e6ff9;
@@ -30,8 +32,10 @@
         display: flex;
         gap: 20px;
         margin-top: 50px;
-        button {
+        button,
+        a {
           position: relative;
+          text-decoration: none;
           height: 42px;
           padding: 0px 30px;
           display: flex;
@@ -48,6 +52,8 @@
           letter-spacing: 0px;
           color: #0f1828;
           cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           &:hover {
             transform: translateY(-2px);
@@ -100,13 +106,212 @@
     }
     .click-call-right-content{
       .click-call-banner-video{
-        width: 650px;
+        width: 100%;
         height: 100%;
         overflow: hidden;
         video {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 993px) {
+    padding: 40px 40px 50px 40px;
+
+    .click-call-banner-content {
+      gap: 36px;
+
+      .click-call-left-content {
+        flex: 1 1 50%;
+        max-width: 55%;
+
+        h2 {
+          font-size: 38px;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: 17.5px;
+          line-height: 28px;
+          margin-top: 16px;
+        }
+
+        .both-button {
+          margin-top: 36px;
+          gap: 16px;
+
+          button,
+          a {
+            padding: 0px 22px;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .click-call-right-content {
+        flex: 1 1 50%;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .click-call-banner-video {
+          width: 100%;
+          max-width: 500px;
+
+          video {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 36px 40px 48px 40px;
+
+    .click-call-banner-content {
+      flex-direction: column;
+      gap: 36px;
+      align-items: flex-start;
+
+      .click-call-left-content {
+        width: 100%;
+        max-width: 100%;
+
+        h2 {
+          font-size: 34px;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: 16.5px;
+          line-height: 26px;
+          margin-top: 14px;
+        }
+
+        .both-button {
+          margin-top: 28px;
+          flex-wrap: wrap;
+          gap: 14px;
+
+          button,
+          a {
+            padding: 0px 24px;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .click-call-right-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .click-call-banner-video {
+          width: 100%;
+          max-width: 520px;
+          border-radius: 16px;
+
+          video {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px 40px 20px;
+
+    .click-call-banner-content {
+      flex-direction: column;
+      gap: 30px;
+
+      .click-call-left-content {
+        width: 100%;
+
+        h2 {
+          font-size: 30px;
+          line-height: 1.22;
+        }
+
+        p {
+          font-size: 15.5px;
+          line-height: 24px;
+          margin-top: 14px;
+        }
+
+        .both-button {
+          margin-top: 24px;
+          gap: 12px;
+          flex-wrap: wrap;
+
+          button,
+          a {
+            padding: 0px 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .click-call-right-content {
+        width: 100%;
+
+        .click-call-banner-video {
+          max-width: 100%;
+          border-radius: 12px;
+
+          video {
+            border-radius: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 20px 36px 20px;
+
+    .click-call-banner-content {
+      gap: 26px;
+
+      .click-call-left-content {
+        h2 {
+          font-size: 26px;
+          line-height: 1.25;
+        }
+
+        p {
+          font-size: 14.5px;
+          line-height: 22px;
+        }
+
+        .both-button {
+          flex-direction: column;
+          width: 100%;
+          gap: 12px;
+          margin-top: 20px;
+
+          button,
+          a {
+            width: 100%;
+            height: 44px;
+            box-sizing: border-box;
+            justify-content: center;
+            text-align: center;
+          }
         }
       }
     }

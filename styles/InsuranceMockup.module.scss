@@ -1,0 +1,444 @@
+.mockupContainer {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  min-height: 500px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  perspective: 1200px;
+  box-sizing: border-box;
+}
+
+.phoneFrame {
+  position: relative;
+  width: 320px;
+  background: #f6f8fe;
+  border-radius: 32px;
+  border: 3.5px solid #b7a9fd;
+  box-shadow: 0 24px 50px -15px rgba(91, 108, 248, 0.32),
+    0 10px 20px -8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transform: rotate(-3deg) rotateY(6deg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: rotate(0deg) rotateY(0deg) translateY(-4px);
+    box-shadow: 0 30px 60px -15px rgba(91, 108, 248, 0.42);
+  }
+}
+
+.phoneHeader {
+  background: linear-gradient(135deg, #5b6cf8 0%, #6e7bfb 100%);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #5b6cf8;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headerTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.verifiedBadge {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00d2d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerSub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.phoneBody {
+  padding: 16px 14px 22px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 330px;
+}
+
+.botCard {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 14px rgba(91, 108, 248, 0.08);
+  border: 1px solid rgba(230, 235, 250, 0.9);
+}
+
+.botText {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.botTextWithMargin {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.45;
+  margin: 0 0 10px 0;
+}
+
+.userBubble {
+  align-self: flex-end;
+  background: #5b6cf8;
+  color: #ffffff;
+  border-radius: 14px 14px 3px 14px;
+  padding: 7px 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(91, 108, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.optionBtn {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 13px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1.5px solid #5b6cf8;
+  color: #5b6cf8;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background: rgba(91, 108, 248, 0.08);
+  }
+
+  &.optionActive {
+    background: #5b6cf8;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(91, 108, 248, 0.3);
+  }
+}
+
+/* Floating Card Common */
+.floatingCard {
+  position: absolute;
+  border-radius: 18px;
+  box-shadow: 0 20px 42px -10px rgba(91, 108, 248, 0.28),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px -10px rgba(91, 108, 248, 0.38);
+  }
+}
+
+/* Top Floating Card: Health e-card */
+.cardTop {
+  top: 20px;
+  right: -8px;
+  width: 230px;
+  background: linear-gradient(135deg, #5869f7 0%, #7664f9 100%);
+  padding: 14px 16px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: floatCardTop 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatCardTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.eCardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.eCardTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.plusIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(90deg);
+  }
+}
+
+.eCardNumber {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.eCardSub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.1px;
+}
+
+/* Bottom Floating Card: Claim Status */
+.cardBottom {
+  bottom: 24px;
+  right: 0px;
+  width: 250px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  padding: 14px 16px;
+  animation: floatCardBottom 4s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatCardBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.claimTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #0f1828;
+  margin: 0 0 12px 0;
+}
+
+.timelineRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.stepIconSuccess {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35);
+}
+
+.stepIconActive {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5b6cf8;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(91, 108, 248, 0.35);
+
+  .innerDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+}
+
+.stepIconPending {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .innerDotMuted {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #94a3b8;
+  }
+}
+
+.stepLabel {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #4b5563;
+  text-align: center;
+  white-space: nowrap;
+
+  &.labelActive {
+    color: #1f2937;
+    font-weight: 700;
+  }
+}
+
+/* Progress bar */
+.progressBarTrack {
+  width: 100%;
+  height: 4px;
+  background: #eef2ff;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #5b6cf8 100%);
+  border-radius: 9999px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1080px) {
+  .mockupContainer {
+    max-width: 400px;
+    padding: 16px 8px;
+  }
+
+  .phoneFrame {
+    width: 290px;
+  }
+
+  .cardTop {
+    width: 215px;
+    right: -10px;
+  }
+
+  .cardBottom {
+    width: 230px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mockupContainer {
+    max-width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phoneFrame {
+    width: 100%;
+    max-width: 320px;
+    transform: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .floatingCard {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    max-width: 320px;
+    animation: none;
+    transform: none;
+  }
+
+  .cardTop,
+  .cardBottom {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+

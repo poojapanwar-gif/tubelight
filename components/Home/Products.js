@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Products.module.scss";
 
 const Products = () => {
@@ -11,7 +12,7 @@ const Products = () => {
       alt: "AI conversations preview",
       color: "var(--ai)",
       btnText: "Start conversations",
-      link: "#channels",
+      link: "/intelligent-conversations",
     },
     {
       title: "Messaging",
@@ -21,7 +22,7 @@ const Products = () => {
       alt: "Messaging channels preview",
       color: "var(--sms)",
       btnText: "Send messages",
-      link: "#channels",
+      link: "/whatsapp",
     },
     {
       title: "Email",
@@ -31,7 +32,7 @@ const Products = () => {
       alt: "Email campaign preview",
       color: "var(--email)",
       btnText: "Send emails",
-      link: "#channels",
+      link: "/email-delivery",
     },
     {
       title: "Voice & IVR",
@@ -41,7 +42,7 @@ const Products = () => {
       alt: "Voice call preview",
       color: "var(--voice)",
       btnText: "Make calls",
-      link: "#channels",
+      link: "/ivr-solution",
     },
     {
       title: "User Authentication",
@@ -51,7 +52,7 @@ const Products = () => {
       alt: "User authentication preview",
       color: "var(--blue)",
       btnText: "Verify users",
-      link: "#outcomes",
+      link: "/sms-verification",
     },
     {
       title: "Customer Data",
@@ -61,7 +62,7 @@ const Products = () => {
       alt: "Customer data dashboard preview",
       color: "var(--rcs)",
       btnText: "Connect data",
-      link: "#integrations",
+      link: "/data-verification",
     },
   ];
 
@@ -77,7 +78,7 @@ const Products = () => {
 
         <div className={styles["prod-grid"]}>
           {productsData.map((prod, index) => (
-            <a
+            <Link
               key={index}
               className={styles["prod-card"]}
               style={{ "--c": prod.color }}
@@ -109,7 +110,7 @@ const Products = () => {
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

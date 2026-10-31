@@ -1,0 +1,452 @@
+.mockupContainer {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  min-height: 490px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  perspective: 1200px;
+  box-sizing: border-box;
+}
+
+.phoneFrame {
+  position: relative;
+  width: 320px;
+  background: #f6f8fe;
+  border-radius: 32px;
+  border: 3.5px solid #b7a9fd;
+  box-shadow: 0 24px 50px -15px rgba(91, 108, 248, 0.32),
+    0 10px 20px -8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transform: rotate(-3deg) rotateY(6deg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: rotate(0deg) rotateY(0deg) translateY(-4px);
+    box-shadow: 0 30px 60px -15px rgba(91, 108, 248, 0.42);
+  }
+}
+
+.phoneHeader {
+  background: linear-gradient(135deg, #5b6cf8 0%, #6e7bfb 100%);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #5b6cf8;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headerTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+}
+
+.verifiedBadge {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00d2d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerSub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.phoneBody {
+  padding: 16px 14px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 330px;
+}
+
+.botCard {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 11px 13px;
+  box-shadow: 0 4px 14px rgba(91, 108, 248, 0.08);
+  border: 1px solid rgba(230, 235, 250, 0.9);
+}
+
+.botText {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stepTag {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  line-height: 1.2;
+}
+
+.tagCompleted {
+  background: #5b6cf8;
+  color: #ffffff;
+}
+
+.tagCurrent {
+  background: #ffffff;
+  border: 1.5px solid #5b6cf8;
+  color: #5b6cf8;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.actionBtn {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1.5px solid #5b6cf8;
+  background: #ffffff;
+  color: #5b6cf8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background: rgba(91, 108, 248, 0.08);
+  }
+
+  &.actionActive {
+    background: #5b6cf8;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(91, 108, 248, 0.3);
+  }
+}
+
+.userBubble {
+  align-self: flex-end;
+  background: #5b6cf8;
+  color: #ffffff;
+  border-radius: 14px 14px 3px 14px;
+  padding: 7px 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(91, 108, 248, 0.25);
+  max-width: 80%;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Floating Card Common */
+.floatingCard {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 18px;
+  box-shadow: 0 20px 42px -10px rgba(91, 108, 248, 0.28),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px -10px rgba(91, 108, 248, 0.35);
+  }
+}
+
+.cardTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #0f1828;
+  margin: 0;
+}
+
+.cardSub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Top Floating Card */
+.cardTop {
+  top: 15px;
+  right: 0;
+  width: 230px;
+  animation: floatCardTop 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatCardTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.cardTopHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.giftIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.35);
+}
+
+.statusSteps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stepDot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotSuccess {
+  background: #10b981;
+}
+
+.dotActive {
+  background: rgba(91, 108, 248, 0.15);
+  border: 2px solid #5b6cf8;
+}
+
+.innerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5b6cf8;
+}
+
+.dotPending {
+  background: #e5e7eb;
+}
+
+.stepLabel {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.stepLabelMuted {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+/* Bottom Floating Card */
+.cardBottom {
+  bottom: 20px;
+  right: 0;
+  width: 250px;
+  animation: floatCardBottom 4s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatCardBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.confirmButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btnReceived {
+  flex: 1;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: #e6f9f0;
+  color: #10b981;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background: #d1fae5;
+    transform: translateY(-1px);
+  }
+}
+
+.btnIssue {
+  flex: 1;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: #ffe4e6;
+  color: #e11d48;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover {
+    background: #fecdd3;
+    transform: translateY(-1px);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1080px) {
+  .mockupContainer {
+    max-width: 400px;
+    padding: 16px 8px;
+  }
+
+  .phoneFrame {
+    width: 290px;
+  }
+
+  .cardTop {
+    width: 210px;
+    right: -10px;
+  }
+
+  .cardBottom {
+    width: 230px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mockupContainer {
+    max-width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phoneFrame {
+    width: 100%;
+    max-width: 320px;
+    transform: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .floatingCard {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    max-width: 320px;
+    animation: none;
+    transform: none;
+  }
+
+  .cardTop,
+  .cardBottom {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+

@@ -1,0 +1,2736 @@
+.agentic-feature-section {
+  width: 100%;
+  background: #f1f2ff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  h6 {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #5e6ff9;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: Space Grotesk, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    color: #12172e;
+    margin-top: 16px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .all-agentic-feature-cards {
+    margin-top: 56px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .feature-row-top {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .feature-row-middle {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .feature-row-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 24px;
+      width: 100%;
+    }
+
+    /* Common Card Styling with Increased Height & Smooth Hover Effect */
+    .feature-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 34px 30px;
+      min-height: 270px;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+      position: relative;
+      box-sizing: border-box;
+
+      &:hover {
+        border-color: #5e6ff9;
+        box-shadow: 0 20px 45px -15px rgba(94, 111, 249, 0.32);
+        transform: translateY(-4px);
+      }
+
+      /* Horizontal card modifier (for Card 1: Omnichannel ONLY) */
+      &.feature-card-horizontal {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 38px 44px;
+
+        .card-header {
+          margin-bottom: 0;
+          flex: 1 1 auto;
+          max-width: 48%;
+
+          h3 {
+            font-size: 26px;
+            line-height: 34px;
+            margin-bottom: 12px;
+          }
+
+          p {
+            font-size: 14.5px;
+            line-height: 24px;
+          }
+        }
+
+        .card-visual {
+          margin-top: 0 !important;
+          width: auto !important;
+          flex: 0 0 auto;
+        }
+      }
+
+      /* Normal Card Header (For Card 2 through Card 8) */
+      .card-header {
+        margin-bottom: 24px;
+
+        h3 {
+          font-family: Space Grotesk, sans-serif;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 28px;
+          color: #12172e;
+          margin: 0 0 12px 0;
+        }
+
+        p {
+          font-family: Inter, sans-serif;
+          font-weight: 400;
+          font-size: 14.5px;
+          line-height: 23px;
+          color: #64748b;
+          margin: 0;
+        }
+      }
+
+      /* Graphic Visuals in Card (Direct child of .feature-card, applies to ALL cards!) */
+      .card-visual {
+        margin-top: auto;
+        width: 100%;
+
+        
+        /* ===== MODERN CARD IMAGES (for Intelligent Conversations) ===== */
+        .modern-img-wrap-wide {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 100%;
+          max-width: 440px;
+
+          .modern-card-img-wide {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+          }
+        }
+
+        .modern-img-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-height: 94px;
+          margin-top: auto;
+          padding-top: 14px;
+
+          .modern-card-img {
+            max-width: 100%;
+            max-height: 94px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+          }
+        }
+
+        /* ===== NEED CARD IMAGES (for Lead Management System) ===== */
+        .need-img-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-height: 94px;
+          margin-top: auto;
+          padding-top: 14px;
+
+          .need-card-img {
+            max-width: 100%;
+            max-height: 94px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+          }
+        }
+
+        
+        /* ===== LEAD MANAGEMENT VISUALS (Crisp, High-Fidelity Vector Components) ===== */
+        
+        /* 1. Centralized Lead Capture */
+        .lead-capture-visual {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          gap: 6px;
+          min-height: 94px;
+
+          .lead-sources-col {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-shrink: 0;
+
+            .lead-source-chip {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              background: #ffffff;
+              border: 1px solid #e2e8f0;
+              border-radius: 20px;
+              padding: 3px 8px;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              color: #334155;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+              white-space: nowrap;
+
+              .lead-source-dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                flex-shrink: 0;
+
+                &.dot-blue { background: #3b82f6; }
+                &.dot-purple { background: #a855f7; }
+                &.dot-green { background: #10b981; }
+              }
+            }
+          }
+
+          .lead-capture-svg {
+            flex-shrink: 0;
+          }
+
+          .lead-record-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 8px 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            min-width: 110px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            position: relative;
+
+            .record-eyebrow {
+              font-family: Inter, sans-serif;
+              font-size: 8px;
+              font-weight: 700;
+              letter-spacing: 0.6px;
+              color: #94a3b8;
+              text-transform: uppercase;
+            }
+
+            .record-name {
+              font-family: Inter, sans-serif;
+              font-size: 11.5px;
+              font-weight: 700;
+              color: #1e293b;
+              line-height: 14px;
+            }
+
+            .record-sub {
+              font-family: Inter, sans-serif;
+              font-size: 9px;
+              color: #64748b;
+              line-height: 11px;
+            }
+
+            .record-tag-new {
+              align-self: flex-start;
+              margin-top: 3px;
+              background: #ecfdf5;
+              border: 1px solid #a7f3d0;
+              border-radius: 10px;
+              color: #059669;
+              font-family: Inter, sans-serif;
+              font-size: 8.5px;
+              font-weight: 700;
+              padding: 1px 6px;
+              line-height: 12px;
+            }
+          }
+        }
+
+        /* 2. AI-Powered Lead Qualification */
+        .lead-qual-visual {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+          gap: 12px;
+          min-height: 94px;
+
+          .qual-gauge-wrap {
+            position: relative;
+            width: 66px;
+            height: 66px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .qual-gauge-svg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            .qual-gauge-inner {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              z-index: 1;
+
+              .qual-gauge-num {
+                font-family: Space Grotesk, sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                color: #1e293b;
+                line-height: 15px;
+              }
+
+              .qual-gauge-lbl {
+                font-family: Inter, sans-serif;
+                font-size: 8px;
+                color: #94a3b8;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
+
+          .qual-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .qual-pill-status {
+              background: #dcfce7;
+              border: 1px solid #bbf7d0;
+              border-radius: 12px;
+              padding: 2px 8px;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 700;
+              color: #15803d;
+              align-self: flex-start;
+              margin-bottom: 2px;
+            }
+
+            .qual-check-row {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #475569;
+              line-height: 13px;
+
+              .check-green {
+                color: #16a34a;
+                font-weight: 700;
+                font-size: 10.5px;
+              }
+            }
+          }
+        }
+
+        /* 3. Intelligent Lead Assignment */
+        .lead-assign-visual {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          gap: 6px;
+          min-height: 94px;
+
+          .assign-pill-btn {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: #ffffff;
+            font-family: Inter, sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+            white-space: nowrap;
+            flex-shrink: 0;
+
+            span {
+              font-size: 9px;
+            }
+          }
+
+          .assign-svg-connector {
+            flex-shrink: 0;
+          }
+
+          .assign-targets-col {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+
+            .assign-agent-box {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: 10px;
+              padding: 5px 10px;
+              transition: all 0.2s ease;
+
+              &.agent-box-active {
+                background: #f0fdf4;
+                border: 1px solid #bbf7d0;
+
+                .agent-box-name {
+                  font-family: Inter, sans-serif;
+                  font-size: 10.5px;
+                  font-weight: 700;
+                  color: #15803d;
+                  line-height: 13px;
+                }
+
+                .agent-box-sub {
+                  font-family: Inter, sans-serif;
+                  font-size: 8.5px;
+                  color: #16a34a;
+                  line-height: 11px;
+                }
+              }
+
+              &.agent-box-muted {
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
+                opacity: 0.65;
+
+                .agent-box-name {
+                  font-family: Inter, sans-serif;
+                  font-size: 10.5px;
+                  font-weight: 600;
+                  color: #64748b;
+                  line-height: 13px;
+                }
+
+                .agent-box-sub {
+                  font-family: Inter, sans-serif;
+                  font-size: 8.5px;
+                  color: #94a3b8;
+                  line-height: 11px;
+                }
+              }
+            }
+          }
+        }
+
+        /* 4. Automated Follow-Ups */
+        .lead-followup-visual {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          min-height: 94px;
+          padding: 4px 0;
+
+          .followup-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+
+            .followup-icon-wrap {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 5px;
+              flex-shrink: 0;
+
+              &.icon-wa {
+                background: #dcfce7;
+                color: #16a34a;
+              }
+
+              &.icon-sms {
+                background: #dbeafe;
+                color: #2563eb;
+              }
+
+              &.icon-call {
+                background: #f3e8ff;
+                color: #9333ea;
+              }
+            }
+
+            .followup-title {
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 600;
+              color: #1e293b;
+              line-height: 13px;
+              white-space: nowrap;
+            }
+
+            .followup-sub {
+              font-family: Inter, sans-serif;
+              font-size: 9px;
+              color: #94a3b8;
+              margin-top: 1px;
+            }
+          }
+
+          .followup-arrow-line {
+            flex: 1;
+            height: 1px;
+            border-top: 1.5px dashed #cbd5e1;
+            margin: 0 4px;
+            margin-bottom: 18px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .arrow-head {
+              position: absolute;
+              right: -3px;
+              top: -8px;
+              color: #94a3b8;
+              font-size: 12px;
+              font-weight: 700;
+            }
+          }
+        }
+
+        /* 5. Lead Scoring and Prioritization */
+        .lead-score-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          min-height: 94px;
+          justify-content: center;
+          padding: 4px 0;
+
+          .score-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .score-pill {
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 700;
+              padding: 2px 8px;
+              border-radius: 10px;
+              min-width: 42px;
+              text-align: center;
+
+              &.pill-hot {
+                background: #ffe4e6;
+                color: #e11d48;
+              }
+
+              &.pill-warm {
+                background: #fef3c7;
+                color: #d97706;
+              }
+
+              &.pill-cold {
+                background: #e0f2fe;
+                color: #0284c7;
+              }
+            }
+
+            .score-track {
+              flex: 1;
+              height: 6px;
+              background: #f1f5f9;
+              border-radius: 4px;
+              overflow: hidden;
+
+              .score-fill {
+                height: 100%;
+                border-radius: 4px;
+
+                &.fill-hot {
+                  background: linear-gradient(90deg, #f43f5e 0%, #e11d48 100%);
+                }
+
+                &.fill-warm {
+                  background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+                }
+
+                &.fill-cold {
+                  background: linear-gradient(90deg, #38bdf8 0%, #0284c7 100%);
+                }
+              }
+            }
+
+            .score-val {
+              font-family: Space Grotesk, sans-serif;
+              font-size: 11px;
+              font-weight: 700;
+              color: #1e293b;
+              min-width: 18px;
+              text-align: right;
+            }
+          }
+        }
+
+        /* 6. Complete Lead Interaction History */
+        .lead-history-visual {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          min-height: 94px;
+          justify-content: center;
+
+          .lhist-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .lhist-icon {
+              width: 22px;
+              height: 22px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+
+              &.icon-form {
+                background: #eff6ff;
+                color: #3b82f6;
+              }
+
+              &.icon-wa-tint {
+                background: #dcfce7;
+                color: #16a34a;
+              }
+
+              &.icon-call-tint {
+                background: #f3e8ff;
+                color: #9333ea;
+              }
+            }
+
+            .lhist-text {
+              display: flex;
+              flex-direction: column;
+
+              .lhist-title {
+                font-family: Inter, sans-serif;
+                font-size: 10.5px;
+                font-weight: 600;
+                color: #1e293b;
+                line-height: 13px;
+              }
+
+              .lhist-sub {
+                font-family: Inter, sans-serif;
+                font-size: 9px;
+                color: #94a3b8;
+                line-height: 11px;
+              }
+            }
+          }
+
+          .lhist-line {
+            width: 1.5px;
+            height: 10px;
+            background: #cbd5e1;
+            margin-left: 10px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+          }
+        }
+
+        /* 7. Lead Pipeline Management */
+        .lead-pipeline-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          width: 100%;
+          min-height: 94px;
+          justify-content: center;
+
+          .pipe-stages-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+
+            .pipe-stage-chip {
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 6px;
+              white-space: nowrap;
+
+              &.stage-new {
+                background: #eff6ff;
+                color: #2563eb;
+              }
+
+              &.stage-contacted {
+                background: #faf5ff;
+                color: #7c3aed;
+              }
+
+              &.stage-qualified {
+                background: #fffbeb;
+                color: #d97706;
+              }
+
+              &.stage-converted {
+                background: #f0fdf4;
+                color: #15803d;
+              }
+            }
+          }
+
+          .pipe-multi-bar {
+            display: flex;
+            height: 7px;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+
+            .bar-seg-blue { flex: 1; background: #3b82f6; }
+            .bar-seg-purple { flex: 1; background: #8b5cf6; }
+            .bar-seg-amber { flex: 1; background: #f59e0b; }
+            .bar-seg-green { flex: 1; background: #10b981; }
+          }
+
+          .pipe-sub-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            .pipe-chip-lost {
+              background: #f1f5f9;
+              border: 1px solid #e2e8f0;
+              border-radius: 4px;
+              font-family: Inter, sans-serif;
+              font-size: 8.5px;
+              font-weight: 600;
+              color: #64748b;
+              padding: 1px 5px;
+            }
+
+            .pipe-subtext {
+              font-family: Inter, sans-serif;
+              font-size: 8.5px;
+              color: #94a3b8;
+              line-height: 11px;
+            }
+          }
+        }
+
+        /* 8. AI-Assisted Sales Insights */
+        .lead-insights-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+          min-height: 94px;
+          justify-content: center;
+
+          .insight-action-box {
+            background: #faf5ff;
+            border: 1px dashed #c084fc;
+            border-radius: 10px;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .insight-eyebrow {
+              font-family: Inter, sans-serif;
+              font-size: 8.5px;
+              font-weight: 700;
+              letter-spacing: 0.6px;
+              color: #7c3aed;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+            }
+
+            .insight-msg {
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              color: #1e293b;
+              line-height: 14px;
+              margin: 0;
+            }
+          }
+
+          .insight-buttons-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            .insight-btn-subtle {
+              background: #eff6ff;
+              border: 1px solid #bfdbfe;
+              border-radius: 12px;
+              padding: 3px 8px;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              color: #1d4ed8;
+              white-space: nowrap;
+            }
+
+            .insight-btn-primary {
+              background: #6366f1;
+              color: #ffffff;
+              border-radius: 12px;
+              padding: 3px 9px;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+              white-space: nowrap;
+            }
+
+            .insight-btn-green {
+              background: #dcfce7;
+              border: 1px solid #bbf7d0;
+              border-radius: 12px;
+              padding: 3px 8px;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              color: #15803d;
+              white-space: nowrap;
+            }
+          }
+        }
+
+        /* 9. Lead Performance Analytics */
+        .lead-analytics-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          min-height: 94px;
+          justify-content: flex-end;
+
+          .lanalytics-legend-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .lanalytics-legend-group {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+
+              .lanalytics-legend-item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-family: Inter, sans-serif;
+                font-size: 10px;
+                color: #64748b;
+                font-weight: 500;
+
+                .lanalytics-dot {
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+
+                  &.dot-blue { background: #3b82f6; }
+                  &.dot-green { background: #10b981; }
+                }
+              }
+            }
+
+            .lanalytics-badge-rate {
+              background: #dcfce7;
+              border: 1px solid #bbf7d0;
+              border-radius: 10px;
+              padding: 1px 7px;
+              font-family: Inter, sans-serif;
+              font-size: 9px;
+              font-weight: 700;
+              color: #15803d;
+            }
+          }
+
+          .lanalytics-chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 10px;
+            height: 72px;
+            padding: 0 8px;
+
+            .lbar-group {
+              display: flex;
+              align-items: flex-end;
+              gap: 4px;
+              flex: 1;
+              justify-content: center;
+
+              .lbar {
+                width: 12px;
+                border-radius: 4px 4px 0 0;
+                transition: transform 0.2s ease;
+
+                &.lbar-blue {
+                  background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 100%);
+                }
+
+                &.lbar-green {
+                  background: linear-gradient(180deg, #34d399 0%, #10b981 100%);
+                }
+
+                &:hover {
+                  transform: scaleY(1.05);
+                }
+              }
+            }
+          }
+        }
+
+        /* ===== COMMON VISUAL HELPERS ===== */
+        .dot-green {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #10b981;
+          display: inline-block;
+          flex-shrink: 0;
+        }
+
+        .dot-purple {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #6366f1;
+          display: inline-block;
+          flex-shrink: 0;
+        }
+
+        .check-green {
+          color: #16a34a;
+          font-weight: 700;
+          font-size: 11px;
+        }
+
+        /* 1. Omnichannel Campaign Management */
+        .omnichannel-visual {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: auto;
+
+          .omni-speaker-orb {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px -4px rgba(124, 58, 237, 0.45), 0 0 18px rgba(99, 102, 241, 0.3);
+            flex-shrink: 0;
+            color: #ffffff;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          .omni-connector-svg {
+            width: 95px;
+            height: 180px;
+            flex-shrink: 0;
+            margin-left: -22px;
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+          }
+
+          .omni-channels-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+
+            .omni-pill {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              background: #ffffff;
+              border: 1px solid #e0e7ff;
+              border-radius: 24px;
+              padding: 6px 16px;
+              box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+              min-width: 165px;
+              box-sizing: border-box;
+
+              .dot-blue {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #3b82f6;
+                flex-shrink: 0;
+              }
+              .dot-green {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #10b981;
+                flex-shrink: 0;
+              }
+              .dot-blue-alt {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #2563eb;
+                flex-shrink: 0;
+              }
+              .dot-purple {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #a855f7;
+                flex-shrink: 0;
+              }
+              .dot-green-alt {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #059669;
+                flex-shrink: 0;
+              }
+
+              .omni-pill-name {
+                font-family: Inter, sans-serif;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #1e1b4b;
+                flex: 1;
+              }
+
+              .omni-pill-status {
+                font-family: Inter, sans-serif;
+                font-size: 11px;
+                color: #6366f1;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        /* 2. Audience Segmentation */
+        .audience-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+
+          .segment-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            .seg-pill {
+              font-family: Inter, sans-serif;
+              font-size: 11px;
+              font-weight: 600;
+              padding: 4px 10px;
+              border-radius: 12px;
+
+              &.seg-new {
+                background: #e0f2fe;
+                color: #0284c7;
+              }
+              &.seg-ret {
+                background: #dcfce7;
+                color: #16a34a;
+              }
+              &.seg-high {
+                background: #f3e8ff;
+                color: #9333ea;
+              }
+              &.seg-inact {
+                background: #fef9c3;
+                color: #ca8a04;
+              }
+            }
+          }
+
+          .segment-bar {
+            display: flex;
+            width: 100%;
+            height: 7px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            .bar-new {
+              background: #38bdf8;
+              height: 100%;
+            }
+            .bar-ret {
+              background: #4ade80;
+              height: 100%;
+            }
+            .bar-high {
+              background: #c084fc;
+              height: 100%;
+            }
+            .bar-inact {
+              background: #facc15;
+              height: 100%;
+            }
+          }
+
+          .segment-filters {
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .filter-chip {
+              display: inline-flex;
+              align-items: center;
+              gap: 5px;
+              background: #f8fafc;
+              border: 1px solid #e2e8f0;
+              border-radius: 7px;
+              padding: 4px 9px;
+              font-family: Inter, sans-serif;
+              font-size: 11px;
+              color: #475569;
+              font-weight: 500;
+            }
+          }
+
+          .segment-caption {
+            font-family: Inter, sans-serif;
+            font-size: 10.5px;
+            color: #94a3b8;
+            margin: 2px 0 0 0;
+          }
+        }
+
+        /* 3. AI-Assisted Personalization */
+        .personalization-wrap {
+          display: grid;
+          grid-template-columns: 1.35fr 1fr;
+          gap: 10px;
+          align-items: stretch;
+          width: 100%;
+
+          .pers-message-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .pers-draft-text {
+              font-family: Inter, sans-serif;
+              font-size: 11px;
+              line-height: 17px;
+              color: #334155;
+              margin: 0 0 8px 0;
+
+              .pers-var {
+                background: #e0e7ff;
+                color: #4338ca;
+                padding: 1px 4px;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 10px;
+              }
+            }
+
+            .pers-ai-badge {
+              align-self: flex-start;
+              background: #6366f1;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              padding: 3px 8px;
+              border-radius: 12px;
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+            }
+          }
+
+          .pers-vars-list {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .pers-var-item {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #334155;
+              padding: 2px 0;
+            }
+
+            .pers-template-tag {
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              color: #94a3b8;
+              margin-top: 4px;
+              text-align: center;
+              border-top: 1px dashed #e2e8f0;
+              padding-top: 4px;
+            }
+          }
+        }
+
+        /* 4. Automated Customer Journeys */
+        .journey-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 4px 0;
+
+          .journey-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 50px;
+
+            .journey-circle {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 6px;
+              flex-shrink: 0;
+
+              &.circle-trigger {
+                background: #6366f1;
+                color: #ffffff;
+                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+              }
+              &.circle-delay {
+                background: #ffffff;
+                border: 1.5px solid #cbd5e1;
+                color: #64748b;
+              }
+              &.circle-wa {
+                background: #dcfce7;
+                color: #16a34a;
+              }
+              &.circle-email {
+                background: #f3e8ff;
+                color: #9333ea;
+              }
+            }
+
+            .journey-title {
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 600;
+              color: #1e293b;
+              line-height: 13px;
+              white-space: nowrap;
+            }
+
+            .journey-sub {
+              font-family: Inter, sans-serif;
+              font-size: 9px;
+              color: #94a3b8;
+              margin-top: 2px;
+            }
+          }
+
+          .journey-line {
+            flex: 1;
+            height: 1px;
+            border-top: 1.5px dashed #cbd5e1;
+            margin: 0 4px;
+            margin-bottom: 22px;
+          }
+        }
+
+        /* 5. Campaign Scheduling */
+        .scheduling-wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+
+          .sched-days-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .sched-day {
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: Inter, sans-serif;
+              font-size: 11px;
+              font-weight: 600;
+              color: #64748b;
+              background: #f1f5f9;
+
+              &.sched-day-active {
+                background: #6366f1;
+                color: #ffffff;
+                box-shadow: 0 3px 10px rgba(99, 102, 241, 0.4);
+              }
+            }
+          }
+
+          .sched-pills-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+
+            .sched-time-pill {
+              display: inline-flex;
+              align-items: center;
+              gap: 5px;
+              background: #ffffff;
+              border: 1px solid #e2e8f0;
+              border-radius: 14px;
+              padding: 3px 9px;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 600;
+              color: #1e293b;
+            }
+
+            .sched-tz-pill {
+              background: #ffffff;
+              border: 1px solid #e2e8f0;
+              border-radius: 14px;
+              padding: 3px 7px;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #64748b;
+            }
+
+            .sched-loc-pill {
+              background: #dcfce7;
+              border-radius: 14px;
+              padding: 3px 9px;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #16a34a;
+            }
+          }
+
+          .sched-caption {
+            font-family: Inter, sans-serif;
+            font-size: 10px;
+            color: #94a3b8;
+            margin: 0;
+          }
+        }
+
+        /* 6. Intelligent Follow-Ups */
+        .followup-wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+
+          .followup-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 9px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 9px;
+
+            .followup-left {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              .followup-icon-check,
+              .followup-icon-warn,
+              .followup-icon-chat {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+              }
+
+              .circle-orange {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #f59e0b;
+                box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+                display: inline-block;
+              }
+
+              .followup-text {
+                display: flex;
+                flex-direction: column;
+
+                .followup-name {
+                  font-family: Inter, sans-serif;
+                  font-size: 11px;
+                  font-weight: 600;
+                  color: #1e293b;
+                  line-height: 14px;
+                }
+
+                .followup-sub {
+                  font-family: Inter, sans-serif;
+                  font-size: 9.5px;
+                  color: #94a3b8;
+                  line-height: 12px;
+                }
+              }
+            }
+
+            .followup-badge-deliv {
+              background: #e0f2fe;
+              color: #0284c7;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 10px;
+            }
+
+            .followup-badge-unread {
+              background: #fef9c3;
+              color: #ca8a04;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 10px;
+            }
+
+            .followup-badge-auto {
+              background: #6366f1;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        /* 7. Campaign Performance Analytics */
+        .camp-analytics-wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+
+          .camp-legend-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .legend-item {
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              color: #64748b;
+              font-weight: 500;
+
+              .legend-dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+
+                &.dot-blue {
+                  background: #3b82f6;
+                }
+                &.dot-purple {
+                  background: #8b5cf6;
+                }
+                &.dot-green {
+                  background: #10b981;
+                }
+              }
+            }
+          }
+
+          .camp-bars-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 5px;
+            height: 80px;
+            border-bottom: 1.5px solid #e2e8f0;
+            padding-bottom: 2px;
+
+            .camp-bar {
+              flex: 1;
+              background: linear-gradient(180deg, #6366f1 0%, #818cf8 100%);
+              border-radius: 3px 3px 1px 1px;
+              transition: transform 0.2s ease, opacity 0.2s ease;
+
+              &:hover {
+                transform: scaleY(1.05);
+                opacity: 0.9;
+              }
+            }
+          }
+        }
+
+        /* 8. Template and Compliance Management */
+        .compliance-wrap {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          width: 100%;
+
+          .compliance-shield {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 22px rgba(99, 102, 241, 0.4);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          .compliance-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+
+            .comp-row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background: #ffffff;
+              border: 1px solid #e2e8f0;
+              border-radius: 8px;
+              padding: 5px 9px;
+
+              .comp-label {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-family: Inter, sans-serif;
+                font-size: 10.5px;
+                font-weight: 500;
+                color: #1e293b;
+              }
+
+              .comp-status-tag {
+                font-family: Inter, sans-serif;
+                font-size: 9.5px;
+                color: #94a3b8;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        
+        /* ===== INTELLIGENT CONVERSATIONS (VECTOR VISUALS) ===== */
+
+        /* Card 1: Unified Conversation Workspace */
+        .conv-workspace-visual {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          margin-top: auto;
+          padding-top: 20px;
+          gap: 0;
+
+          .conv-inbox-pill {
+            background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+            color: #ffffff;
+            font-family: Inter, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 18px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: 0 8px 22px rgba(99, 102, 241, 0.35);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          .conv-connector-svg {
+            width: 60px;
+            height: 110px;
+            flex-shrink: 0;
+            margin-left: -4px;
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+          }
+
+          .conv-channels-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+
+            .conv-channels-row {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              flex-wrap: wrap;
+
+              .conv-chan-chip {
+                background: #ffffff;
+                border: 1px solid #e0e7ff;
+                border-radius: 18px;
+                padding: 5px 12px;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-family: Inter, sans-serif;
+                font-size: 11.5px;
+                font-weight: 600;
+                color: #1e1b4b;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+
+                .dot-wa-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #10b981;
+                  flex-shrink: 0;
+                }
+                .dot-insta-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #e11d48;
+                  flex-shrink: 0;
+                }
+                .dot-fb-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #2563eb;
+                  flex-shrink: 0;
+                }
+                .dot-rcs-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #3b82f6;
+                  flex-shrink: 0;
+                }
+                .dot-email-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #a855f7;
+                  flex-shrink: 0;
+                }
+                .dot-webchat-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #059669;
+                  flex-shrink: 0;
+                }
+                .dot-sms-circle {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 50%;
+                  background: #4f46e5;
+                  flex-shrink: 0;
+                }
+              }
+            }
+
+            .conv-bottom-chip {
+              align-self: flex-start;
+              background: #dcfce7;
+              border: 1px solid #bbf7d0;
+              color: #15803d;
+              font-family: Inter, sans-serif;
+              font-size: 11px;
+              font-weight: 600;
+              padding: 4px 14px;
+              border-radius: 14px;
+              margin-top: 2px;
+            }
+          }
+        }
+
+        /* Card 2: Intent Recognition */
+        .intent-visual {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+
+          .intent-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+
+            .intent-query-bubble {
+              background: #f1f5f9;
+              border: 1px solid #e2e8f0;
+              border-radius: 10px;
+              padding: 6px 10px;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #1e293b;
+            }
+
+            .intent-tag-pill {
+              background: #6366f1;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 600;
+              padding: 3px 8px;
+              border-radius: 10px;
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+              align-self: flex-start;
+            }
+          }
+
+          .intent-arrow {
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .intent-right-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1.2;
+
+            .intent-item {
+              background: #f8fafc;
+              border: 1px solid #e2e8f0;
+              border-radius: 8px;
+              padding: 5px 8px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 6px;
+
+              &.intent-item-active {
+                background: #eef2ff;
+                border-color: #c7d2fe;
+
+                .intent-name {
+                  color: #4338ca;
+                  font-weight: 700;
+                }
+              }
+
+              .intent-name {
+                font-family: Inter, sans-serif;
+                font-size: 10.5px;
+                font-weight: 500;
+                color: #475569;
+              }
+
+              .intent-bar-track {
+                width: 50px;
+                height: 5px;
+                background: #e2e8f0;
+                border-radius: 4px;
+                overflow: hidden;
+
+                .intent-bar-fill-high {
+                  width: 85%;
+                  height: 100%;
+                  background: #6366f1;
+                  border-radius: 4px;
+                }
+
+                .intent-bar-fill-low {
+                  height: 100%;
+                  background: #818cf8;
+                  border-radius: 4px;
+                }
+              }
+            }
+          }
+        }
+
+        /* Card 3: Context-Aware Response Assistance */
+        .assist-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+
+          .assist-box {
+            background: #f8fafc;
+            border: 1.5px dashed #818cf8;
+            border-radius: 10px;
+            padding: 8px 12px;
+
+            .assist-eyebrow {
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 700;
+              color: #4f46e5;
+              letter-spacing: 0.5px;
+              margin-bottom: 4px;
+            }
+
+            .assist-text {
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              color: #1e293b;
+              margin: 0;
+              line-height: 15px;
+            }
+          }
+
+          .assist-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            .assist-btn-use {
+              background: #6366f1;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 4px 10px;
+              border-radius: 8px;
+            }
+
+            .assist-badge-source {
+              background: #dcfce7;
+              color: #166534;
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              font-weight: 500;
+              padding: 4px 8px;
+              border-radius: 8px;
+            }
+          }
+        }
+
+        /* Card 4: AI Agent Workflow Execution */
+        .workflow-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          width: 100%;
+
+          .wf-step-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .wf-step-left {
+              display: flex;
+              align-items: center;
+              gap: 7px;
+
+              .wf-icon-check {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #dcfce7;
+                color: #16a34a;
+                font-size: 9.5px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .wf-icon-arrow {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #e0e7ff;
+                color: #4f46e5;
+                font-size: 8.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .wf-step-title {
+                font-family: Inter, sans-serif;
+                font-size: 10.5px;
+                font-weight: 600;
+                color: #1e293b;
+              }
+            }
+
+            .wf-step-status {
+              font-family: Inter, sans-serif;
+              font-size: 9.5px;
+              color: #94a3b8;
+            }
+
+            .wf-progress-bar {
+              width: 55px;
+              height: 5px;
+              background: #e0e7ff;
+              border-radius: 4px;
+              overflow: hidden;
+
+              .wf-progress-fill {
+                width: 70%;
+                height: 100%;
+                background: #6366f1;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+
+        /* Card 5: Seamless Human Handover */
+        .handover-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+
+          .handover-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .handover-orb-ai {
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-weight: 700;
+              font-size: 11px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+              flex-shrink: 0;
+            }
+
+            .handover-connector {
+              flex: 1;
+              height: 1px;
+              border-top: 1.5px dashed #cbd5e1;
+              position: relative;
+              margin: 0 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .handover-pill-badge {
+                position: absolute;
+                background: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-radius: 12px;
+                padding: 2px 8px;
+                font-family: Inter, sans-serif;
+                font-size: 9.5px;
+                font-weight: 600;
+                color: #1e293b;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                white-space: nowrap;
+              }
+            }
+
+            .handover-orb-agent {
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: #10b981;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            }
+          }
+
+          .handover-tags {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+
+            .ho-tag {
+              background: #f1f5f9;
+              border: 1px solid #e2e8f0;
+              border-radius: 8px;
+              padding: 3px 8px;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              color: #3b82f6;
+
+              &.ho-tag-green {
+                background: #dcfce7;
+                border-color: #bbf7d0;
+                color: #15803d;
+              }
+            }
+          }
+        }
+
+        /* Card 6: Intelligent Routing */
+        .routing-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+
+          .routing-agent-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .routing-avatar-blue {
+              width: 26px;
+              height: 26px;
+              border-radius: 50%;
+              background: #3b82f6;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            }
+
+            .routing-avatar-purple {
+              width: 26px;
+              height: 26px;
+              border-radius: 50%;
+              background: #a855f7;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-size: 10.5px;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            }
+
+            .routing-info {
+              display: flex;
+              flex-direction: column;
+              min-width: 85px;
+
+              .routing-name {
+                font-family: Inter, sans-serif;
+                font-size: 11px;
+                font-weight: 600;
+                color: #1e293b;
+                line-height: 13px;
+              }
+
+              .routing-sub {
+                font-family: Inter, sans-serif;
+                font-size: 9px;
+                color: #94a3b8;
+                line-height: 11px;
+              }
+            }
+
+            .routing-track {
+              flex: 1;
+              height: 6px;
+              background: #e2e8f0;
+              border-radius: 4px;
+              overflow: hidden;
+
+              .routing-fill {
+                height: 100%;
+                background: #3b82f6;
+                border-radius: 4px;
+              }
+
+              .routing-fill-purple {
+                height: 100%;
+                background: #a855f7;
+                border-radius: 4px;
+              }
+            }
+          }
+
+          .routing-tags-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 2px;
+
+            .routing-tag-blue {
+              background: #eff6ff;
+              border: 1px solid #bfdbfe;
+              color: #1d4ed8;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 6px;
+            }
+
+            .routing-tag-green {
+              background: #dcfce7;
+              border: 1px solid #bbf7d0;
+              color: #15803d;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              font-weight: 600;
+              padding: 2px 7px;
+              border-radius: 6px;
+            }
+          }
+        }
+
+        /* Card 7: Complete Conversation History */
+        .history-timeline-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 100%;
+
+          .hist-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .hist-icon {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+
+              &.hist-icon-green {
+                background: #dcfce7;
+                color: #16a34a;
+              }
+
+              &.hist-icon-lavender {
+                background: #e0e7ff;
+                color: #4338ca;
+                font-size: 10px;
+              }
+
+              &.hist-icon-purple {
+                background: #f3e8ff;
+              }
+            }
+
+            .hist-text {
+              display: flex;
+              flex-direction: column;
+
+              .hist-title {
+                font-family: Inter, sans-serif;
+                font-size: 11px;
+                font-weight: 600;
+                color: #1e293b;
+                line-height: 13px;
+              }
+
+              .hist-sub {
+                font-family: Inter, sans-serif;
+                font-size: 9.5px;
+                color: #94a3b8;
+                line-height: 11px;
+              }
+            }
+          }
+
+          .hist-line {
+            width: 1.5px;
+            height: 6px;
+            border-left: 1.5px dashed #cbd5e1;
+            margin-left: 9.5px;
+          }
+        }
+
+        /* Card 8: Conversation Analytics */
+        .conv-analytics-visual {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+
+          .conv-legend-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .conv-legend-item {
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+              font-family: Inter, sans-serif;
+              font-size: 10px;
+              color: #64748b;
+              font-weight: 500;
+
+              .conv-dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+
+                &.dot-blue {
+                  background: #3b82f6;
+                }
+                &.dot-purple {
+                  background: #a855f7;
+                }
+                &.dot-green {
+                  background: #10b981;
+                }
+              }
+            }
+          }
+
+          .conv-bars-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 6px;
+            height: 75px;
+            border-bottom: 1.5px solid #e2e8f0;
+            padding-bottom: 2px;
+
+            .conv-bar {
+              flex: 1;
+              border-radius: 3px 3px 1px 1px;
+              transition: transform 0.2s ease;
+
+              &:hover {
+                transform: scaleY(1.05);
+              }
+            }
+          }
+        }
+
+        /* 1. Tag Pills (Other modes) */
+        .tags-list {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-wrap: wrap;
+
+          .tag-pill {
+            font-family: Inter, sans-serif;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: #eef2ff;
+            color: #4f46e5;
+            display: inline-block;
+
+            &.pill-urgent {
+              background: #fee2e2;
+              color: #ef4444;
+              font-weight: 700;
+            }
+
+            &.pill-billing {
+              background: #fef9c3;
+              color: #ca8a04;
+              font-weight: 700;
+            }
+
+            &.pill-low {
+              background: #dcfce7;
+              color: #16a34a;
+              font-weight: 700;
+            }
+
+            &.pill-access {
+              background: #eef2ff;
+              color: #4f46e5;
+              font-weight: 700;
+            }
+          }
+        }
+
+        /* 2. Agent Workload Bars */
+        .assignment-workload {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+
+          .agent-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .agent-avatar {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background: #5e6ff9;
+              color: #ffffff;
+              font-family: Inter, sans-serif;
+              font-weight: 700;
+              font-size: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+            }
+
+            .agent-name {
+              font-family: Inter, sans-serif;
+              font-size: 13.5px;
+              font-weight: 700;
+              color: #0f1828;
+              min-width: 46px;
+            }
+
+            .progress-track {
+              flex: 1;
+              height: 8px;
+              background: #e0e7ff;
+              border-radius: 10px;
+              overflow: hidden;
+
+              .progress-fill {
+                height: 100%;
+                background: #5e6ff9;
+                border-radius: 10px;
+                transition: width 0.4s ease;
+              }
+            }
+          }
+        }
+
+        /* 3. Reply Ready Button */
+        .reply-ready-wrapper {
+          display: flex;
+          align-items: center;
+
+          .reply-ready-btn {
+            background: #5e6ff9;
+            color: #ffffff;
+            font-family: Inter, sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(94, 111, 249, 0.3);
+
+            .star-icon {
+              font-size: 14px;
+            }
+          }
+        }
+
+        /* 4. SLA Circular Progress */
+        .sla-circle-wrap {
+          display: flex;
+          align-items: center;
+
+          .sla-radial {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              position: absolute;
+              inset: 0;
+            }
+
+            .sla-percent {
+              font-family: Inter, sans-serif;
+              font-size: 13px;
+              font-weight: 700;
+              color: #0f1828;
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+
+        /* 5. Complete Timeline Bullets */
+        .timeline-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: #475569;
+
+            .bullet-dot {
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: #5e6ff9;
+              flex-shrink: 0;
+            }
+          }
+        }
+
+        /* 6. Chart Bars */
+        .chart-container {
+          background: #f8fafc;
+          border-radius: 12px;
+          padding: 18px 22px 14px;
+          width: 100%;
+          border: 1px solid #f1f5f9;
+          box-sizing: border-box;
+
+          .bars-wrapper {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 10px;
+            height: 70px;
+
+            .bar {
+              flex: 1;
+              background: #6e7bf9;
+              border-radius: 6px;
+              transition: transform 0.2s ease;
+
+              &:hover {
+                transform: scaleY(1.05);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Media Queries */
+  @media (max-width: 1280px) and (min-width: 1081px) {
+    padding: 60px 40px;
+
+    h2 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    .all-agentic-feature-cards {
+      gap: 20px;
+      margin-top: 48px;
+
+      .feature-row-top,
+      .feature-row-middle,
+      .feature-row-bottom {
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) and (min-width: 769px) {
+    padding: 50px 40px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    .all-agentic-feature-cards {
+      margin-top: 40px;
+      gap: 20px;
+
+      .feature-row-top,
+      .feature-row-middle,
+      .feature-row-bottom {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .feature-card.feature-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .card-header {
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .card-visual {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+
+    h6 {
+      font-size: 13px;
+    }
+
+    h2 {
+      font-size: 28px;
+      line-height: 38px;
+      margin-top: 12px;
+    }
+
+    .all-agentic-feature-cards {
+      margin-top: 32px;
+      gap: 16px;
+
+      .feature-row-top,
+      .feature-row-middle,
+      .feature-row-bottom {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+      }
+
+      .feature-card {
+        padding: 24px 20px;
+        min-height: auto;
+        border-radius: 16px;
+
+        &.feature-card-horizontal {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          padding: 24px 20px !important;
+
+          .card-header {
+            max-width: 100%;
+            margin-bottom: 18px;
+          }
+
+          .card-visual {
+            width: 100% !important;
+          }
+        }
+
+        .card-header {
+          margin-bottom: 18px;
+
+          h3 {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .all-agentic-feature-cards {
+      margin-top: 24px;
+      gap: 14px;
+
+      .feature-row-top,
+      .feature-row-middle,
+      .feature-row-bottom {
+        gap: 14px;
+      }
+
+      .feature-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+
+        &.feature-card-horizontal {
+          padding: 20px 16px !important;
+        }
+
+        .card-header {
+          margin-bottom: 14px;
+
+          h3 {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 6px;
+          }
+
+          p {
+            font-size: 13.5px;
+            line-height: 21px;
+          }
+        }
+
+        .card-visual {
+          .tags-list {
+            gap: 6px;
+
+            .tag-pill {
+              font-size: 11.5px;
+              padding: 4px 9px;
+            }
+          }
+
+          .assignment-workload {
+            gap: 10px;
+
+            .agent-row {
+              gap: 8px;
+
+              .agent-name {
+                font-size: 13px;
+                width: 44px;
+              }
+            }
+          }
+
+          .bars-wrapper {
+            gap: 6px;
+          }
+        }
+      }
+    }
+  }
+}

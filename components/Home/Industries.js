@@ -1,15 +1,17 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Industries.module.scss";
 
 const Industries = () => {
   const industriesData = [
     {
-      title: "Real Estate",
-      desc: "Deliver brochures instantly, automate site-visit reminders and qualify leads the moment they enquire.",
+      title: "Home & Appliances",
+      desc: "Enabling self-service for customers, distributors, and dealers with warranty registration and support.",
       img: "/images/ind-realestate.jpg",
-      alt: "Real estate",
+      alt: "Home & Appliances",
       color: "var(--rcs)",
-      uses: ["Brochure on WhatsApp", "Visit reminders", "EMI alerts"],
+      href: "/case-studies/home-appliance",
+      uses: ["Warranty registration", "Service booking", "Dealer orders"],
     },
     {
       title: "Healthcare",
@@ -17,39 +19,44 @@ const Industries = () => {
       img: "/images/ind-health.jpg",
       alt: "Healthcare",
       color: "var(--wa)",
+      href: "/case-studies/health-tech",
       uses: ["Appointment nudges", "Report ready", "Refill reminders"],
     },
     {
-      title: "Education",
-      desc: "Send admission updates, automate fee reminders and share results and schedules across channels.",
+      title: "Insurance",
+      desc: "Simplifying policy services, claim registration, and renewal reminders with automated virtual assistants.",
       img: "/images/ind-education.jpg",
-      alt: "Education",
+      alt: "Insurance",
       color: "var(--email)",
-      uses: ["Admission updates", "Fee reminders", "Result alerts"],
+      href: "/case-studies/insurance",
+      uses: ["Policy renewals", "Claim status", "Instant quotes"],
     },
     {
-      title: "Finance & Banking",
+      title: "Banking & Finance",
       desc: "Secure OTP delivery, transaction alerts, EMI and KYC nudges — DLT-registered and audit-ready.",
       img: "/images/ind-finance.jpg",
-      alt: "Finance and banking",
+      alt: "Banking & Finance",
       color: "var(--ai)",
+      href: "/case-studies/banking-finance",
       uses: ["OTP & 2FA", "Txn alerts", "Collections"],
     },
     {
-      title: "E-commerce",
-      desc: "Recover abandoned carts, confirm COD orders and send real-time shipping updates that reduce RTO.",
+      title: "Oil Company",
+      desc: "Automating customer engagement, QR loyalty scanning, and gift dispatch for global lubricants networks.",
       img: "/images/ind-ecommerce.jpg",
-      alt: "E-commerce",
+      alt: "Oil Company",
       color: "var(--voice)",
-      uses: ["Cart recovery", "COD confirm", "Shipping updates"],
+      href: "/case-studies/oil-company",
+      uses: ["Loyalty rewards", "QR scanner", "Distributor connect"],
     },
     {
-      title: "Logistics & Delivery",
-      desc: "Send live out-for-delivery alerts, confirm OTP at handover and cut failed deliveries with two-way nudges.",
+      title: "Electric Utility",
+      desc: "Bringing essential utility services to consumers through WhatsApp with automated bill alerts and payment flows.",
       img: "/images/ind-logistics.jpg",
-      alt: "Logistics and delivery",
+      alt: "Electric Utility",
       color: "var(--sms)",
-      uses: ["OFD alerts", "Handover OTP", "RTO reduction"],
+      href: "/case-studies/electric-utility",
+      uses: ["Bill alerts", "Outage updates", "Instant payments"],
     },
   ];
 
@@ -65,7 +72,12 @@ const Industries = () => {
 
         <div className={styles["ind-grid"]}>
           {industriesData.map((item, index) => (
-            <div key={index} className={styles.ind} style={{ "--c": item.color }}>
+            <Link
+              key={index}
+              href={item.href}
+              className={styles.ind}
+              style={{ "--c": item.color }}
+            >
               <div className={styles["ind-img"]}>
                 <img src={item.img} alt={item.alt} loading="lazy" />
               </div>
@@ -76,7 +88,7 @@ const Industries = () => {
                   <span key={uIdx}>{use}</span>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

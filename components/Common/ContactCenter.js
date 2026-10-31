@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "@/styles/ContactCenter.module.scss";
 import Image from "next/image";
 import contactcenter from "@/public/images/contactcenter.png";
@@ -17,7 +18,7 @@ const ContactCenter = () => {
           voice calling and assured call delivery backed by a global carrier
           network.
         </p>
-        <button>Learn More</button>
+        <Link href="/contact-center-suite">Learn More</Link>
         <Image src={contactcenter} alt="img" />
       </div>
     </div>

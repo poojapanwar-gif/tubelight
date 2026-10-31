@@ -47,9 +47,10 @@ export const productCategories = [
             label: "Shortcode",
             href: "/short-code-sms",
           },
-          { label: "Instagram", href: "#channels" },
-          { label: "FB Messenger", href: "#channels" },
-          { label: "TextEdu", href: "#channels" },
+          { label: "Google Business", href: "/gbm" },
+          { label: "Instagram", href: "/instagram" },
+          { label: "FB Messenger", href: "/facebook" },
+          { label: "TextEdu", href: "/textedu" },
         ],
       },
       {
@@ -64,7 +65,6 @@ export const productCategories = [
             href: "/number-masking",
           },
           { label: "IVR", href: "/ivr-solution" },
-          { label: "Flow Builder", href: "#channels" },
           { label: "WebRTC", href: "/web-rtc" },
           { label: "Click 2 Call", href: "/clicktocall" },
         ],
@@ -116,9 +116,9 @@ export const productCategories = [
       {
         title: "Contact Center Suite",
         links: [
-          { label: "Predictive Dialer", href: "#predictive-dialer" },
-          { label: "Outbound Dialer", href: "#outbound-dialer" },
-          { label: "Inbound Calls", href: "#inbound-calls" },
+          { label: "Predictive Dialer", href: "/predective-dialer" },
+          { label: "Outbound Dialer", href: "/outbound-dialer" },
+          { label: "Inbound Calls", href: "/inbound-calls" },
         ],
       },
     ],
@@ -154,11 +154,10 @@ export const productCategories = [
       {
         title: "Unified Inbox",
         links: [
-          { label: "Multi-Channel Inbox", href: "#inbox" },
-          { label: "Team Collaboration", href: "#inbox" },
-          { label: "WhatsApp Shared Inbox", href: "#inbox" },
-          { label: "Auto-Assignment", href: "#inbox" },
-          { label: "SLA & Ticket Tracking", href: "#inbox" },
+          { label: "Lead Management System", href: "/lead-management-system" },
+          { label: "Ticketing Flow Builder", href: "/ticketing-flow-builder" },
+          { label: "AI Flow Builder", href: "/ai-flow-builder" },
+          { label: "AI-Powered Workforce Management", href: "/ai-powered-workforce-management" },
         ],
       },
     ],
@@ -214,11 +213,10 @@ export const productCategories = [
           },
           {
             label: "Flash Call Verification",
-            href: "https://tubelightcommunications.com/flash-call-verification",
+            href: "/flash-call-verification",
           },
-          { label: "WhatsApp 2FA", href: "#2fa" },
-          { label: "Email OTP", href: "#2fa" },
-          { label: "Failover Fallback", href: "#2fa" },
+          { label: "WhatsApp 2FA", href: "/whatsapp" },
+          { label: "Email OTP", href: "/email-delivery" },
         ],
       },
     ],
@@ -261,11 +259,15 @@ export const productCategories = [
       {
         title: "Agentic AI",
         links: [
-          { label: "Conversational AI", href: "#ai" },
-          { label: "Voice AI Bots", href: "#ai" },
-          { label: "Intent Recognition", href: "#ai" },
-          { label: "Workflow Automation", href: "#ai" },
-          { label: "Knowledge Base AI", href: "#ai" },
+          { label: "AI Powered Ticketing", href: "/ai-powered-ticketing" },
+          { label: "AI Campaigner", href: "/ai-campaigner" },
+          { label: "Intelligent Conversations", href: "/intelligent-conversations" },
+          { label: "AI-Powered Lead Management System", href: "/ai-powered-lead-management-system" },
+          { label: "Voice Bot", href: "/voice-bot" },
+          { label: "AI Chatbot", href: "/ai-chatbot" },
+          { label: "Conversational AI", href: "/conversational-ai" },
+          { label: "AI Sentiment Analysis", href: "/ai-sentiment-analysis" },
+          { label: "Spam Text Detection", href: "/spam-text-detection" },
         ],
       },
     ],
@@ -302,21 +304,24 @@ export const productCategories = [
         title: "Numbers & Auth",
         links: [
           {
-            label: "Virtual Numbers",
-            href: "https://tubelightcommunications.com/numbers",
+            label: "Flash Call Verification",
+            href: "/flash-call-verification",
           },
-          { label: "Toll-Free Numbers", href: "#numbers" },
           {
             label: "Phone Verification",
-            href: "https://tubelightcommunications.com/phone-verification",
+            href: "/phone-verification",
           },
           {
-            label: "Number Lookup",
-            href: "https://tubelightcommunications.com/number-lookup",
+            label: "SMS Verification",
+            href: "/sms-verification",
           },
           {
             label: "Data Verification",
-            href: "https://tubelightcommunications.com/data-verification",
+            href: "/data-verification",
+          },
+          {
+            label: "Numbers",
+            href: "/numbers",
           },
         ],
       },
@@ -367,11 +372,12 @@ export const productCategories = [
       {
         title: "Engage & Apps",
         links: [
-          { label: "Campaign Manager", href: "#engage" },
-          { label: "Audience Segmentation", href: "#engage" },
-          { label: "Drip Campaigns", href: "#engage" },
-          { label: "Surveys & Feedback", href: "#engage" },
-          { label: "Webhooks & Triggers", href: "#engage" },
+          { label: "Contact Centre Suite", href: "/contact-center-suite" },
+          { label: "1inBox", href: "/1inbox" },
+          { label: "Campaigns", href: "/campaigns" },
+          { label: "BoTtl", href: "/bottl" },
+          { label: "Truecaller", href: "/truecaller" },
+          { label: "TextEdu", href: "/textedu" },
         ],
       },
     ],
@@ -379,23 +385,52 @@ export const productCategories = [
 ];
 
 export const integrationsList = [
-  { name: "Salesforce", img: "/images/integration1.png" },
-  { name: "Zoho", img: "/images/integration2.png" },
-  { name: "LeadSquared", img: "/images/integration3.png" },
-  { name: "Freshworks", img: "/images/integration4.png" },
-  { name: "Kylas", img: "/images/integration5.png" },
-  { name: "WordPress Plugins", img: "/images/integration6.png" },
-  { name: "Zendesk", img: "/images/integration7.png" },
+  {
+    name: "Salesforce",
+    img: "/images/integration1.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Salesforce/Onboard",
+  },
+  {
+    name: "Zoho",
+    img: "/images/integration2.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Zoho/About",
+  },
+  {
+    name: "LeadSquared",
+    img: "/images/integration3.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Leadsquared/Installation",
+  },
+  {
+    name: "Freshworks",
+    img: "/images/integration4.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Freshworks/Onboard",
+  },
+  {
+    name: "Kylas",
+    img: "/images/integration5.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Kylas/About",
+  },
+  {
+    name: "WordPress Plugins",
+    img: "/images/integration6.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/WordPressPlugin/Configuration",
+  },
+  {
+    name: "Zendesk",
+    img: "/images/integration7.png",
+    url: "https://tubelightcommunications.com/crm-docs/docs/Zendesk/About",
+  },
 ];
 
 export const quickLinks = [
-  { label: "Pricing", href: "#pricing" },
-  { label: "Services & Support", href: "#support" },
-  { label: "Developer Docs", href: "#developers" },
+  { label: "Pricing", href: "/contact-us" },
+  { label: "Services & Support", href: "/contact-us" },
+  { label: "Developer Docs", href: "/#developers" },
 ];
 
 const ProductMenu = ({ onClose }) => {
   const [activeId, setActiveId] = useState("cpaas");
+  const [mobileExpandedCat, setMobileExpandedCat] = useState("cpaas");
   const [isForceClosed, setIsForceClosed] = useState(false);
   const pathname = usePathname();
 
@@ -421,7 +456,8 @@ const ProductMenu = ({ onClose }) => {
       className={`${styles.productMega} product-mega-panel ${isForceClosed ? styles.forceClosed : ""}`}
       onMouseEnter={() => setIsForceClosed(false)}
     >
-      <div className={styles.menuContainer}>
+      {/* ============ 1. DESKTOP MEGA MENU (Screens > 980px) ============ */}
+      <div className={styles.desktopMenuContainer}>
         {/* ============ 1. LEFT CATEGORIES SIDEBAR ============ */}
         <div className={styles.categoriesSidebar}>
           {productCategories.map((cat) => {
@@ -486,14 +522,22 @@ const ProductMenu = ({ onClose }) => {
             <h4 className={styles.columnTitle}>Integrations</h4>
             <div className={styles.integrationsGrid}>
               {integrationsList.map((item, iIdx) => (
-                <div key={iIdx} className={styles.integItem} title={item.name}>
+                <a
+                  key={iIdx}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.integItem}
+                  title={item.name}
+                  onClick={handleLinkClick}
+                >
                   <img
                     src={item.img}
                     alt={item.name}
                     className={styles.integImg}
                     loading="lazy"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -501,15 +545,13 @@ const ProductMenu = ({ onClose }) => {
 
         {/* ============ 3. RIGHT SIDEBAR (CTA & QUICK LINKS) ============ */}
         <div className={styles.rightSidebar}>
-          <a
-            href="https://tubelightcommunications.com/contact"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact-us"
             className={styles.ctaButton}
             onClick={handleLinkClick}
           >
             Try It For Free
-          </a>
+          </Link>
 
           <div className={styles.quickLinksWrap}>
             <h5 className={styles.quickTitle}>Quick Links</h5>
@@ -539,6 +581,125 @@ const ProductMenu = ({ onClose }) => {
                 );
               })}
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* ============ 2. MOBILE PRODUCT MENU (Screens <= 980px) ============ */}
+      <div className={styles.mobileProductMenu}>
+        <div className={styles.mobileMenuHeader}>
+          <span className={styles.mobileMenuBadge}>Products & Solutions</span>
+        </div>
+
+        <div className={styles.mobileCatList}>
+          {productCategories.map((cat) => {
+            const isExpanded = mobileExpandedCat === cat.id;
+            return (
+              <div
+                key={cat.id}
+                className={`${styles.mobileCatItem} ${isExpanded ? styles.mobileCatExpanded : ""}`}
+              >
+                <button
+                  type="button"
+                  className={styles.mobileCatTrigger}
+                  onClick={() => setMobileExpandedCat(isExpanded ? null : cat.id)}
+                  aria-expanded={isExpanded}
+                >
+                  <div className={styles.mobileCatTriggerLeft}>
+                    <span className={styles.mobileCatIcon}>{cat.icon}</span>
+                    <span className={styles.mobileCatLabel}>{cat.label}</span>
+                  </div>
+                  <svg
+                    className={`${styles.mobileCatChev} ${isExpanded ? styles.rotated : ""}`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+
+                {isExpanded && (
+                  <div className={styles.mobileCatContent}>
+                    {cat.columns.map((col, cIdx) => (
+                      <div key={cIdx} className={styles.mobileSubCol}>
+                        {col.title && cat.columns.length > 1 && (
+                          <div className={styles.mobileSubColTitle}>{col.title}</div>
+                        )}
+                        <ul className={styles.mobileLinksList}>
+                          {col.links.map((link, lIdx) => {
+                            const isInternal = link.href.startsWith("/");
+                            return (
+                              <li key={lIdx}>
+                                {isInternal ? (
+                                  <Link
+                                    href={link.href}
+                                    className={styles.mobileLink}
+                                    onClick={handleLinkClick}
+                                  >
+                                    <span>{link.label}</span>
+                                    <span className={styles.mobileLinkArrow}>→</span>
+                                  </Link>
+                                ) : (
+                                  <a
+                                    href={link.href}
+                                    className={styles.mobileLink}
+                                    onClick={handleLinkClick}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <span>{link.label}</span>
+                                    <span className={styles.mobileLinkArrow}>↗</span>
+                                  </a>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile Bottom Actions (CTA + Quick Links) - NO Integrations! */}
+        <div className={styles.mobileFooterActions}>
+          <Link
+            href="/contact-us"
+            className={styles.mobileCtaBtn}
+            onClick={handleLinkClick}
+          >
+            Try It For Free
+          </Link>
+          <div className={styles.mobileQuickRow}>
+            {quickLinks.map((ql, qIdx) => {
+              const isInternal = ql.href.startsWith("/");
+              return isInternal ? (
+                <Link
+                  key={qIdx}
+                  href={ql.href}
+                  className={styles.mobileQuickPill}
+                  onClick={handleLinkClick}
+                >
+                  {ql.label}
+                </Link>
+              ) : (
+                <a
+                  key={qIdx}
+                  href={ql.href}
+                  className={styles.mobileQuickPill}
+                  onClick={handleLinkClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ql.label}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

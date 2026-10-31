@@ -8,12 +8,16 @@ export const metadata = {
   title: "Tubelight Communications — Customer Engagement Platform for Modern Enterprises",
   description:
     "Connect with customers across WhatsApp, SMS, RCS, Voice, Email and AI-powered conversations from a single omnichannel platform. CPaaS + contact centre built for modern enterprises.",
+  icons: {
+    icon: "/-TLicon.png",
+  },
 };
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/-TLicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

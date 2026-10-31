@@ -38,7 +38,11 @@
       color: #ffffff;
       width: 50%;
     }
-    button {
+    button,
+    a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
       height: 42px;
       border-radius: 12px;
       padding: 0px 30px;
@@ -67,6 +71,142 @@
       position: absolute;
       right: 80px;
       bottom: 40px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 40px 40px;
+
+    .data-verification-content {
+      padding: 50px 30px 40px 40px;
+
+      h2 {
+        width: 55%;
+        font-size: 38px;
+        line-height: 48px;
+      }
+
+      p {
+        width: 52%;
+        font-size: 15.5px;
+        line-height: 25px;
+      }
+
+      img {
+        right: 40px;
+        bottom: 30px;
+        max-width: 380px;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 30px 40px;
+
+    .data-verification-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 30px;
+
+      h2 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      button,
+      a {
+        margin-top: 28px;
+      }
+
+      img {
+        position: static;
+        margin-top: 30px;
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 20px 30px 20px;
+
+    .data-verification-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 20px 24px 20px;
+
+      h2 {
+        width: 100%;
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 14px;
+      }
+
+      p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      button,
+      a {
+        margin-top: 22px;
+        height: 40px;
+        padding: 0 24px;
+        font-size: 14px;
+      }
+
+      img {
+        position: static;
+        margin-top: 24px;
+        align-self: center;
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px 20px 24px 20px;
+
+    .data-verification-content {
+      padding: 24px 16px 20px 16px;
+
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 13.5px;
+        line-height: 21px;
+      }
+
+      button,
+      a {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      img {
+        margin-top: 20px;
+        max-width: 240px;
+      }
     }
   }
 }

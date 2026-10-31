@@ -1,0 +1,199 @@
+.cs-list-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 24px 150px;
+  text-align: center;
+  background: #ffffff;
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(40px);
+  }
+  .glow-left {
+    width: 520px;
+    height: 520px;
+    left: -230px;
+    top: 120px;
+    background: radial-gradient(
+      circle,
+      rgba(186, 205, 251, 0.75) 0%,
+      rgba(214, 226, 252, 0.45) 45%,
+      rgba(255, 255, 255, 0) 72%
+    );
+  }
+  .glow-right {
+    width: 480px;
+    height: 480px;
+    right: -170px;
+    top: -10px;
+    background: radial-gradient(
+      circle,
+      rgba(175, 196, 252, 0.8) 0%,
+      rgba(208, 221, 253, 0.45) 45%,
+      rgba(255, 255, 255, 0) 72%
+    );
+  }
+
+  .cs-list-hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: #0f1828;
+  }
+  p {
+    margin-top: 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #6b7280;
+  }
+}
+
+.cs-list-section {
+  position: relative;
+  padding: 0 24px 100px;
+  background: #ffffff;
+  padding-top: 40px;
+}
+
+.cs-list-grid {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 74px;
+  row-gap: 40px;
+}
+
+.cs-card {
+  position: relative;
+  display: block;
+  height: 357px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  isolation: isolate;
+
+  .cs-card-visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    transition: transform 0.5s var(--ease);
+  }
+
+  .cs-card-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0) 38%),
+      radial-gradient(circle at 18% 70%, rgba(255, 255, 255, 0.45) 0, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .cs-caption {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    z-index: 1;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 14px 16px 18px;
+    box-shadow: 0 6px 24px -14px rgba(15, 24, 40, 0.25);
+  }
+
+  .cs-caption-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+
+    h3 {
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: #0f1828;
+    }
+  }
+
+  .cs-read-more {
+    flex-shrink: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #5e6ff9;
+  }
+
+  p {
+    margin-top: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #5f6982;
+  }
+
+  &.is-link {
+    cursor: pointer;
+    &:hover .cs-card-visual {
+      transform: scale(1.03);
+    }
+    &:hover .cs-read-more {
+      text-decoration: underline;
+    }
+    &:focus-visible {
+      outline: 2px solid #5e6ff9;
+      outline-offset: 4px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-list-grid {
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+  .cs-card {
+    height: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-list-hero {
+    padding: 80px 16px 72px;
+    h1 {
+      font-size: 34px;
+    }
+    .glow-left,
+    .glow-right {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .cs-list-section {
+    padding: 0 16px 96px;
+    padding-top: 20px;
+  }
+  .cs-list-grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+  .cs-card {
+    height: 300px;
+    .cs-caption {
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+    }
+  }
+}

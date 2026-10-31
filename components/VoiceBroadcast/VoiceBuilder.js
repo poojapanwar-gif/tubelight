@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/VoiceBuilder.module.scss";
 import voicebuilder from "../../public/images/voicebuilder.png";
 import Image from "next/image";
@@ -42,7 +43,7 @@ const VoiceBuilder = () => {
             Text to speech available to create voice files in major Global /
             Regional Language.
           </h6>
-          <button>Learn more</button>
+          <Link href="/contact-us">Learn more</Link>
         </div>
       </div>
       <div className={styles["explore-solution-section"]}>

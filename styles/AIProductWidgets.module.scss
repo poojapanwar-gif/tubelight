@@ -1,0 +1,459 @@
+// CSS recreations of the Figma mock widgets used on the AI product pages.
+
+$ink: #0f1828;
+$muted: #5f6982;
+$blue: #5e6ff9;
+$navy: #1e2463;
+
+/* ================= Hero diagram (ticketing) ================= */
+.diagram {
+  position: relative;
+  height: 100%;
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+.diagram-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #a7acd0;
+}
+
+.diagram-body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.diagram-input {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: -6px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: $navy;
+  color: #fff;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.diagram-ai {
+  position: relative;
+  flex: 0 0 auto;
+  width: 66px;
+  height: 66px;
+  margin-right: auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: radial-gradient(circle at 40% 35%, #7d8afc, #5563f1);
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 0 9px rgba(94, 111, 249, 0.25),
+    0 10px 26px -6px rgba(94, 111, 249, 0.7);
+  strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    line-height: 1;
+  }
+  small {
+    margin-top: 3px;
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+  }
+}
+
+.diagram-routes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  padding: 8px 0;
+}
+
+.diagram-route {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.diagram-node {
+  position: relative;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $navy;
+  color: #fff;
+  font-size: 7px;
+  box-shadow: 0 4px 10px -4px rgba(30, 36, 99, 0.6);
+}
+
+.diagram-ticket {
+  margin-right: -10px;
+  padding: 4px 14px 4px 6px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-left: 2px solid;
+  font-size: 6.5px;
+  line-height: 1.4;
+  b {
+    color: $ink;
+    font-weight: 600;
+  }
+  i {
+    font-style: normal;
+  }
+  &.is-red {
+    border-color: #f08a96;
+    i {
+      color: #f08a96;
+    }
+  }
+  &.is-green {
+    border-color: #2fb36a;
+    i {
+      color: #2fb36a;
+    }
+  }
+}
+
+.diagram-sla {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: $navy;
+  overflow: hidden;
+}
+
+.diagram-sla-fill {
+  position: absolute;
+  inset: 0 64% 0 0;
+  background: #22a06b;
+}
+
+.diagram-sla-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ================= Ticket card (platform section) ================= */
+.ticket {
+  width: 100%;
+  padding: 28px 26px 30px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #e8eaf6;
+  box-shadow: 0 16px 40px -22px rgba(94, 111, 249, 0.45);
+  font-family: "Inter", sans-serif;
+}
+
+.ticket-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  strong {
+    font-size: 17px;
+    font-weight: 600;
+    color: $ink;
+  }
+}
+
+.ticket-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.chip-red {
+  background: #fde7ea;
+  color: #e5484d;
+}
+
+.chip-blue {
+  background: #e6e9fe;
+  color: $blue;
+}
+
+.chip-green {
+  background: #dff6e8;
+  color: #1f9b55;
+  font-weight: 600;
+  height: 28px;
+  padding: 0 12px;
+}
+
+.chip-orange {
+  background: #fdefd8;
+  color: #c97a12;
+  font-weight: 600;
+  height: 28px;
+  padding: 0 12px;
+}
+
+.ticket-quote {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #eef0fd;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4a5370;
+}
+
+.ticket-summary {
+  margin: 16px 0 18px;
+  padding: 14px 18px 16px;
+  border-radius: 12px;
+  border: 1.5px dashed #8d97f3;
+  p {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 24px;
+    color: $ink;
+  }
+}
+
+.ticket-summary-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: $blue;
+}
+
+/* ================= Feature card widgets ================= */
+%widget {
+  margin-top: auto;
+  list-style: none;
+}
+
+.pills {
+  @extend %widget;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  li {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #eceefd;
+    color: $blue;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.priority {
+  @extend %widget;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  li {
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.tone-red {
+  background: #fde8ec;
+  color: #e5484d;
+}
+
+.tone-yellow {
+  background: #fefbe0;
+  color: #e3cf2b;
+}
+
+.tone-green {
+  background: #e3f8e7;
+  color: #2fa84f;
+}
+
+.tone-blue {
+  background: #eceefd;
+  color: $blue;
+}
+
+.assignees {
+  @extend %widget;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.avatar {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.assignee-name {
+  flex: 0 0 70px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $ink;
+}
+
+.progress {
+  flex: 1;
+  height: 5px;
+  border-radius: 999px;
+  background: #e2e5fb;
+  overflow: hidden;
+  span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: $blue;
+  }
+}
+
+.suggested {
+  @extend %widget;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 248px;
+  max-width: 100%;
+  padding: 13px 18px;
+  border-radius: 10px;
+  background: $blue;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 24px -12px rgba(94, 111, 249, 0.8);
+}
+
+.sla-ring {
+  @extend %widget;
+  align-self: flex-start;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient($blue calc(var(--p) * 1%), #eceefb 0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: #fbfbfe;
+  }
+  span {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    color: $ink;
+  }
+}
+
+.history {
+  @extend %widget;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #4a5370;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $blue;
+    }
+  }
+}
+
+.bars {
+  @extend %widget;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 112px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, #f3f4fd 100%);
+  span {
+    flex: 1;
+    border-radius: 3px 3px 0 0;
+    background: linear-gradient(135deg, #5e6ff9 0%, #8e6cf7 100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .ticket {
+    padding: 22px 18px;
+  }
+  .ticket-head {
+    flex-wrap: wrap;
+  }
+  .pills {
+    gap: 10px;
+  }
+  .bars {
+    gap: 6px;
+    height: 90px;
+  }
+}

@@ -1,0 +1,819 @@
+.how-it-works-section {
+  width: 100%;
+  padding: 60px 80px;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .section-title {
+    font-family: Space Grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.88px;
+    vertical-align: middle;
+    color: #0f1828;
+    margin: 0 0 50px 0;
+  }
+
+  .how-it-works-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+
+    // Left Side: 4 Steps List
+    .steps-left {
+      flex: 0 0 360px;
+      max-width: 400px;
+      z-index: 5;
+
+      .steps-timeline {
+        display: flex;
+        flex-direction: column;
+
+        .step-row {
+          display: flex;
+          align-items: stretch; // stretches column so line is 100% continuous
+          gap: 24px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .step-badge-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            width: 38px;
+
+            .step-badge {
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: Inter, sans-serif;
+              font-weight: 600;
+              font-size: 15px;
+              color: #5e6ff9;
+              background: #eef2ff;
+              border: 1.5px solid #d6e4fd;
+              flex-shrink: 0;
+              transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .step-connector-line {
+              width: 2px;
+              flex: 1;
+              min-height: 36px;
+              background: #e2e8f0;
+              margin: 0;
+              transition: background 0.35s ease;
+            }
+          }
+
+          .step-text {
+            flex: 1;
+            padding-bottom: 28px;
+            padding-top: 6px; // aligns text nicely with badge center
+
+            .step-heading {
+              font-family: Space Grotesk, sans-serif;
+              font-weight: 600;
+              font-style: normal;
+              font-size: 20px;
+              line-height: 120%;
+              letter-spacing: 0px;
+              color: #0f1828;
+              margin: 0;
+              transition: color 0.3s ease;
+            }
+
+            .step-detail {
+              font-family: Inter, sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              font-size: 14.5px;
+              line-height: 22px;
+              letter-spacing: 0px;
+              color: #5f6982;
+              margin: 8px 0 0 0;
+              transition: color 0.3s ease;
+            }
+          }
+
+          // Active Step State
+          &.step-active {
+            .step-badge-column {
+              .step-badge {
+                background: #5e6ff9;
+                color: #ffffff;
+                border-color: #5e6ff9;
+                box-shadow: 0 4px 14px rgba(94, 111, 249, 0.45);
+                transform: scale(1.1);
+              }
+
+              .step-connector-line {
+                background: #5e6ff9;
+              }
+            }
+
+            .step-text {
+              .step-heading {
+                color: #5e6ff9;
+              }
+
+              .step-detail {
+                color: #1e293b;
+              }
+            }
+          }
+
+          &:last-child {
+            .step-text {
+              padding-bottom: 0;
+            }
+          }
+
+          &:hover {
+            .step-heading {
+              color: #5e6ff9;
+            }
+          }
+        }
+      }
+    }
+
+    // Right Side: 4 Horizontal Slots
+    .stages-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 480px;
+
+      .mobile-icons-row {
+        display: none;
+      }
+
+      .stages-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        width: 100%;
+
+        .stage-slot {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+          // Inactive Slot: Exactly matches user specs
+          &.slot-inactive {
+            .icon-box {
+              width: 90px;
+              height: 90px;
+              border-radius: 8px;
+              background: #e6effb;
+              border: 0.2px solid #5e6ff9;
+              box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+              .box-img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+                display: block;
+              }
+
+              &:hover {
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 10px 20px rgba(94, 111, 249, 0.3);
+              }
+            }
+          }
+
+          // Active Slot: Phone device with concentric ripples without overlap
+          &.slot-active {
+            .phone-mockup-wrapper {
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 220px;
+              height: 450px;
+
+              // Concentric Pulse Rings: sized so they never overlap neighboring boxes
+              .concentric-ring-outer {
+                position: absolute;
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                border: 1.5px solid rgba(94, 111, 249, 0.16);
+                pointer-events: none;
+                animation: rippleOuter 4s ease-in-out infinite;
+              }
+
+              .concentric-ring-inner {
+                position: absolute;
+                width: 260px;
+                height: 260px;
+                border-radius: 50%;
+                border: 1.5px solid rgba(94, 111, 249, 0.3);
+                pointer-events: none;
+                animation: rippleInner 4s ease-in-out infinite;
+              }
+
+              // Phone Device Body
+              .phone-device {
+                position: relative;
+                width: 220px;
+                height: 440px;
+                border-radius: 36px;
+                background: #0b1120;
+                border: 4px solid #1e293b;
+                box-shadow:
+                  0 24px 48px rgba(15, 23, 42, 0.4),
+                  0 0 20px rgba(94, 111, 249, 0.15);
+                padding: 22px 18px;
+                box-sizing: border-box;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                animation: phonePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+                .screen-content {
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+
+                  .phone-notch {
+                    width: 44px;
+                    height: 4px;
+                    background: #1e293b;
+                    border-radius: 4px;
+                    margin: 0 auto 18px auto;
+                  }
+
+                  .screen-title {
+                    font-family: Space Grotesk, sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #ffffff;
+                    margin: 0 0 14px 0;
+                  }
+
+                  // Step 1: Login Form
+                  .form-field {
+                    margin-bottom: 12px;
+
+                    label {
+                      font-family: Inter, sans-serif;
+                      font-size: 11px;
+                      color: #94a3b8;
+                      display: block;
+                      margin-bottom: 4px;
+                    }
+
+                    .input-box {
+                      background: #1e293b;
+                      border-radius: 6px;
+                      padding: 8px 10px;
+                      color: #ffffff;
+                      font-size: 12px;
+                      letter-spacing: 2px;
+                      border: 1px solid #334155;
+                    }
+                  }
+
+                  .phone-hint {
+                    font-family: Inter, sans-serif;
+                    font-size: 10.5px;
+                    color: #94a3b8;
+                    margin: 10px 0 0 0;
+                    line-height: 15px;
+                  }
+
+                  .phone-button {
+                    margin-top: auto;
+                    background: linear-gradient(
+                      135deg,
+                      #2f6dee 0%,
+                      #5e6ff9 100%
+                    );
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px 16px;
+                    font-family: Inter, sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 14px rgba(47, 109, 238, 0.4);
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                      transform: translateY(-2px);
+                    }
+                  }
+
+                  // Step 2: SMS Message
+                  .sms-bubble {
+                    background: #1e293b;
+                    border: 1px solid #334155;
+                    border-radius: 12px;
+                    padding: 14px;
+                    margin-top: 10px;
+
+                    .sms-header {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 8px;
+
+                      .sms-sender {
+                        font-family: Inter, sans-serif;
+                        font-weight: 600;
+                        font-size: 11px;
+                        color: #5e6ff9;
+                      }
+
+                      .sms-time {
+                        font-family: Inter, sans-serif;
+                        font-size: 9.5px;
+                        color: #64748b;
+                      }
+                    }
+
+                    .sms-text {
+                      font-family: Inter, sans-serif;
+                      font-size: 11.5px;
+                      line-height: 17px;
+                      color: #cbd5e1;
+                      margin: 0;
+
+                      strong {
+                        color: #38bdf8;
+                        font-weight: 700;
+                      }
+                    }
+                  }
+
+                  .sms-pulsing-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    background: rgba(94, 111, 249, 0.15);
+                    border: 1px solid rgba(94, 111, 249, 0.3);
+                    border-radius: 20px;
+                    padding: 6px 12px;
+                    margin-top: auto;
+                    font-family: Inter, sans-serif;
+                    font-size: 11px;
+                    color: #818cf8;
+
+                    .badge-dot {
+                      width: 7px;
+                      height: 7px;
+                      border-radius: 50%;
+                      background: #22c55e;
+                      box-shadow: 0 0 8px #22c55e;
+                    }
+                  }
+
+                  // Step 3: OTP Code Input
+                  .phone-subhint {
+                    font-family: Inter, sans-serif;
+                    font-size: 11px;
+                    color: #94a3b8;
+                    margin: 0 0 16px 0;
+                  }
+
+                  .otp-boxes-row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 6px;
+                    margin-top: 10px;
+
+                    .otp-digit-box {
+                      width: 27px;
+                      height: 34px;
+                      background: #1e293b;
+                      border: 1.5px solid #5e6ff9;
+                      border-radius: 6px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-family: Space Grotesk, sans-serif;
+                      font-weight: 700;
+                      font-size: 14px;
+                      color: #38bdf8;
+                      box-shadow: 0 0 10px rgba(94, 111, 249, 0.25);
+                    }
+                  }
+
+                  .phone-resend {
+                    font-family: Inter, sans-serif;
+                    font-size: 10.5px;
+                    color: #64748b;
+                    margin-top: 14px;
+                    text-align: center;
+                  }
+
+                  // Step 4: Verification Success
+                  .success-icon-wrap {
+                    display: flex;
+                    justify-content: center;
+                    margin: 18px 0 14px 0;
+
+                    .success-circle {
+                      width: 60px;
+                      height: 60px;
+                      border-radius: 50%;
+                      background: linear-gradient(
+                        135deg,
+                        #10b981 0%,
+                        #059669 100%
+                      );
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      box-shadow: 0 0 24px rgba(16, 185, 129, 0.4);
+                      animation: pulseSuccess 2s ease-in-out infinite;
+                    }
+                  }
+
+                  .screen-title-success {
+                    font-family: Space Grotesk, sans-serif;
+                    font-weight: 700;
+                    font-size: 17px;
+                    color: #ffffff;
+                    text-align: center;
+                    margin: 0 0 8px 0;
+                  }
+
+                  .phone-success-desc {
+                    font-family: Inter, sans-serif;
+                    font-size: 11.5px;
+                    line-height: 16px;
+                    color: #94a3b8;
+                    text-align: center;
+                    margin: 0;
+                  }
+
+                  .phone-button-success {
+                    margin-top: auto;
+                    background: linear-gradient(
+                      135deg,
+                      #10b981 0%,
+                      #059669 100%
+                    );
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px 16px;
+                    font-family: Inter, sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 1081px) {
+    padding: 40px 40px;
+
+    .how-it-works-container {
+      gap: 30px;
+
+      .stages-right {
+        .stages-row {
+          gap: 36px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 40px 40px;
+
+    .section-title {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .how-it-works-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+
+      .steps-left {
+        width: 100%;
+        max-width: 680px;
+      }
+
+      .stages-right {
+        width: 100%;
+        min-height: 480px;
+
+        .stages-row {
+          justify-content: center;
+          gap: 24px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+
+    .section-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .how-it-works-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      .steps-left {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .stages-right {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mobile-icons-row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          width: 100%;
+          margin-bottom: 24px;
+
+          .mobile-icon-box {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            background: #e6effb;
+            border: 1.2px solid #5e6ff9;
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+
+            .box-img {
+              width: 32px;
+              height: 32px;
+              object-fit: contain;
+              display: block;
+            }
+
+            &.mobile-icon-active {
+              background: #5e6ff9;
+              border-color: #5e6ff9;
+              box-shadow: 0 4px 14px rgba(94, 111, 249, 0.45);
+              transform: translateY(-2px) scale(1.06);
+
+              .box-img {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+
+        .stages-row {
+          justify-content: center;
+          gap: 0;
+
+          .stage-slot {
+            &.slot-inactive {
+              display: none;
+            }
+
+            &.slot-active {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px 20px 28px 20px;
+
+    .section-title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .how-it-works-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+
+      .steps-left {
+        width: 100%;
+        max-width: 100%;
+
+        .steps-timeline {
+          .step-row {
+            gap: 16px;
+
+            .step-badge-column {
+              width: 32px;
+
+              .step-badge {
+                width: 32px;
+                height: 32px;
+                font-size: 13.5px;
+              }
+
+              .step-connector-line {
+                min-height: 24px;
+              }
+            }
+
+            .step-text {
+              padding-bottom: 18px;
+              padding-top: 4px;
+
+              .step-heading {
+                font-size: 17.5px;
+              }
+
+              .step-detail {
+                font-size: 13.5px;
+                line-height: 20px;
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .stages-right {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mobile-icons-row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+          margin-bottom: 20px;
+
+          .mobile-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: #e6effb;
+            border: 1px solid #5e6ff9;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+
+            .box-img {
+              width: 28px;
+              height: 28px;
+              object-fit: contain;
+              display: block;
+            }
+
+            &.mobile-icon-active {
+              background: #5e6ff9;
+              border-color: #5e6ff9;
+              box-shadow: 0 4px 12px rgba(94, 111, 249, 0.45);
+              transform: translateY(-2px) scale(1.06);
+
+              .box-img {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+
+        .stages-row {
+          justify-content: center;
+          gap: 0;
+
+          .stage-slot {
+            &.slot-inactive {
+              display: none;
+            }
+
+            &.slot-active {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+
+              .phone-mockup-wrapper {
+                .concentric-ring-outer {
+                  width: 280px;
+                  height: 280px;
+                }
+
+                .concentric-ring-inner {
+                  width: 240px;
+                  height: 240px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Keyframe Animations
+@keyframes rippleOuter {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rippleInner {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes phonePop {
+  from {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseSuccess {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 32px rgba(16, 185, 129, 0.6);
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../../styles/Hubs.module.scss";
 
 const Hubs = () => {
@@ -11,7 +12,7 @@ const Hubs = () => {
       alt: "Marketing on WhatsApp and Instagram",
       title: "Scale Marketing",
       desc: "Automate customer engagement on WhatsApp & Instagram to drive leads and conversions.",
-      link: "#products",
+      link: "/campaigns",
       renderOverlays: () => (
         <>
           <span className={`${styles["hub-ov"]} ${styles["ov-ig"]}`} aria-hidden="true">
@@ -48,7 +49,7 @@ const Hubs = () => {
       alt: "Support agent on a unified team inbox",
       title: "Delight Customers",
       desc: "Stay on top of every customer query with a unified team inbox built for WhatsApp, SMS & Instagram.",
-      link: "#product",
+      link: "/contact-center-suite",
       renderOverlays: () => (
         <>
           <div className={`${styles["hub-ov"]} ${styles["ov-tl"]}`}>
@@ -81,7 +82,7 @@ const Hubs = () => {
       alt: "Sales rep closing deals on WhatsApp",
       title: "Win Deals",
       desc: "Capture leads, engage prospects, and close deals faster with a WhatsApp-first Sales CRM.",
-      link: "#outcomes",
+      link: "/1inbox",
       renderOverlays: () => (
         <>
           <span className={`${styles["hub-ov"]} ${styles["ov-bub-me"]}`}>
@@ -126,12 +127,12 @@ const Hubs = () => {
               </div>
               <h3>{hub.title}</h3>
               <p>{hub.desc}</p>
-              <a className={styles["hub-link"]} href={hub.link}>
+              <Link className={styles["hub-link"]} href={hub.link}>
                 Learn More
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

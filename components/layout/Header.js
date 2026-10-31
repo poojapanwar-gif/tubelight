@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Header.module.scss";
 import Menu from "./Menu";
+import MenuMobile from "./MenuMobile";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,6 +14,20 @@ const Header = () => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,9 +49,9 @@ const Header = () => {
         <div className={styles["hellobar-inner"]}>
           <span>
             🚀 New: AI-powered conversations across every channel —{" "}
-            <a href="https://tubelightcommunications.com/contact" target="_blank" rel="noopener noreferrer">
+            <Link href="/contact-us">
               Book a demo <span className={styles["hb-arrow"]}>→</span>
-            </a>
+            </Link>
           </span>
         </div>
       </div>
@@ -44,23 +59,25 @@ const Header = () => {
       {/* ============ NAV ============ */}
       <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`} id="nav">
         <div className={`${styles.wrap} ${styles["nav-inner"]}`}>
-          <Link className={styles.brand} href="/">
+          <Link className={styles.brand} href="/" onClick={() => setIsMobileMenuOpen(false)}>
             <img className={styles["brand-logo"]} src="/images/footerlogo.png" alt="Tubelight Communications" />
           </Link>
 
-          <Menu isOpen={isMobileMenuOpen} />
+          {/* Desktop Navigation */}
+          <Menu />
 
           <div className={styles["nav-cta"]}>
-            <a className={`${styles.btn} ${styles["btn-ghost"]} ${styles["nav-desktop-cta"]}`} href="#login">
+            <Link className={`${styles.btn} ${styles["btn-ghost"]} ${styles["nav-desktop-cta"]}`} href="/login">
               Login
-            </a>
-            <a className={`${styles.btn} ${styles["btn-blue"]} ${styles["nav-desktop-cta"]}`} href="#register">
+            </Link>
+            <Link className={`${styles.btn} ${styles["btn-blue"]} ${styles["nav-desktop-cta"]}`} href="/sign-up">
               Register
-            </a>
+            </Link>
             <button
               className={styles["nav-toggle"]}
               id="navToggle"
               aria-label="Menu"
+              aria-expanded={isMobileMenuOpen}
               onClick={toggleMobileMenu}
             >
               <span></span>
@@ -70,6 +87,9 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* ============ MOBILE NAVIGATION DRAWER (Slide from Left, height 100%) ============ */}
+      <MenuMobile isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </>
   );
 };

@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   h2 {
     font-family:
       Space Grotesk,
@@ -18,6 +19,7 @@
     color: #0f1828;
     text-align: center;
   }
+
   .all-advantages-cards {
     margin-top: 50px;
     width: 100%;
@@ -25,12 +27,46 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px 40px;
+
     .advantage-cards {
       width: calc((100% - 80px) / 3);
       position: relative;
       padding-top: 50px;
       padding-left: 50px;
       cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+      &:hover {
+        transform: translateY(-8px);
+
+        .digit-box {
+          transform: translate(-3px, -3px) scale(1.05);
+          box-shadow: 0 16px 32px -6px rgba(47, 109, 238, 0.55);
+        }
+
+        .card-content {
+          border-color: rgba(47, 109, 238, 0.4);
+          background: #ffffff;
+          box-shadow:
+            0 20px 40px -15px rgba(47, 109, 238, 0.18),
+            0 0 0 1px rgba(94, 111, 249, 0.15);
+
+          &::before {
+            opacity: 1;
+            transform: scale(1.35);
+            filter: blur(32px);
+          }
+
+          h5 {
+            color: #2f6dee;
+          }
+
+          p {
+            color: #1e293b;
+          }
+        }
+      }
+
       .digit-box {
         background: linear-gradient(218deg, #2f6dee 0%, #947afe 100%);
         width: 120px;
@@ -42,6 +78,10 @@
         left: 0px;
         z-index: 1;
         box-shadow: 0 10px 24px -8px rgba(47, 109, 238, 0.35);
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+
         h3 {
           font-family:
             Space Grotesk,
@@ -52,8 +92,10 @@
           letter-spacing: -0.5px;
           text-transform: capitalize;
           color: #ffffff;
+          transition: transform 0.3s ease;
         }
       }
+
       .card-content {
         position: relative;
         height: 100%;
@@ -70,6 +112,10 @@
         overflow: hidden;
         background: #ffffffe9;
         box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+        transition:
+          border-color 0.35s ease,
+          box-shadow 0.35s ease,
+          background-color 0.35s ease;
 
         &::before {
           content: "";
@@ -84,6 +130,10 @@
           opacity: 0.8;
           pointer-events: none;
           z-index: 0;
+          transition:
+            transform 0.4s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
         }
 
         h5 {
@@ -99,7 +149,9 @@
           text-transform: capitalize;
           color: #0f1828;
           margin: 0;
+          transition: color 0.3s ease;
         }
+
         p {
           position: relative;
           z-index: 1;
@@ -110,6 +162,98 @@
           letter-spacing: 0px;
           color: #3c4660;
           margin: 0;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0px 40px 40px 40px;
+
+    h2 {
+      font-size: 38px;
+    }
+
+    .all-advantages-cards {
+      gap: 45px 30px;
+
+      .advantage-cards {
+        width: calc((100% - 60px) / 3);
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 0px 40px 40px 40px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    .all-advantages-cards {
+      gap: 40px 24px;
+
+      .advantage-cards {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0px 20px 40px 20px;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .all-advantages-cards {
+      margin-top: 32px;
+      gap: 36px 0;
+
+      .advantage-cards {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0px 20px 30px 20px;
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .all-advantages-cards {
+      margin-top: 24px;
+      gap: 32px 0;
+
+      .advantage-cards {
+        padding-top: 36px;
+        padding-left: 36px;
+
+        .digit-box {
+          width: 90px;
+          height: 80px;
+          border-radius: 14px;
+          padding: 10px;
+
+          h3 {
+            font-size: 26px;
+          }
+        }
+
+        .card-content {
+          padding: 24px 16px;
+
+          h5 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
       }
     }

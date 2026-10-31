@@ -1,0 +1,244 @@
+.cs-classic-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 403px;
+  background: #5e6ff9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+
+  @media (max-width: 1080px) {
+    padding: 50px 40px;
+  }
+  @media (max-width: 680px) {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .hero-circle {
+    position: absolute;
+    left: -110px;
+    top: -170px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .hero-phone {
+    position: absolute;
+    left: 50px;
+    top: 120px;
+    width: 150px;
+    height: 290px;
+    border: 3px solid rgba(255, 255, 255, 0.28);
+    border-radius: 26px;
+    transform: rotate(-14deg);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      width: 34px;
+      height: 4px;
+      margin-left: -17px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.28);
+    }
+  }
+
+  .hero-bubble {
+    position: absolute;
+    left: 95px;
+    top: 40px;
+    width: 100px;
+    height: 56px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.24);
+    background-image: repeating-linear-gradient(
+      180deg,
+      transparent 0 14px,
+      rgba(255, 255, 255, 0.55) 14px 16px,
+      transparent 16px 22px
+    );
+    background-size: 70% 100%;
+    background-position: 14px 6px;
+    background-repeat: no-repeat;
+    &.bubble-2 {
+      left: -40px;
+      top: 135px;
+      width: 96px;
+    }
+  }
+
+  .hero-plane {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 220px;
+    height: 120px;
+  }
+
+  .hero-person {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    max-width: 40%;
+    object-fit: cover;
+    object-position: left bottom;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%), linear-gradient(to bottom, transparent 0, #000 12%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0, #000 22%), linear-gradient(to bottom, transparent 0, #000 12%);
+    mask-composite: intersect;
+  }
+}
+
+.cs-classic-body {
+  width: 100%;
+  padding: 64px 80px 140px;
+  box-sizing: border-box;
+
+  @media (max-width: 1080px) {
+    padding: 48px 40px 80px;
+  }
+  @media (max-width: 680px) {
+    padding: 36px 20px 60px;
+  }
+}
+
+.cs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  & + .cs-row {
+    margin-top: 40px;
+  }
+
+  &.is-reversed .cs-row-media {
+    order: 2;
+  }
+
+  .cs-row-text {
+    h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #5e6ff9;
+      margin-bottom: 14px;
+    }
+    p {
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #6b7280;
+      & + p {
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #5e6ff9;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 8px 18px -6px rgba(94, 111, 249, 0.4);
+  transition: all 0.25s ease;
+  &:hover {
+    background: #4757e6;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px -6px rgba(94, 111, 249, 0.6);
+  }
+}
+
+/* --- illustrations --- */
+.cs-art {
+  width: 100%;
+  max-width: 490px;
+  margin: 0 auto;
+
+  .cs-art-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-classic-hero {
+    .hero-person {
+      max-width: 34%;
+    }
+  }
+  .cs-row {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-classic-hero {
+    min-height: 260px;
+    padding: 48px 16px;
+    h1 {
+      font-size: 32px;
+    }
+    .hero-phone {
+      left: -40px;
+      top: 90px;
+      width: 110px;
+      height: 210px;
+      opacity: 0.6;
+    }
+    .hero-plane {
+      width: 140px;
+    }
+    .hero-person {
+      display: none;
+    }
+  }
+  .cs-classic-body {
+    padding: 40px 16px 80px;
+  }
+  .cs-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    & + .cs-row {
+      margin-top: 48px;
+    }
+    &.is-reversed .cs-row-media {
+      order: 0;
+    }
+    .cs-row-text h2 {
+      font-size: 26px;
+    }
+  }
+  .cs-art .cs-art-label {
+    font-size: 16px;
+  }
+}
