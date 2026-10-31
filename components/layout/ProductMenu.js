@@ -454,7 +454,7 @@ const ProductMenu = ({ onClose }) => {
   return (
     <div
       className={`${styles.productMega} product-mega-panel ${isForceClosed ? styles.forceClosed : ""}`}
-      onMouseEnter={() => setIsForceClosed(false)}
+      onMouseLeave={() => setIsForceClosed(false)}
     >
       {/* ============ 1. DESKTOP MEGA MENU (Screens > 980px) ============ */}
       <div className={styles.desktopMenuContainer}>

@@ -6,6 +6,14 @@ import styles from "../../styles/Menu.module.scss";
 import ProductMenu from "./ProductMenu";
 
 const MenuLink = ({ item, onClick }) => {
+  const handleClick = (e) => {
+    onClick?.(e);
+    e.currentTarget?.blur();
+    if (typeof document !== "undefined") {
+      document.activeElement?.blur();
+    }
+  };
+
   const inner = (
     <>
       <span className={styles["mega-ic"]}>{item.icon}</span>
@@ -16,7 +24,7 @@ const MenuLink = ({ item, onClick }) => {
     </>
   );
   return item.href.startsWith("/") ? (
-    <Link className={styles["mega-link"]} style={{ "--mc": "#5e6ff9" }} href={item.href} onClick={onClick}>
+    <Link className={styles["mega-link"]} style={{ "--mc": "#5e6ff9" }} href={item.href} onClick={handleClick}>
       {inner}
     </Link>
   ) : (
@@ -24,7 +32,7 @@ const MenuLink = ({ item, onClick }) => {
       className={styles["mega-link"]}
       style={{ "--mc": "#5e6ff9" }}
       href={item.href}
-      onClick={onClick}
+      onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -35,9 +43,11 @@ const MenuLink = ({ item, onClick }) => {
 
 const Menu = ({ isOpen, onClose }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isForceClosed, setIsForceClosed] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    setIsForceClosed(false);
     setOpenDropdown(null);
     if (typeof document !== "undefined") {
       document.activeElement?.blur();
@@ -45,6 +55,7 @@ const Menu = ({ isOpen, onClose }) => {
   }, [pathname]);
 
   const closeAll = () => {
+    setIsForceClosed(true);
     setOpenDropdown(null);
     onClose?.();
     if (typeof document !== "undefined") {
@@ -434,12 +445,22 @@ const Menu = ({ isOpen, onClose }) => {
   ];
 
   return (
-    <nav className={`${styles["nav-links"]} ${isOpen ? styles.open : ""}`} id="navLinks">
+    <nav
+      className={`${styles["nav-links"]} ${isOpen ? styles.open : ""} ${
+        isForceClosed ? styles.forceClosed : ""
+      }`}
+      id="navLinks"
+      onMouseLeave={() => {
+        setIsForceClosed(false);
+        setOpenDropdown(null);
+      }}
+    >
       {/* 1. PRODUCTS */}
       <div className={`${styles["nav-item"]} ${styles["product-item"]} ${openDropdown === "products" ? styles.open : ""}`}>
         <button
           className={styles["nav-trigger"]}
           type="button"
+          onMouseEnter={() => setIsForceClosed(false)}
           onClick={() => toggleDropdown("products")}
         >
           Products{" "}
@@ -455,6 +476,7 @@ const Menu = ({ isOpen, onClose }) => {
         <button
           className={styles["nav-trigger"]}
           type="button"
+          onMouseEnter={() => setIsForceClosed(false)}
           onClick={() => toggleDropdown("solutions")}
         >
           Solutions{" "}
@@ -486,6 +508,7 @@ const Menu = ({ isOpen, onClose }) => {
         <button
           className={styles["nav-trigger"]}
           type="button"
+          onMouseEnter={() => setIsForceClosed(false)}
           onClick={() => toggleDropdown("developer")}
         >
           Developer{" "}
@@ -517,6 +540,7 @@ const Menu = ({ isOpen, onClose }) => {
         <button
           className={styles["nav-trigger"]}
           type="button"
+          onMouseEnter={() => setIsForceClosed(false)}
           onClick={() => toggleDropdown("resources")}
         >
           Resources{" "}
@@ -540,6 +564,7 @@ const Menu = ({ isOpen, onClose }) => {
         <button
           className={styles["nav-trigger"]}
           type="button"
+          onMouseEnter={() => setIsForceClosed(false)}
           onClick={() => toggleDropdown("company")}
         >
           Company{" "}
