@@ -11,10 +11,10 @@ const ContactCenter = () => {
         <h2>Contact Center Suite</h2>
         <p>
           Implement voice calling, then sit back and enjoy increased engagement,
-          efficiency, and flexiblity - as well as cost savings!
+          efficiency, and flexibility - as well as cost savings!
         </p>
         <p>
-          Keep it easy and expand quiker with a full solution for high-quality
+          Keep it easy and expand quicker with a full solution for high-quality
           voice calling and assured call delivery backed by a global carrier
           network.
         </p>

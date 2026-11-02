@@ -15,7 +15,7 @@ const PredectiveCall = () => {
     },
     {
       icon: "03",
-      title: "ACampaign Management",
+      title: "Campaign Management",
       detail:
         " Configure campaigns, contact lists, schedules, and dialing rules.",
     },

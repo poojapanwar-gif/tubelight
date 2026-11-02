@@ -55,7 +55,7 @@ const FacebookCustomer = () => {
         </svg>
       ),
       title: "3. Improve",
-      detail: "TImprove response consistency.",
+      detail: "Improve response consistency.",
     },
     {
       icon: (

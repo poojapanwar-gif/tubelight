@@ -17,7 +17,7 @@ const NumbersUseCases = () => {
     {
       title: "Short Codes",
       detail:
-        "Number represents your brand, so why not make it recognizable? Short, sweet, and simple! Shortcodes are also used for feedbacks, surveys, voting and more.",
+        "Number represents your brand, so why not make it recognizable? Short, sweet, and simple! Shortcodes are also used for feedback, surveys, voting and more.",
     },
     {
       title: "VMN",

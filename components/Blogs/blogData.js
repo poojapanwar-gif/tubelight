@@ -470,7 +470,7 @@ const blogPosts = [
       },
       comparison: {
         eyebrow: "Comparison",
-        title: "Why RCS Outperforms Tradional SMS",
+        title: "Why RCS Outperforms Traditional SMS",
         subtitle:
           "RCS drives significantly higher engagement thanks to its visual and interactive capabilities. Brand identity and app-like UX make it easier for customers to trust, interact and transact.",
         columns: ["Traditional SMS", "RCS Messaging"],
@@ -520,7 +520,7 @@ const blogPosts = [
       recommend: {
         eyebrow: "Keep in mind",
         title: "Why Tubelight Recommends RCS Messaging",
-        text: "Tubelight Communications provides a robust platform to deploy RCS campaigns with ease. As SMS becomes outdated, enterprises can leverage the best of RCS while ensuring reach and realiability.",
+        text: "Tubelight Communications provides a robust platform to deploy RCS campaigns with ease. As SMS becomes outdated, enterprises can leverage the best of RCS while ensuring reach and reliability.",
         points: [
           "RCS-to-WhatsApp to SMS feedback",
           "Campaign orchestration tools",

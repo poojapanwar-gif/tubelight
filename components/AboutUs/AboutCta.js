@@ -10,7 +10,7 @@ const AboutCta = () => {
           <h2>
             Lets Build Better <span>Conversations Together</span>
           </h2>
-          <p>Join Tubelight Comminications to engage, support and grow</p>
+          <p>Join Tubelight Communications to engage, support and grow</p>
           <Link href="/contact-us" className={styles["about-cta-btn"]}>
             Book a Demo
           </Link>
