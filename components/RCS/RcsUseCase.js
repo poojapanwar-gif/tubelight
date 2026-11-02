@@ -736,7 +736,7 @@ const RcsUseCase = () => {
       `}</style>
 
       <h2>Use Cases</h2>
-      <h6>Wherever two parties need to talk but should not share personal numbers, masking keeps the conversation safe.</h6>
+      <h6>See how businesses use RCS to engage customers at every step.</h6>
       <div className={`${styles["use-cases-all-cards"]} rcs-two-cols-grid`}>
         {useCaseCard.map((item, index) => (
           <Link href={item.link} key={index}>

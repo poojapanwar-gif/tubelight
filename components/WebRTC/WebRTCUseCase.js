@@ -799,7 +799,7 @@ const WebRTCUseCase = () => {
       `}</style>
 
       <h2>Use Cases</h2>
-      <h6>WebRTC-specific introduction.</h6>
+      <h6>Explore how WebRTC enables real-time voice communication across different customer touchpoints.</h6>
       <div className={styles["use-cases-all-cards"]}>
         {useCaseCard.map((item, index) => (
           <Link href={item.link} key={index}>
