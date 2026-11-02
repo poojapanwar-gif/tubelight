@@ -6,7 +6,7 @@ import styles from "../../styles/ClickUseCases.module.scss";
 const CampaignsCase = () => {
   const useCaseCard = [
     {
-      id: "promoc",
+      id: "promo",
       link: "/ai-campaigner",
       linktext: "PromoC",
       title: "Promotional Campaigns",
@@ -232,7 +232,7 @@ const CampaignsCase = () => {
       ),
     },
     {
-      id: "alertc",
+      id: "alert",
       link: "/sms-and-otp",
       linktext: "AlertC",
       title: "Transactional Alerts",
@@ -384,7 +384,7 @@ const CampaignsCase = () => {
       ),
     },
     {
-      id: "engagec",
+      id: "engage",
       link: "/rcs",
       linktext: "EngageC",
       title: "Conversational Campaigns",

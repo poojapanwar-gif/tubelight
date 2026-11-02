@@ -8,7 +8,7 @@ const ShortCodeCase = () => {
     {
       id: "alertsc",
       link: "/",
-      linktext: "AlertSC",
+      linktext: "Alert",
       title: "Alerts & Notifications",
       detail:
         "Send system alerts, appointment reminders and emergency notifications in bulk to all your customers using the SMS API.",
@@ -190,7 +190,7 @@ const ShortCodeCase = () => {
     {
       id: "optinsc",
       link: "/",
-      linktext: "OptInSC",
+      linktext: "OptIn",
       title: "Opt-in Campaigns",
       detail:
         "Invite users to text a keyword to your Short Code to subscribe, enter contests, claim offers or request information.",
@@ -341,7 +341,7 @@ const ShortCodeCase = () => {
     {
       id: "mediasc",
       link: "/",
-      linktext: "MediaSC",
+      linktext: "Media",
       title: "Print, TV & Outdoor Ads",
       detail:
         "Add a call to action to traditional media so people can text your Short Code for an enquiry or more information.",

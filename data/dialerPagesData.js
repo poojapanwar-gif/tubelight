@@ -220,7 +220,7 @@ export const dialerPagesData = {
         },
         {
           icon: "02",
-          title: "IIVR and Self-Service",
+          title: "IVR and Self-Service",
           detail:
             "Allow callers to navigate menus and access supported self-service options.",
         },
