@@ -130,7 +130,7 @@ const HeroBanner = () => {
       </div>
 
       <div className={styles["hero-logos-wrap"]}>
-        <div className={styles["hero-logos-cap"]}>Trusted by leading enterprises</div>
+        <div className={styles["hero-logos-cap"]}>Trusted by Leading Enterprises & Public Sector Organizations</div>
         <div className={`${styles["logo-marquee"]} ${styles["hero-logos"]}`}>
           <div className={styles["hl-track"]} id="logoTrackHero">
             {/* Original track */}
