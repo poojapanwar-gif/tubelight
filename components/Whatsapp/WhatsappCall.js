@@ -64,7 +64,7 @@ const WhatsappCall = () => {
     <div className={styles["website-crm-section"]}>
       <h2>Create an exceptional brand experience.</h2>
       <p>
-        Leverage 2 billion+ active users in more then 180 countries to take your
+        Leverage 2 billion+ active users in more than 180 countries to take your
         brand places.
       </p>
       <div className={styles["website-crm-all-cards"]}>

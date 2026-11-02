@@ -13,13 +13,13 @@ const WhatsappAdvantages = () => {
       digit: "02",
       title: "Securing Conversations",
       detail:
-        "Enterprise - level security forms a vital pillar of the Whatsapp Business API. For instance, Whatsapp verifies all business account details before activation",
+        "Enterprise - level security forms a vital pillar of the WhatsApp Business API. For instance, WhatsApp verifies all business account details before activation",
     },
     {
       digit: "03",
       title: "Mastering Integration",
       detail:
-        "Brand choose to team up with an official Whatsapp Business API provider to plan, implement, and rollout their Whatapp solution",
+        "Brand choose to team up with an official WhatsApp Business API provider to plan, implement, and rollout their WhatsApp solution",
     },
     {
       digit: "04",
@@ -37,7 +37,7 @@ const WhatsappAdvantages = () => {
 
   return (
     <div className={styles["whatsapp-advantages-section"]}>
-      <h2>Whatsapp Advantages</h2>
+      <h2>WhatsApp Advantages</h2>
       <div className={styles["all-advantages-cards"]}>
         {cardData.map((item, index) => (
           <div className={styles["advantage-cards"]} key={index}>

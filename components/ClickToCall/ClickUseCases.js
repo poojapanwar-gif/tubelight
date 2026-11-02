@@ -8,7 +8,7 @@ const ClickUseCases = () => {
     {
       id: "webc2c",
       link: "/",
-      linktext: "WebC2C",
+      linktext: "Web",
       title: "Web-based Click to Call",
       detail:
         "This implementation involves embedding a Click to Call button on a website. When a user click on the button, the system prompts the user to enter their phone number. The System then connects the user to the destination number.",
@@ -244,10 +244,10 @@ const ClickUseCases = () => {
     {
       id: "appc2c",
       link: "/",
-      linktext: "AppC2C",
+      linktext: "App",
       title: "App-based Click to Call",
       detail:
-        "This implementation involves involves integration Click to Call functionality into a mobile application. When a user clicks on the button, the app initiates a call to the destination number.",
+        "This implementation involves integration Click to Call functionality into a mobile application. When a user clicks on the button, the app initiates a call to the destination number.",
       renderVisual: () => (
         <div
           style={{
@@ -426,7 +426,7 @@ const ClickUseCases = () => {
     {
       id: "adsc2c",
       link: "/",
-      linktext: "AdsC2C",
+      linktext: "Ads",
       title: "Click to Call Ads",
       detail:
         "This implementation involves adding a Click to Call button to a search engine or social media advertisement. When a user clicks on the button, the system connects the user to the destination number.",

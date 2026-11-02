@@ -56,7 +56,7 @@ const SmsOtpCall = () => {
           />
         </svg>
       ),
-      title: "Two-way SMSM",
+      title: "Two-way SMS",
       detail:
         "Let customers reply, opt in or respond to surveys and keywords, and handle every conversation.",
     },

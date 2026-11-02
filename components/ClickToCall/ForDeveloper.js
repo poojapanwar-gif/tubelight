@@ -1,10 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import style from "../../styles/ForDeveloper.module.scss";
+import style from "../../styles/IVRDevelopers.module.scss";
 
 const text = `Tubelight programmable API infrastructure enables developers to
 easily integrate communication API’s and create solutions of their
 choice.`;
+
+
+
 
 const ForDeveloper = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,7 +23,9 @@ const ForDeveloper = () => {
             <span className={style.keyword}>new</span>
           </div>
           <div className={style["code-line"]}>
-            <span className={style.function}>tubelightCommunicationsClient</span>
+            <span className={style.function}>
+              tubelightCommunicationsClient
+            </span>
             <span className={style.operator}>(</span>
             <span className={style.string}>'YOUR_ACCESS_KEY'</span>
             <span className={style.operator}>);</span>
@@ -83,7 +88,9 @@ const ForDeveloper = () => {
             <span className={style.keyword}>new</span>
           </div>
           <div className={style["code-line"]}>
-            <span className={style.function}>TubelightCommunicationsClient</span>
+            <span className={style.function}>
+              TubelightCommunicationsClient
+            </span>
             <span className={style.operator}>(</span>
             <span className={style.string}>"YOUR_ACCESS_KEY"</span>
             <span className={style.operator}>);</span>
@@ -140,13 +147,15 @@ const ForDeveloper = () => {
       ),
     },
     {
-      tab: "PHYTHON",
+      tab: "PYTHON",
       renderCode: () => (
         <>
           <div className={style["code-line"]}>
             <span className={style.variable}>tubelight_communications</span>{" "}
             <span className={style.operator}>=</span>{" "}
-            <span className={style.function}>TubelightCommunicationsClient</span>
+            <span className={style.function}>
+              TubelightCommunicationsClient
+            </span>
             <span className={style.operator}>(</span>
           </div>
           <div className={style["code-line"]}>
@@ -203,18 +212,9 @@ const ForDeveloper = () => {
       ),
     },
   ];
-
   return (
-    <div className={style["for-developer-section"]}>
+    <div className={style["ivr-developer-section"]}>
       <div className={style["developer-left-right-content"]}>
-        <div className={style["developer-left-content"]}>
-          <h2>
-            For Developers,
-            <br /> By Developers
-          </h2>
-          <p>{text}</p>
-          <button>API Documentation</button>
-        </div>
         <div className={style["developer-right-content"]}>
           <div className={style["all-tabs-and-content"]}>
             <div className={style["all-tabs"]}>
@@ -235,6 +235,14 @@ const ForDeveloper = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={style["developer-left-content"]}>
+          <h2>
+            For Developers,
+            <br /> By Developers
+          </h2>
+          <p>{text}</p>
+          <button>Documentation</button>
         </div>
       </div>
     </div>
