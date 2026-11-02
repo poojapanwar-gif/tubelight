@@ -7,7 +7,7 @@ const VoicePlatfrom = () => {
       digit: "O1",
       title: "Local Language",
       detail:
-        "Connect with your customer in International & Regional Languages",
+        "Connect with your customer in International and regional languages",
     },
     {
       digit: "O2",
@@ -37,7 +37,7 @@ const VoicePlatfrom = () => {
       digit: "O6",
       title: "Missed Call",
       detail:
-        "Missed Call is an effective simple & budget friendly solution for lead generation.",
+        "Missed Call is an effective simple and budget-friendly solution for lead generation.",
     },
     {
       digit: "O7",

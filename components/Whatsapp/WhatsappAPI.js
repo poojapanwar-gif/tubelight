@@ -182,7 +182,7 @@ const WhatsappAPI = () => {
 
   return (
     <div className={styles["whatsapp-api-section"]} ref={sectionRef}>
-      <h2>WhatsApp API Business Solution Profile</h2>
+      <h2>WhatsApp Business API Profile</h2>
       <div className={styles["whatsapp-api-circle-content"]}>
         {/* Center Live Smartphone Video Screen */}
         <div className={styles["phone-wrapper"]}>

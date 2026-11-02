@@ -7,25 +7,25 @@ const WhatsappAdvantages = () => {
       digit: "01",
       title: "Powering Messaging",
       detail:
-        "Customer services such as delivering notifications and alerts, its real strength lies in its ability to let brands easily engage in two - way interactions in real time",
+        "Customer services such as delivering notifications and alerts, its real strength lies in its ability to let brands easily engage in Two-way interactions in real time",
     },
     {
       digit: "02",
       title: "Securing Conversations",
       detail:
-        "Enterprise - level security forms a vital pillar of the WhatsApp Business API. For instance, WhatsApp verifies all business account details before activation",
+        "Enterprise-level security forms a vital pillar of the WhatsApp Business API. For instance, WhatsApp verifies  business account details before activation",
     },
     {
       digit: "03",
       title: "Mastering Integration",
       detail:
-        "Brand choose to team up with an official WhatsApp Business API provider to plan, implement, and rollout their WhatsApp solution",
+        "Brand choose to work with an official WhatsApp Business API provider to plan, implement, and rollout their WhatsApp solution",
     },
     {
       digit: "04",
       title: "Transforming Marketing",
       detail:
-        "From Click - to -Chat and Conversation buttons that let consumers immediately start chatting with a brand to deploying broadcast messaging in digital marketing campaigns",
+        "From Click-to-Chat and Conversation buttons that let consumers immediately start chatting with a brand to deploying broadcast messaging in digital marketing campaigns",
     },
     {
       digit: "05",

@@ -247,7 +247,7 @@ const ClickUseCases = () => {
       linktext: "App",
       title: "App-based Click to Call",
       detail:
-        "This implementation involves integration Click to Call functionality into a mobile application. When a user clicks on the button, the app initiates a call to the destination number.",
+        "This implementation involves integration Click to Call functionality into a mobile application. When a user clicks  the button, the app initiates a call to the destination number.",
       renderVisual: () => (
         <div
           style={{

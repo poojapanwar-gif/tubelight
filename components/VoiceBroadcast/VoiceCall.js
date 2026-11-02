@@ -64,7 +64,7 @@ const VoiceCall = () => {
     <div className={styles["website-crm-section"]}>
       <h2>Create new opportunities over a call.</h2>
       <p>
-        Be heard on scale: Voice broadcast service can help you improve customer
+        Be heard at scale: Voice broadcast service can help you improve customer
         relations by sending automated calls to masses or to the list curated by
         you in language of your choice
       </p>

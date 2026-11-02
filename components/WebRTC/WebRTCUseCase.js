@@ -799,7 +799,7 @@ const WebRTCUseCase = () => {
       `}</style>
 
       <h2>Use Cases</h2>
-      <h6>Wherever two parties need to talk but should not share personal numbers, masking keeps the conversation safe.</h6>
+      <h6>WebRTC-specific introduction.</h6>
       <div className={styles["use-cases-all-cards"]}>
         {useCaseCard.map((item, index) => (
           <Link href={item.link} key={index}>

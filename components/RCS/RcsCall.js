@@ -113,7 +113,7 @@ const RcsCall = () => {
           />
         </svg>
       ),
-      title: "Simple SMS API",
+      title: "RCS Messaging API",
       detail:
         "Automatic RCS-to-WhatsApp to SMS fallback so every message reaches the customer.",
     },
