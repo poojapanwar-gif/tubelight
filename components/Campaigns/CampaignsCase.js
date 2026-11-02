@@ -6,9 +6,9 @@ import styles from "../../styles/ClickUseCases.module.scss";
 const CampaignsCase = () => {
   const useCaseCard = [
     {
-      id: "promo",
+      id: "promoc",
       link: "/ai-campaigner",
-      linktext: "PromoC",
+      linktext: "Promo",
       title: "Promotional Campaigns",
       detail:
         "Announce offers, launches, and seasonal sales to targeted audience segments. Add links, images, and call-to-action buttons to drive instant response.",
@@ -232,9 +232,9 @@ const CampaignsCase = () => {
       ),
     },
     {
-      id: "alert",
+      id: "alertc",
       link: "/sms-and-otp",
-      linktext: "AlertC",
+      linktext: "Alert",
       title: "Transactional Alerts",
       detail:
         "Send OTPs, order updates, payment reminders, and appointment confirmations. Messages are delivered reliably and on time across all channels.",
@@ -384,9 +384,9 @@ const CampaignsCase = () => {
       ),
     },
     {
-      id: "engage",
+      id: "engagec",
       link: "/rcs",
-      linktext: "EngageC",
+      linktext: "Engage",
       title: "Conversational Campaigns",
       detail:
         "Run interactive WhatsApp and RCS campaigns with buttons, carousels, and AI-led replies. Customers can browse, ask, and buy without leaving the chat.",
