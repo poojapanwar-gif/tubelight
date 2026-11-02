@@ -4,58 +4,58 @@ import styles from "../../styles/VoicePlatfrom.module.scss";
 const VoicePlatfrom = () => {
   const cardData = [
     {
-      digit: "O1",
+      digit: "01",
       title: "Local Language",
       detail:
         "Connect with your customers in international and regional languages.",
     },
     {
-      digit: "O2",
+      digit: "02",
       title: "OBD",
       detail:
         "Send customers recorded messages that are personal and responsive.",
     },
     {
-      digit: "O3",
+      digit: "03",
       title: "Numbers",
       detail:
         "Build customer trust with instant provisioning of local numbers.",
     },
     {
-      digit: "O4",
+      digit: "04",
       title: "Flow Builder",
       detail:
         "IVR Flow Builder provides an intuitive drag-and-drop interface that makes it easy for users to create and customize their own IVR workflows.",
     },
     {
-      digit: "O5",
+      digit: "05",
       title: "IVR",
       detail:
         "IVR systems are used to route incoming calls to the appropriate department or agent. By providing customers with a series of options, IVR can help reduce wait times and improve customer satisfaction.",
     },
     {
-      digit: "O6",
+      digit: "06",
       title: "Missed Call",
       detail:
         "Missed Call is an effective, simple, and budget-friendly solution for lead generation.",
     },
     {
-      digit: "O7",
+      digit: "07",
       title: "Number Masking",
       detail:
         "Increase customer privacy & safety by Number Masking solution for various cases.",
     },
     {
-      digit: "O8",
+      digit: "08",
       title: "Contact Center Solution",
       detail:
-        "Deploy best in class contact center solution at scale with tons of loaded feature & a great UI.",
+        "Deploy best in class contact center solution at scale with tons of loaded features & a great UI.",
     },
     {
-      digit: "O9",
+      digit: "09",
       title: "Click2Call",
       detail:
-        "Simplest & quickest solution",
+        "Simplest & quickest solution.",
     },
   ];
 

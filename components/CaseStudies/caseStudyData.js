@@ -532,7 +532,7 @@ export const caseStudies = [
     stats: defaultStats("Banking services in one chat"),
     objective: {
       heading: "Secure, easy access to banking services through WhatsApp",
-      text: "Bank wanted to provide customers with secure, easy access to banking services directly through WhatsApp. The goal was to simplify routine tasks like checking balances, updating contact details, and locating branches/ATMs, while ensuring end-to-end security with OTP verification",
+      text: "Bank wanted to provide customers with secure, easy access to banking services directly through WhatsApp. The goal was to simplify routine tasks like checking balances, updating contact details, and locating branches/ATMs, while ensuring end-to-end security with OTP verification.",
     },
     solution: {
       heading:
@@ -853,7 +853,7 @@ export const caseStudies = [
       { label: "Automation", value: "End-to-End" },
       { label: "Self-Service", value: "WhatsApp Chatbot" },
     ],
-    stats: defaultStats("Banking services in one chat"),
+    stats: defaultStats("Services in one chat"),
     objective: {
       heading: "Make customer interactions easier and faster",
       text: "Home and Appliance (Company) wanted to make customer interactions easier and faster. They needed a system where customers, distributors, and dealers could self-serve for tasks like registering complaints, requesting product demos, or checking product details — without waiting for manual support.",
@@ -917,7 +917,7 @@ export const caseStudies = [
         },
         {
           title: "Customer Satisfaction",
-          text: "Self-service improved convenience and built trust in the brand",
+          text: "Self-service improved convenience and built trust in the brand.",
         },
         {
           title: "Operational Efficiency",

@@ -34,7 +34,7 @@ const defaultCards = [
         />
       </svg>
     ),
-    title: "Improve outbound calling productivity",
+    title: "Improve outbound calling productivity.",
   },
   {
     icon: (
@@ -68,7 +68,7 @@ const defaultCards = [
         />
       </svg>
     ),
-    title: "Gain visibility into campaign performance",
+    title: "Gain visibility into campaign performance.",
   },
   {
     icon: (
