@@ -631,7 +631,7 @@ export const caseStudies = [
       { label: "Authentication", value: "Employee ID" },
       { label: "Services", value: "Policy & Claims" },
     ],
-    stats: defaultStats("Banking services in one chat"),
+    stats: defaultStats("Services in one chat"),
     objective: {
       heading: "Simplify policy-related interactions through WhatsApp",
       text: "Company Insurance wanted to provide customers with a virtual assistant on WhatsApp to simplify policy-related interactions. The goal was to make services like downloading e-cards, checking hospital networks, and tracking claims accessible in one place, without the need for branch visits or lengthy calls.",
