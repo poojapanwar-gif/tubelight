@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import style from "../../styles/IVRDevelopers.module.scss";
 
 const text = `Tubelight programmable API infrastructure enables developers to
-easily integrate communication API’s and create solutions of their
+easily integrate communication APIs and create solutions of their
 choice.`;
 
 

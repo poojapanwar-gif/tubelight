@@ -12,7 +12,7 @@ const WhatsappBanner = () => {
           </h2>
           <p>
             Engage your consumers on world’s most popular messaging app use
-            whatsApp for better conversions with loaded features.
+            WhatsApp for better conversions with loaded features.
           </p>
           <div className={styles["both-button"]}>
             <Link href="/contact-us" className={styles["blue-button"]}>

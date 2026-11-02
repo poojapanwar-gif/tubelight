@@ -19,7 +19,7 @@ const WhatsappAdvantages = () => {
       digit: "03",
       title: "Mastering Integration",
       detail:
-        "Brand choose to work with an official WhatsApp Business API provider to plan, implement, and rollout their WhatsApp solution",
+        "Brands choose to work with an official WhatsApp Business API provider to plan, implement, and rollout their WhatsApp solution",
     },
     {
       digit: "04",

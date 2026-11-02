@@ -336,7 +336,7 @@ export const caseStudies = [
         arrows: false,
         nodes: [
           { icon: "📱", label: "Customer" },
-          { icon: "💬", label: "Whatsapp Chatbot" },
+          { icon: "💬", label: "WhatsApp Chatbot" },
           { icon: "🔐", label: "Tubelight Platform" },
           { icon: "🏦", label: "Utility Backend" },
         ],

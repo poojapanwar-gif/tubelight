@@ -30,7 +30,7 @@ const page = () => (
     <NumbersWorld/>
     <PHPCode
       title="For Developers, By Developers"
-      desc="Tubelight programmable API infrastructure enables developers to easily integrate communication API's and create solutions of their choice. Create a free developer account today to access API and SDK's."
+      desc="Tubelight programmable API infrastructure enables developers to easily integrate communication APIs and create solutions of their choice. Create a free developer account today to access APIs and SDKs."
       buttonText="Documentation"
     />
 

@@ -80,7 +80,7 @@ const FlashMuch = () => {
     },
     {
       id: "whatsapp",
-      label: "Whatsapp",
+      label: "WhatsApp",
       top: 250,
       left: 75,
       icon: (
