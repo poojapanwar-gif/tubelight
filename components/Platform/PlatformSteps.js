@@ -6,9 +6,9 @@ const PlatformSteps = ({ steps }) => {
   return (
     <section className={styles["platform-steps"]}>
       <h2>
-        Simple for you
+        Simple for You.
         <br />
-        Seamless for your customers
+        Seamless for Your Customers.
       </h2>
       <div className={styles["steps-row"]}>
         {steps.map((item, index) => (

@@ -88,7 +88,7 @@ const MaskingCustomer = () => {
   ];
   return (
     <div className={styles["your-customer-section"]}>
-      <h2>Simple for you Seamless for your customers</h2>
+      <h2>Simple for You. Seamless for Your Customers.</h2>
       <div className={styles["all-customer-cards"]}>
         {cardContent.map((item, index) => (
           <div className={styles["customer-card"]} key={index}>
