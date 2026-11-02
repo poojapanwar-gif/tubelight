@@ -35,13 +35,13 @@ const VoiceBuilder = () => {
           <h6>Easy to configure flow</h6>
           <h6>Multi-level IVR Technology</h6>
           <h6>
-            API integration in IVR Flow : Collect DTMF Responses, SET dynamic
-            flows, Broadcast OBD Personalized / Responsive
+            API integration in IVR Flow: Collect DTMF responses, set dynamic
+            flows, broadcast OBD personalized / responsive
           </h6>
           <h6>Call Forwarding</h6>
           <h6>
-            Text to speech available to create voice files in major Global /
-            Regional Language.
+            Text to speech available to create voice files in major global /
+            regional languages.
           </h6>
           <Link href="/contact-us">Learn more</Link>
         </div>
