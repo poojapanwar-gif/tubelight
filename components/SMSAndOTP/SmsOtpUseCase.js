@@ -8,7 +8,7 @@ const SmsOtpUseCase = () => {
     {
       id: "otpverify",
       link: "/",
-      linktext: "OTPVerify",
+      linktext: "OTP Verify",
       title: "Login & transaction verification",
       detail:
         "Verify users at sign-up, login and payment with secure one-time passwords delivered in seconds.",
@@ -176,7 +176,7 @@ const SmsOtpUseCase = () => {
     {
       id: "bulksms",
       link: "/",
-      linktext: "BulkSMS",
+      linktext: "Bulk SMS",
       title: "Promotions, alerts & reminders",
       detail:
         "Announce offers, send payment reminders and share order updates with thousands of customers at once.",
@@ -356,7 +356,7 @@ const SmsOtpUseCase = () => {
     {
       id: "twowaysms",
       link: "/",
-      linktext: "TwoWaySMS",
+      linktext: "Two Way SMS",
       title: "Conversations & feedback",
       detail:
         "Let customers reply with keywords to opt in, book, claim offers or share feedback, and track every response.",

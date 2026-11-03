@@ -8,7 +8,7 @@ const IVRUseCase = () => {
     {
       id: "inbound",
       link: "/",
-      linktext: "InboundIVR",
+      linktext: "Inbound IVR",
       title: "Smart call answering & routing",
       detail:
         "Greet callers with a custom voice menu, let them self-serve common queries, and route the rest to the right agent or department.",
@@ -274,7 +274,7 @@ const IVRUseCase = () => {
     {
       id: "outbound",
       link: "/",
-      linktext: "OutboundIVR",
+      linktext: "Outbound IVR",
       title: "Automated voice reminders & alerts",
       detail:
         "Reach thousands of customers at once with appointment reminders, payment alerts and announcements delivered as voice calls.",
@@ -387,7 +387,7 @@ const IVRUseCase = () => {
     {
       id: "voicesurvey",
       link: "/",
-      linktext: "VoiceSurvey",
+      linktext: "Voice Survey",
       title: "Feedback after every call",
       detail:
         "Collect ratings and feedback with a quick keypad response at the end of a call, and track satisfaction in real time.",

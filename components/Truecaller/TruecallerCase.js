@@ -8,7 +8,7 @@ const TruecallerCase = () => {
     {
       id: "delivery-call",
       link: "/truecaller",
-      linktext: "DeliveryCall",
+      linktext: "Delivery",
       title: "Delivery & logistics",
       detail:
         "Let customers know it is the courier calling, so they pick up and your deliveries succeed the first time.",
@@ -225,7 +225,7 @@ const TruecallerCase = () => {
     {
       id: "bank-call",
       link: "/truecaller",
-      linktext: "BankCall",
+      linktext: "Bank",
       title: "Banking & collections",
       detail:
         "Reach customers on payment reminders and service calls with an identity they can trust.",
@@ -440,7 +440,7 @@ const TruecallerCase = () => {
     {
       id: "care-call",
       link: "/truecaller",
-      linktext: "CareCall",
+      linktext: "Care",
       title: "Appointments & support",
       detail:
         "Confirm bookings and follow up on service requests with calls customers are happy to answer.",

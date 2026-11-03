@@ -8,7 +8,7 @@ const EmailUseCase = () => {
     {
       id: "transactionalmail",
       link: "/",
-      linktext: "TransactionalMail",
+      linktext: "Transactional Mail",
       title: "Receipts & confirmations",
       detail:
         "Send order confirmations, invoices, password resets and account alerts the instant they are triggered.",
@@ -190,7 +190,7 @@ const EmailUseCase = () => {
     {
       id: "campaignmail",
       link: "/",
-      linktext: "CampaignMail",
+      linktext: "Campaign Mail",
       title: "Newsletters & promotions",
       detail:
         "Reach your whole audience with branded campaigns and track every open and click.",
@@ -341,7 +341,7 @@ const EmailUseCase = () => {
     {
       id: "alertmail",
       link: "/",
-      linktext: "AlertMail",
+      linktext: "Alert Mail",
       title: "Notifications & alerts",
       detail:
         "Keep users informed about activity, billing and security with timely email notifications.",

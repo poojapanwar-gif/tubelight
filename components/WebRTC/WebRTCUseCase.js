@@ -8,7 +8,7 @@ const WebRTCUseCase = () => {
     {
       id: "webcall",
       link: "/",
-      linktext: "WebCall",
+      linktext: "Web",
       title: "Websites & landing pages",
       detail:
         "Turn visitors into conversations with a call button that connects them to your team in one click.",
@@ -264,7 +264,7 @@ const WebRTCUseCase = () => {
     {
       id: "crmcall",
       link: "/",
-      linktext: "CRMCall",
+      linktext: "CRM",
       title: "Agent desktop & CRM",
       detail:
         "Give agents a softphone inside your CRM so they can call leads and customers without switching tools.",
@@ -414,7 +414,7 @@ const WebRTCUseCase = () => {
     {
       id: "supportcall",
       link: "/",
-      linktext: "SupportCall",
+      linktext: "Support",
       title: "In-app customer support",
       detail:
         "Let customers speak to support from inside your app or portal, with context and call history attached.",

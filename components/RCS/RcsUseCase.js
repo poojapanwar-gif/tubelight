@@ -8,7 +8,7 @@ const RcsUseCase = () => {
     {
       id: "retailrcs",
       link: "/",
-      linktext: "RetailRCS",
+      linktext: "Retail RCS",
       title: "Retail",
       detail:
         "Share rich product catalogs and flash sale promotions with interactive carousels and buy-now buttons.",
@@ -199,7 +199,7 @@ const RcsUseCase = () => {
     {
       id: "bankrcs",
       link: "/",
-      linktext: "BankRCS",
+      linktext: "Bank RCS",
       title: "Banking & Finance",
       detail:
         "Send personalized alerts, OTPs and EMI reminders with CTA buttons for immediate action.",
@@ -336,7 +336,7 @@ const RcsUseCase = () => {
     {
       id: "travelrcs",
       link: "/",
-      linktext: "TravelRCS",
+      linktext: "Travel RCS",
       title: "Travel & Hospitality",
       detail:
         "Provide itinerary updates, mobile check-ins and multilingual assistance in one rich message.",
@@ -495,7 +495,7 @@ const RcsUseCase = () => {
     {
       id: "supportrcs",
       link: "/",
-      linktext: "SupportRCS",
+      linktext: "Support RCS",
       title: "Customer Support",
       detail:
         "Enable chat-based assistance within the native messaging app, reducing the need for app downloads.",

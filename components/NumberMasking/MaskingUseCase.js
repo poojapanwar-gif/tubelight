@@ -8,7 +8,7 @@ const MaskingUseCase = () => {
     {
       id: "ridemask",
       link: "/",
-      linktext: "RideMask",
+      linktext: "Ride",
       title: "Ride-hailing & delivery",
       detail:
         "Let riders and customers coordinate pickups and drop-offs by call without exchanging personal phone numbers.",
@@ -264,7 +264,7 @@ const MaskingUseCase = () => {
     {
       id: "marketmask",
       link: "/",
-      linktext: "MarketMask",
+      linktext: "Market",
       title: "E-commerce & marketplaces",
       detail:
         "Connect buyers and sellers for order queries while keeping every transaction and relationship on your platform.",
@@ -415,7 +415,7 @@ const MaskingUseCase = () => {
     {
       id: "servicemask",
       link: "/",
-      linktext: "ServiceMask",
+      linktext: "Service",
       title: "Healthcare, real estate & services",
       detail:
         "Connect patients, tenants and service customers with professionals securely, with recordings and logs for every call.",

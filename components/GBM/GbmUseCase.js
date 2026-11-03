@@ -8,7 +8,7 @@ const GbmUseCase = () => {
     {
       id: "storechat",
       link: "/",
-      linktext: "StoreChat",
+      linktext: "Store Chat",
       title: "Retail & local stores",
       detail:
         "Answer questions on store hours, stock and offers right from your Google listing, before the customer walks in.",
@@ -168,7 +168,7 @@ const GbmUseCase = () => {
     {
       id: "branchchat",
       link: "/",
-      linktext: "BranchChat",
+      linktext: "Branch Chat",
       title: "Banking & appointments",
       detail:
         "Share branch details and let customers pick a convenient appointment slot in a few taps.",
@@ -385,7 +385,7 @@ const GbmUseCase = () => {
     {
       id: "servicechat",
       link: "/",
-      linktext: "ServiceChat",
+      linktext: "Service Chat",
       title: "Local services & bookings",
       detail:
         "Turn enquiries into bookings with quick replies and handover to a live agent when needed.",

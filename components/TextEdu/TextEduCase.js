@@ -370,7 +370,7 @@ const TextEduCase = () => {
     {
       id: "coaching-edtech",
       link: "/textedu",
-      linktext: "Coaching & EdTech",
+      linktext: "Coaching",
       title: "Admissions & Enquiries",
       detail:
         "Follow up on enquiries, confirm demo classes and send batch reminders so fewer leads and learners slip through.",

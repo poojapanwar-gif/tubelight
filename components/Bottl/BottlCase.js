@@ -8,7 +8,7 @@ const BottlCase = () => {
     {
       id: "webbot",
       link: "/bottl",
-      linktext: "WebBot",
+      linktext: "Web Bot",
       title: "Website Chatbot",
       detail:
         "Embed the chatbot on your website. When a visitor lands on a page, the bot greets them, answers questions, captures their details and routes hot leads to your sales team.",
@@ -386,7 +386,7 @@ const BottlCase = () => {
     {
       id: "adsbot",
       link: "/facebook",
-      linktext: "AdsBot",
+      linktext: "Ads Bot",
       title: "Click-to-Chat Ads",
       detail:
         "Add a chat button to your search or social media ads. When a user clicks, the bot starts the conversation, qualifies the lead and passes the details to your CRM.",
