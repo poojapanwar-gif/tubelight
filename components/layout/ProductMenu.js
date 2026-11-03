@@ -666,7 +666,32 @@ const ProductMenu = ({ onClose }) => {
           })}
         </div>
 
-        {/* Mobile Bottom Actions (CTA + Quick Links) - NO Integrations! */}
+        {/* Mobile Integrations Section */}
+        <div className={styles.mobileIntegrationsSection}>
+          <h4 className={styles.mobileIntegrationsTitle}>Integrations</h4>
+          <div className={styles.mobileIntegrationsGrid}>
+            {integrationsList.map((item, iIdx) => (
+              <a
+                key={iIdx}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mobileIntegItem}
+                title={item.name}
+                onClick={handleLinkClick}
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className={styles.mobileIntegImg}
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Bottom Actions (CTA + Quick Links) */}
         <div className={styles.mobileFooterActions}>
           <Link
             href="/contact-us"

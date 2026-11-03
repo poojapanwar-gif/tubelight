@@ -48,12 +48,12 @@
 
   /* ============ 1. CATEGORIES SIDEBAR ============ */
   .categoriesSidebar {
-    width: 350px;
+    width: 310px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding-right: 32px;
+    padding-right: 24px;
     border-right: 1px solid #DBDDDF; /* divider color #DBDDDF */
     align-self: stretch;
     box-sizing: border-box;
@@ -132,9 +132,9 @@
       align-self: stretch;
 
       .subColumn {
-        min-width: 160px;
+        min-width: 175px;
         flex: 1;
-        padding: 0 36px;
+        padding: 0 28px;
         border-right: 1px solid #DBDDDF; /* divider color #DBDDDF */
         display: flex;
         flex-direction: column;
@@ -178,6 +178,7 @@
               vertical-align: middle;
               color: #5F6275;
               text-decoration: none;
+              white-space: nowrap;
               transition: color 0.18s ease, transform 0.18s ease;
               display: inline-block;
 
@@ -193,9 +194,9 @@
 
     /* Integrations Column with right divider */
     .integrationsColumn {
-      width: 280px;
+      width: 300px;
       flex-shrink: 0;
-      padding: 0 36px;
+      padding: 0 28px;
       border-right: 1px solid #DBDDDF; /* divider color #DBDDDF */
       display: flex;
       flex-direction: column;
@@ -206,40 +207,56 @@
       .columnTitle {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 100%;
         letter-spacing: 0px;
         vertical-align: middle;
         color: #000000;
-        margin: 0 0 20px 0;
+        margin: 0 0 16px 0;
       }
 
-      /* User requested: width: 100px, height: 70px, gap: 20px */
+      /* Integrations Card Grid in pale lavender box */
       .integrationsGrid {
+        width: 100%;
+        background: #eff1ff;
+        border-radius: 12px;
+        padding: 14px;
         display: grid;
-        grid-template-columns: repeat(2, 100px);
-        gap: 20px;
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        box-sizing: border-box;
 
         .integItem {
-          width: 100px;
-          height: 70px;
+          background: #ffffff;
+          border-radius: 8px;
+          height: 56px;
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 8px 10px;
           text-decoration: none;
           cursor: pointer;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          box-sizing: border-box;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+            .integImg {
+              transform: scale(1.04);
+            }
+          }
 
           .integImg {
-            width: 100px;
-            height: 70px;
+            max-width: 100%;
+            max-height: 38px;
+            width: auto;
+            height: auto;
             object-fit: contain;
             display: block;
             transition: transform 0.2s ease;
-
-            &:hover {
-              transform: scale(1.05);
-            }
           }
         }
       }
@@ -494,6 +511,71 @@
       }
     }
 
+    /* Mobile Integrations */
+    .mobileIntegrationsSection {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px dashed #e2e8f0;
+
+      .mobileIntegrationsTitle {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #000000;
+        margin: 0 0 12px 0;
+        letter-spacing: 0px;
+      }
+
+      .mobileIntegrationsGrid {
+        width: 100%;
+        background: #eff1ff;
+        border-radius: 12px;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        box-sizing: border-box;
+
+        .mobileIntegItem {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 52px;
+          background: #ffffff;
+          border: none;
+          border-radius: 8px;
+          padding: 6px 10px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+          text-decoration: none;
+          cursor: pointer;
+          box-sizing: border-box;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+          &:active,
+          &:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+            .mobileIntegImg {
+              transform: scale(1.04);
+            }
+          }
+
+          .mobileIntegImg {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 34px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.2s ease;
+          }
+        }
+      }
+    }
+
     .mobileFooterActions {
       margin-top: 18px;
       display: flex;
@@ -545,8 +627,8 @@
     }
   }
 
-  /* ============ TABLET & LAPTOP RESPONSIVENESS (981px - 1350px) ============ */
-  @media (min-width: 981px) and (max-width: 1350px) {
+  /* ============ TABLET & LAPTOP RESPONSIVENESS (1101px - 1350px) ============ */
+  @media (min-width: 1101px) and (max-width: 1350px) {
     left: 24px;
     right: 24px;
     padding: 32px 24px;
@@ -574,13 +656,14 @@
 
           .linkList li .menuLink {
             font-size: 14px;
+            white-space: nowrap;
           }
         }
       }
 
       .integrationsColumn {
-        width: 200px;
-        padding: 0 18px;
+        width: 230px;
+        padding: 0 16px;
 
         .columnTitle {
           font-size: 16px;
@@ -588,16 +671,15 @@
         }
 
         .integrationsGrid {
-          grid-template-columns: repeat(2, 75px);
-          gap: 12px;
+          padding: 10px;
+          gap: 8px;
 
           .integItem {
-            width: 75px;
-            height: 52px;
+            height: 48px;
+            padding: 6px 8px;
 
             .integImg {
-              width: 75px;
-              height: 52px;
+              max-height: 30px;
             }
           }
         }
@@ -628,8 +710,8 @@
     }
   }
 
-  /* ============ MOBILE RESPONSIVENESS (<= 980px) ============ */
-  @media (max-width: 980px) {
+  /* ============ MOBILE RESPONSIVENESS (<= 1100px) ============ */
+  @media (max-width: 1100px) {
     position: static;
     left: auto;
     right: auto;
