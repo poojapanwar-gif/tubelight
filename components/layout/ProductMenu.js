@@ -50,7 +50,6 @@ export const productCategories = [
           { label: "Google Business", href: "/gbm" },
           { label: "Instagram", href: "/instagram" },
           { label: "FB Messenger", href: "/facebook" },
-          { label: "TextEdu", href: "/textedu" },
         ],
       },
       {

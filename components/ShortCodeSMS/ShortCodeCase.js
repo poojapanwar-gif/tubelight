@@ -190,7 +190,7 @@ const ShortCodeCase = () => {
     {
       id: "optinsc",
       link: "/",
-      linktext: "OptIn",
+      linktext: "Opt In",
       title: "Opt-in Campaigns",
       detail:
         "Invite users to text a keyword to your Short Code to subscribe, enter contests, claim offers or request information.",
