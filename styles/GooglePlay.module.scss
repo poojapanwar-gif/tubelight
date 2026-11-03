@@ -1,0 +1,770 @@
+.googlePlaySection {
+  width: 100%;
+  background: linear-gradient(101.35deg, #1F255F 0%, #412F70 119.46%);
+  padding: 60px 80px;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  // ============ LEFT COLUMN ============
+  .leftCol {
+    flex: 1;
+    max-width: 580px;
+    z-index: 2;
+
+    .heading {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 48px;
+      line-height: 49.68px;
+      letter-spacing: -0.92px;
+      vertical-align: middle;
+      color: #FFFFFF;
+      margin: 0 0 20px 0;
+
+      span {
+        display: block;
+        color: #9FB0FF;
+      }
+    }
+
+    .description {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 34px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: #FFFFFFDB;
+      margin: 0 0 28px 0;
+    }
+
+    .featureList {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 36px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #FFFFFFDB;
+
+        svg {
+          flex-shrink: 0;
+          width: 34px;
+          height: 34px;
+        }
+
+        span {
+          flex: 1;
+        }
+      }
+    }
+
+    .appBadges {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+
+      .badgeBtn {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 9px 20px;
+        text-decoration: none;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .badgeIcon {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+
+          img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+          }
+        }
+
+        .badgeText {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+
+          .badgeSub {
+            font-family: "Inter", sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #262626;
+            letter-spacing: 0.6px;
+            line-height: 1.1;
+            text-transform: uppercase;
+          }
+
+          .badgeTitle {
+            font-family: "Inter", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F172A;
+            line-height: 1.2;
+            margin-top: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  // ============ RIGHT CODE-ANIMATED DIAGRAM (NO BOX / NO WRAPPER SHADOW) ============
+  .rightCol {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+
+    .diagramScaler {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .diagramWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 630px;
+      flex-shrink: 0;
+      transform-origin: center center;
+      transition: transform 0.1s ease-out;
+    }
+
+    // 1. Four Campaign Cards Column
+    .cardsCol {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 195px;
+      flex-shrink: 0;
+
+      .campaignCard {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 14px;
+        padding: 9px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+          transform: translateX(3px);
+          border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .cardIconBox {
+          width: 34px;
+          height: 34px;
+          border-radius: 8px;
+          background: #FFFFFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .cardTextBox {
+          flex: 1;
+          min-width: 0;
+
+          .cardTitle {
+            font-family: "Inter", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin: 0;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .cardSub {
+            font-family: "Inter", sans-serif;
+            font-size: 10.5px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.65);
+            margin: 2px 0 0 0;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    // 2. SVG Connectors
+    .connectorsLeft {
+      width: 70px;
+      height: 270px;
+      flex-shrink: 0;
+      overflow: visible;
+    }
+
+    // 3. Tubelight Cloud Node
+    .cloudNode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-shrink: 0;
+      margin: 0 2px;
+
+      .cloudIconBox {
+        width: 74px;
+        height: 74px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #7C8BFA 0%, #5E6FF9 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 35px rgba(94, 111, 249, 0.5), 0 10px 25px rgba(0, 0, 0, 0.3);
+        animation: cloudBreathe 3s ease-in-out infinite;
+
+        span {
+          font-family: "Space Grotesk", sans-serif;
+          font-size: 38px;
+          font-weight: 700;
+          color: #FFFFFF;
+          line-height: 1;
+        }
+      }
+
+      .cloudLabel {
+        margin-top: 8px;
+
+        .cloudTitle {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-size: 12.5px;
+          font-weight: 600;
+          color: #FFFFFF;
+          line-height: 1.2;
+        }
+
+        .cloudSubtitle {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-size: 10px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.65);
+          margin-top: 2px;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    // 4. Connector Right to Phone
+    .connectorRight {
+      width: 40px;
+      height: 20px;
+      flex-shrink: 0;
+      overflow: visible;
+    }
+
+    // 5. iPhone Mockup Device
+    .phoneDevice {
+      width: 250px;
+      flex-shrink: 0;
+      border-radius: 38px;
+      background: #0E1325;
+      padding: 9px;
+      border: 2.5px solid #2B3354;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5),
+                  0 0 40px rgba(94, 111, 249, 0.15);
+
+      .phoneScreen {
+        background: #FFFFFF;
+        border-radius: 30px;
+        padding: 12px 12px 20px;
+        overflow: hidden;
+
+        .phoneStatusBar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .phoneTime {
+            font-size: 11px;
+            font-weight: 700;
+            color: #0F172A;
+            font-family: "Inter", sans-serif;
+          }
+
+          .dynamicIsland {
+            width: 62px;
+            height: 16px;
+            border-radius: 8px;
+            background: #000000;
+          }
+
+          .statusIcons {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+          }
+        }
+
+        .callTypeHeader {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          margin-top: 14px;
+          font-size: 8.5px;
+          font-weight: 700;
+          color: #3B82F6;
+          letter-spacing: 0.5px;
+          font-family: "Inter", sans-serif;
+
+          .waveform {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 11px;
+
+            span {
+              width: 2px;
+              background: #3B82F6;
+              border-radius: 2px;
+              height: 4px;
+              animation: wavePulse 1.2s ease-in-out infinite;
+
+              &:nth-child(1) { height: 5px; animation-delay: 0s; }
+              &:nth-child(2) { height: 10px; animation-delay: 0.2s; }
+              &:nth-child(3) { height: 7px; animation-delay: 0.4s; }
+              &:nth-child(4) { height: 4px; animation-delay: 0.6s; }
+            }
+          }
+        }
+
+        .callerAvatar {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          background: #EEF2FF;
+          border: 2px solid #C7D2FE;
+          margin: 10px auto 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #4F46E5;
+          }
+        }
+
+        .callerName {
+          font-size: 16px;
+          font-weight: 700;
+          color: #0F172A;
+          text-align: center;
+          margin-top: 6px;
+          font-family: "Space Grotesk", sans-serif;
+        }
+
+        .callerPhone {
+          font-size: 10.5px;
+          font-weight: 500;
+          color: #64748B;
+          text-align: center;
+          margin-top: 2px;
+          font-family: "Inter", sans-serif;
+        }
+
+        .callerTags {
+          display: flex;
+          justify-content: center;
+          gap: 6px;
+          margin-top: 8px;
+
+          .tagHot {
+            font-size: 9px;
+            font-weight: 600;
+            color: #D97706;
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-family: "Inter", sans-serif;
+          }
+
+          .tagExisting {
+            font-size: 9px;
+            font-weight: 600;
+            color: #2563EB;
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-family: "Inter", sans-serif;
+          }
+        }
+
+        .infoCard {
+          background: #F8FAFC;
+          border: 1px solid #E2E8F0;
+          border-radius: 11px;
+          padding: 9px 11px;
+          margin-top: 12px;
+
+          .infoCardTitle {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: #64748B;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            font-family: "Inter", sans-serif;
+          }
+
+          .infoRow {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            margin-bottom: 3px;
+            font-family: "Inter", sans-serif;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .infoLabel {
+              color: #64748B;
+              font-weight: 500;
+            }
+
+            .infoVal {
+              color: #0F172A;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .callActions {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 16px;
+
+          .actionItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+
+            span {
+              font-size: 10.5px;
+              font-weight: 500;
+              color: #64748B;
+              font-family: "Inter", sans-serif;
+            }
+
+            .btnDecline {
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: #EF4444;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+              cursor: pointer;
+              transition: transform 0.2s ease;
+
+              &:hover {
+                transform: scale(1.08);
+              }
+            }
+
+            .btnAnswer {
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background: #22C55E;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+              cursor: pointer;
+              animation: answerPulse 1.8s ease-in-out infinite;
+
+              &:hover {
+                transform: scale(1.08);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ============ KEYFRAME ANIMATIONS ============
+  @keyframes cloudBreathe {
+    0%, 100% {
+      box-shadow: 0 0 30px rgba(94, 111, 249, 0.4), 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 50px rgba(94, 111, 249, 0.75), 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  @keyframes wavePulse {
+    0%, 100% {
+      transform: scaleY(0.4);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+
+  @keyframes answerPulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+      transform: scale(1.06);
+      box-shadow: 0 0 0 14px rgba(34, 197, 94, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+  }
+
+  // ============ RESPONSIVE BREAKPOINTS ============
+  @media (max-width: 1240px) {
+    padding: 60px 40px;
+
+    .container {
+      gap: 30px;
+    }
+
+    .rightCol .diagramWrapper {
+      transform: scale(0.92);
+      transform-origin: center right;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    padding: 60px 30px;
+
+    .container {
+      flex-direction: column;
+      text-align: left;
+      gap: 48px;
+    }
+
+    .leftCol {
+      max-width: 100%;
+    }
+
+    .rightCol {
+      width: 100%;
+
+      .diagramWrapper {
+        transform: scale(1);
+        transform-origin: center center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+
+    .container {
+      gap: 36px;
+    }
+
+    .rightCol {
+      width: 100%;
+      overflow: visible;
+
+      .diagramScaler {
+        height: 420px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.9);
+        transform-origin: center center;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding: 40px 16px;
+
+    .leftCol {
+      .heading {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -0.5px;
+      }
+
+      .description {
+        font-size: 15px;
+        line-height: 26px;
+      }
+
+      .featureList {
+        gap: 14px;
+
+        li {
+          font-size: 16px;
+          line-height: 24px;
+          gap: 10px;
+
+          svg {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+
+      .appBadges {
+        gap: 12px;
+
+        .badgeBtn {
+          padding: 8px 16px;
+          gap: 10px;
+
+          .badgeIcon {
+            width: 26px;
+            height: 26px;
+          }
+
+          .badgeText {
+            .badgeSub {
+              font-size: 9px;
+            }
+
+            .badgeTitle {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .rightCol {
+      .diagramScaler {
+        height: 360px;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.77);
+        transform-origin: center center;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    .rightCol {
+      .diagramScaler {
+        height: 310px;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.66);
+      }
+    }
+  }
+
+  @media (max-width: 440px) {
+    .rightCol {
+      .diagramScaler {
+        height: 270px;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.57);
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    .rightCol {
+      .diagramScaler {
+        height: 245px;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.52);
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    padding: 36px 10px;
+
+    .rightCol {
+      .diagramScaler {
+        height: 215px;
+      }
+
+      .diagramWrapper {
+        transform: scale(0.45);
+      }
+    }
+  }
+}
