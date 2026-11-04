@@ -1,3 +1,4 @@
+import CanvasVideo from '@/components/Common/CanvasVideo';
 import React from 'react'
 import Link from "next/link";
 import styles from "../../styles/ClickCallBanner.module.scss";
@@ -64,7 +65,7 @@ const FlashBanner = ({
           </div>
         </div>
         <div className={styles["click-call-right-content"]}>
-          <div className={styles["click-call-banner-video"]}>
+          <div className={styles["click-call-banner-video"]} style={{ overflow: "hidden", lineHeight: 0 }}>
             {imageSrc ? (
               <img
                 src={imageSrc}
@@ -72,16 +73,7 @@ const FlashBanner = ({
                 style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />
             ) : (
-              <video
-                key={videoSrc}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-              >
-                <source src={videoSrc} type="video/mp4" />
-              </video>
+              <CanvasVideo src={videoSrc} />
             )}
           </div>
         </div>

@@ -1,3 +1,4 @@
+import CanvasVideo from '@/components/Common/CanvasVideo';
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/ClickCallBanner.module.scss";
@@ -51,8 +52,8 @@ const ClickCallBanner = () => {
           </div>
         </div>
         <div className={styles["click-call-right-content"]}>
-            <div className={styles["click-call-banner-video"]}>
-                <video src="/images/clicktocallvideo.mp4" autoPlay loop muted playsInline />
+            <div className={styles["click-call-banner-video"]} style={{ overflow: "hidden", lineHeight: 0 }}>
+                <CanvasVideo src="/images/clicktocallvideo.mp4" />
             </div>
         </div>
       </div>
