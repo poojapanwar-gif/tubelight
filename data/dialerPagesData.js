@@ -1856,7 +1856,7 @@ export const dialerPagesData = {
       primaryBtnLink: "/contact-us",
       secondaryBtnText: "Talk to Expert",
       secondaryBtnLink: "/contact-us",
-      videoSrc: "/images/leadmanagementsystembanner2.mp4",
+      videoSrc: "/images/aileadmanagement.mp4",
     },
     platformContent: {
       eyebrow: "THE PLATFORM",
