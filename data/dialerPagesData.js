@@ -389,7 +389,7 @@ export const dialerPagesData = {
       primaryBtnLink: "/contact-us",
       secondaryBtnText: "Talk to Expert",
       secondaryBtnLink: "/contact-us",
-      videoSrc: "/images/leadmanagementsystembanner.mp4",
+      videoSrc: "/images/leadmanagementsystembanner2.mp4",
     },
     features: {
       title: "From Lead Generation to Lead Conversion",
@@ -1856,7 +1856,7 @@ export const dialerPagesData = {
       primaryBtnLink: "/contact-us",
       secondaryBtnText: "Talk to Expert",
       secondaryBtnLink: "/contact-us",
-      videoSrc: "/images/leadmanagementsystembanner.mp4",
+      videoSrc: "/images/leadmanagementsystembanner2.mp4",
     },
     platformContent: {
       eyebrow: "THE PLATFORM",
