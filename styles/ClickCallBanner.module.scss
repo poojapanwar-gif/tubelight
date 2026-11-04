@@ -4,9 +4,8 @@
   .click-call-banner-content {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
     .click-call-left-content {
-      // margin-top: 80px;
       width: 100%;
       h2 {
         font-family: "Space Grotesk", sans-serif;
@@ -106,7 +105,7 @@
     }
     .click-call-right-content{
       .click-call-banner-video{
-        width: 100%;
+        width: 95%;
         height: 100%;
         overflow: hidden;
         video {
