@@ -6,7 +6,7 @@
     align-items: center;
     gap: 60px;
     .click-call-left-content {
-      width: 100%;
+      width: 95%;
       h2 {
         font-family: "Space Grotesk", sans-serif;
         font-weight: 600;
@@ -104,8 +104,9 @@
       }
     }
     .click-call-right-content{
+      width: 100%;
       .click-call-banner-video{
-        width: 95%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
         video {
