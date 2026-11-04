@@ -207,15 +207,9 @@ export const productCategories = [
         title: "Two-Factor Auth",
         links: [
           {
-            label: "SMS OTP",
-            href: "/sms-and-otp",
+            label: "MuCh 2FA",
+            href: "/much2fa",
           },
-          {
-            label: "Flash Call Verification",
-            href: "/flash-call-verification",
-          },
-          { label: "WhatsApp 2FA", href: "/whatsapp" },
-          { label: "Email OTP", href: "/email-delivery" },
         ],
       },
     ],
