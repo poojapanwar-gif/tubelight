@@ -90,7 +90,7 @@ const GooglePlay = () => {
           <div className={styles.appBadges}>
             {/* Google Play Store Badge */}
             <Link
-              href="https://play.google.com"
+              href="https://play.google.com/store/apps/details?id=com.tubelight_app&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.badgeBtn}
@@ -112,7 +112,7 @@ const GooglePlay = () => {
 
             {/* Apple App Store Badge */}
             <Link
-              href="https://apple.com/app-store"
+              href="https://apps.apple.com/in/app/hello-tubelight/id6779888709"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.badgeBtn}
